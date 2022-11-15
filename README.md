@@ -11,10 +11,4 @@
 | Wgranie tekstur zombie| Refactoring kodu |
 |Stworzenie paska zdrowia| Dopasowanie tekstur zombie|
 |Tekstury strzelania/atakowania dla postaci| Ustalenie hp, speeda, siły i zręczności|
-| Algorytm poruszania się potworów |
-
-
-[]
-[]
-[]
-[x]
+| Algorytm poruszania się potworów |Algorytm poruszania się potworów|
