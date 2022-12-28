@@ -14,6 +14,7 @@
 				<Compiler>
 					<Add option="-std=c++14" />
 					<Add option="-g" />
+					<Add directory="../../SFML/include" />
 				</Compiler>
 				<Linker>
 					<Add library="sfml-graphics-d" />
@@ -21,6 +22,7 @@
 					<Add library="sfml-network-d" />
 					<Add library="sfml-window-d" />
 					<Add library="sfml-system-d" />
+					<Add directory="../../SFML/lib" />
 				</Linker>
 			</Target>
 			<Target title="Release">
@@ -30,7 +32,7 @@
 				<Option compiler="gcc" />
 				<Compiler>
 					<Add option="-O2" />
-					<Add directory="../../SFML-2.5.1/include" />
+					<Add directory="../../SFML/include" />
 				</Compiler>
 				<Linker>
 					<Add option="-s" />
@@ -39,7 +41,7 @@
 					<Add library="sfml-network" />
 					<Add library="sfml-window" />
 					<Add library="sfml-system" />
-					<Add directory="../../SFML-2.5.1/lib" />
+					<Add directory="../../SFML/lib" />
 				</Linker>
 			</Target>
 		</Build>
@@ -47,9 +49,20 @@
 			<Add option="-Wall" />
 			<Add option="-fexceptions" />
 		</Compiler>
-		<Unit filename="include/Animation.h" />
+		<Unit filename="cale_menu_lewy_klik.cpp" />
+		<Unit filename="cale_menu_lewy_klik.h" />
+		<Unit filename="isAnyKeyPressed.cpp" />
+		<Unit filename="isAnyKeyPressed.h" />
+		<Unit filename="klasa_postac.cpp" />
+		<Unit filename="klasa_postac.h" />
 		<Unit filename="main.cpp" />
+		<Unit filename="pozycja_gracza.cpp" />
+		<Unit filename="pozycja_gracza.h" />
 		<Unit filename="src/Animation.cpp" />
+		<Unit filename="strzelanie_player1.cpp" />
+		<Unit filename="strzelanie_player1.h" />
+		<Unit filename="wybor_postaci_z_menu.cpp" />
+		<Unit filename="wybor_postaci_z_menu.h" />
 		<Extensions />
 	</Project>
 </CodeBlocks_project_file>
