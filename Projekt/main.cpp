@@ -24,8 +24,9 @@ bool czy_strzela = false;
 float ziara = 0;
 int czas_strzaly = 0;
 int czas_respu_zombie=10000;
-float hp=1;
+float hp=1000;
 int score = 0;
+int poziom = 1;
 bool powtorz = false;
 vector <zombie> wektor_zombie;
 
@@ -220,7 +221,7 @@ class gracz
 
         player.setTextureRect(IntRect(yTexture,96,69,96));
         player.move(0.0f,3.0f);
-        //lose_hp();
+
 
         if(player.getPosition().x > 765.f && player.getPosition().y >472.f)
         {
@@ -406,16 +407,31 @@ class gracz
 }
 
 
-void convert_score(int &score, Text &tekscior, stringstream &score_to_string)
+void convert_score(int &score, Text &tekscior, stringstream &score_to_string,Text &poziomek, int &poziom, stringstream &poziom_to_string)
 {
     score_to_string.str("");
+    poziom_to_string.str("");
     score_to_string << "Score: " << score;
+    poziom_to_string << "Poziom: " << poziom;
     tekscior.setString(score_to_string.str());
+    poziomek.setString(poziom_to_string.str());
+    if(score >= 0 && score < 10)
+    {
+        poziom = 1;
+    }
+    else if(score >=10 && score < 20)
+    {
+        poziom = 2;
+    }
+    else if(score >= 20)
+    {
+        poziom = 3;
+    }
 }
 
 int main() {
 
-    RenderWindow window(VideoMode(1366, 768), "SFML!", Style::Close|Style::Fullscreen);
+    RenderWindow window(VideoMode(1366, 768), "SFML!", Style::Close);
     window.setFramerateLimit(60);
     //lucznik
     RectangleShape player(Vector2f(69.0f, 96.0f));
@@ -493,6 +509,12 @@ int main() {
     tekscior.setPosition(1125.f,20.f);
     stringstream score_to_string;
 
+    Text poziomek;
+    poziomek.setFont(czcionka);
+    poziomek.setFillColor(Color::White);
+    poziomek.setCharacterSize(50);
+    poziomek.setPosition(1125.f,60.f);
+    stringstream poziom_to_string;
 
     //wladowac menu
     Texture menu;
@@ -532,9 +554,9 @@ int main() {
         {
             if(event.type == Event::Closed)
                 window.close();
-        }
 
-        //NOWY KOX77
+
+        }
 
 
 
@@ -563,13 +585,30 @@ lucznik.usun_strzale_z_pamieci(wektor_strzal_gora);
 
 lucznik.initHP(player);
 lucznik.update_hp();
-convert_score(score,tekscior, score_to_string);
+convert_score(score,tekscior, score_to_string, poziomek, poziom, poziom_to_string);
 
-
-if(wektor_zombie.size() <= 3)
+if(score >= 0 && score < 10)
 {
-    laduj_zombie(czas_respu_zombie, zombi, wektor_zombie);
+    if(wektor_zombie.size() < 3)
+    {
+        laduj_zombie(czas_respu_zombie, zombi, wektor_zombie, score);
+    }
 }
+else if(score >= 10 && score < 20)
+{
+    if(wektor_zombie.size() <= 3)
+    {
+        laduj_zombie(czas_respu_zombie, zombi, wektor_zombie, score);
+    }
+}
+else if(score >= 20)
+{
+   if(wektor_zombie.size() <= 4)
+    {
+        laduj_zombie(czas_respu_zombie, zombi, wektor_zombie, score);
+    }
+}
+
 
 
 
@@ -583,10 +622,6 @@ if(wektor_zombie.size() <= 3)
         player2.move(0.0f,-1.5f);
     if(Keyboard::isKeyPressed(Keyboard::Key::S))
         player2.move(0.0f,1.5f);
-
-
-//hp playera, wrzucic do klasy!!!
-
 
 
 
@@ -630,6 +665,7 @@ if(wektor_zombie.size() <= 3)
         window.draw(sprajt);
         lucznik.render_hp(window);
         window.draw(tekscior);
+        window.draw(poziomek);
 
 
             if(done == 1)
@@ -651,13 +687,16 @@ if(wektor_zombie.size() <= 3)
                 zombie_pozycja();
                     for(int i=0; i<wektor_zombie.size(); ++i)
                         {
-                            wektor_zombie[i].respienie_zombie();
+
+                            wektor_zombie[i].respienie_zombie(score);
                             wektor_zombie[i].poruszanie(player);
                             wektor_zombie[i].bitka(player, hp, window, powtorz, bitmapa, score);
                             window.draw(wektor_zombie[i].shape);
                             wektor_zombie[i].render_hp(window);
                             wektor_zombie[i].initHP();
                             wektor_zombie[i].update_hp();
+
+
 
 
                         }

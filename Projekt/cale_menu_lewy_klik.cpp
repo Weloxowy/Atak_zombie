@@ -11,32 +11,79 @@ using namespace std;
 
 
 
-void laduj_zombie(int &czas_respu, zombie zombi, vector <zombie> &zombie_wektor)
+void laduj_zombie(int &czas_respu, zombie zombi, vector <zombie> &zombie_wektor, int &score)
 {
     czas_respu++;
     if(czas_respu > 200)
     {
-        int losuj;
+        int losuj_3, losuj_4, losuj_5;
         srand (time(NULL));
-        losuj = rand() % 4+1;
-    switch(losuj)
-    {
+        losuj_3 = rand() % 3+1;
+        losuj_4 = rand() % 4+1;
+        losuj_5 = rand() % 5+1;
+        if(score >=0 && score < 10)
+        {
+            switch(losuj_3)
+            {
         case 1: //resp krzak
         zombi.shape.setPosition(434.0f,503.0f);
-    break;
+            break;
         case 2: //lewy dolny rog
         zombi.shape.setPosition(326.0f,679.0f);
-    break;
+            break;
         case 3: // prawy gorny rog
         zombi.shape.setPosition(951.0f,63.0f);
-    break;
+            break;
+        }
+        }
+         if(score >= 10 && score < 20)
+        {
+            switch(losuj_4)
+            {
+            case 1: //resp krzak
+        zombi.shape.setPosition(434.0f,503.0f);
+            break;
+        case 2: //lewy dolny rog
+        zombi.shape.setPosition(326.0f,679.0f);
+            break;
+        case 3: // prawy gorny rog
+        zombi.shape.setPosition(951.0f,63.0f);
+            break;
         case 4: //drzewa po lewej
         zombi.shape.setPosition(103.0f,483.0f);
-    break;
-    }
+            break;
+            }
+        }
+        if(score >= 20)
+        {
+            switch(losuj_5)
+            {
+            case 1: //resp krzak
+        zombi.shape.setPosition(434.0f,503.0f);
+            break;
+        case 2: //lewy dolny rog
+        zombi.shape.setPosition(326.0f,679.0f);
+            break;
+        case 3: // prawy gorny rog
+        zombi.shape.setPosition(951.0f,63.0f);
+            break;
+        case 4: //drzewa po lewej
+        zombi.shape.setPosition(103.0f,483.0f);
+            break;
+        case 5: //drzewa po lewej
+        zombi.shape.setPosition(103.0f,483.0f);
+            break;
+        }
+        }
+
+
+
+
+
         zombie_wektor.insert(zombie_wektor.begin(),zombi);
         czas_respu=0;
     }
+
 }
 
 void przyjmowanie_strzal(vector <zombie> &zombie_wektor,vector <strzal> &wektor_strzal, int &score){
@@ -44,18 +91,21 @@ void przyjmowanie_strzal(vector <zombie> &zombie_wektor,vector <strzal> &wektor_
     for(int i=0;i<zombie_wektor.size();i++){
         for(int j=0; j<wektor_strzal.size();j++){
             if(zombie_wektor[i].shape.getGlobalBounds().intersects(wektor_strzal[j].shape.getGlobalBounds())){
+
                 zombie_wektor[i].hp_zombie--;
                 if(zombie_wektor[i].hp_zombie <= 0)
                 {
                     zombie_wektor.erase(zombie_wektor.begin()+i);
                     score++;
-
                 }
                 wektor_strzal.erase(wektor_strzal.begin()+j);
                 break;
             }
+
         }
+
     }
+
 }
 
 

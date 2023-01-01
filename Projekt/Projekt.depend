@@ -1837,7 +1837,7 @@
 	"cale_menu_lewy_klik.h"
 	"klasa_postac.h"
 
-1672238702 source:d:\code blocks\projekt sfml\projektnajnowszy\cale_menu_lewy_klik.cpp
+1672588053 source:d:\code blocks\projekt sfml\projektnajnowszy\cale_menu_lewy_klik.cpp
 	<SFML/Graphics.hpp>
 	<iostream>
 	<windows.h>
@@ -1845,7 +1845,7 @@
 	"cale_menu_lewy_klik.h"
 	"isAnyKeyPressed.h"
 
-1672239236 d:\code blocks\projekt sfml\projektnajnowszy\cale_menu_lewy_klik.h
+1672588801 d:\code blocks\projekt sfml\projektnajnowszy\cale_menu_lewy_klik.h
 	<SFML/Graphics.hpp>
 	<iostream>
 	<windows.h>
@@ -1885,7 +1885,7 @@
 	<windows.h>
 	<math.h>
 
-1672238526 source:d:\code blocks\projekt sfml\projektnajnowszy\main.cpp
+1672588053 source:d:\code blocks\projekt sfml\projektnajnowszy\main.cpp
 	<SFML/Graphics.hpp>
 	<iostream>
 	<windows.h>

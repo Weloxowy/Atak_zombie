@@ -22,6 +22,7 @@ public:
     bool czy_sie_respi = true;
     bool atak = false;
     bool zablokuj_ruszanie_sie = false;
+
     Sprite shape;
     int delay=0;
     int delay1=0;
@@ -68,14 +69,34 @@ public:
     }
     void update_hp()
     {
+
         float procent = static_cast<float>(hp_zombie) / static_cast<float>(MAXhp);
         hpBarInside.setSize(sf::Vector2f(static_cast<float>(std::floor(hpBarMaxWidth * procent)), hpBarInside.getSize().y));
     }
 
-    void respienie_zombie()
+
+
+
+    void respienie_zombie(int &score)
     {
             if(czy_sie_respi == true)
             {
+                if(score >= 5 && score < 10) // dodatkowe poziomy trudnosci poziom 1
+                    {
+                        hp_zombie  = 4;
+                        MAXhp  = 4;
+                    }
+                else if(score >= 10 && score < 20) // poziom 2
+                {
+                    hp_zombie  = 5;
+                        MAXhp  = 5;
+                }
+                else if(score >=20) // poziom 3
+                {
+                    hp_zombie  = 6;
+                        MAXhp  = 6;
+                }
+
                 if(ziara2 < 6)
                 {
                     if(delay >= 20)
@@ -117,6 +138,79 @@ public:
         xTexture*=80;
         shape.setTextureRect(IntRect(xTexture,304,80,76));
         shape.move(1.0f,0.0f);
+
+        //kolizje
+        if(shape.getPosition().x > 765.f && shape.getPosition().y >472.f)
+        {
+            shape.setPosition(765.f, shape.getPosition().y);
+        }
+        if(shape.getPosition().x > 789.f && shape.getPosition().y >354.f)
+        {
+            shape.setPosition(789.f, shape.getPosition().y);
+        }
+        if(shape.getPosition().x > 809.f && shape.getPosition().y >324.f)
+        {
+            shape.setPosition(809.f, shape.getPosition().y);
+        }
+        if(shape.getPosition().x > 832.f && shape.getPosition().y >308.f)
+        {
+            shape.setPosition(832.f, shape.getPosition().y);
+        }
+        if(shape.getPosition().x > 878.f && shape.getPosition().y >293.f)
+        {
+            shape.setPosition(878.f, shape.getPosition().y);
+        }
+        if(shape.getPosition().x > 933.f && shape.getPosition().y >178.f)
+        {
+            shape.setPosition(933.f, shape.getPosition().y);
+        }
+        if(shape.getPosition().x > 947.f && shape.getPosition().y >148.f)
+        {
+            shape.setPosition(947.f, shape.getPosition().y);
+        }
+        if(shape.getPosition().x > 964.f && shape.getPosition().y > -93.f)
+        {
+            shape.setPosition(964.f, shape.getPosition().y);
+        }
+        if((shape.getPosition().x > 482.f && shape.getPosition().y < 90.f) && (shape.getPosition().x < 664.f && shape.getPosition().y < 90.f))
+        {
+            shape.setPosition(482.f, shape.getPosition().y);
+        }if(shape.getPosition().x > 765.f && shape.getPosition().y >472.f)
+        {
+            shape.setPosition(765.f, shape.getPosition().y);
+        }
+        if(shape.getPosition().x > 789.f && shape.getPosition().y >354.f)
+        {
+            shape.setPosition(789.f, shape.getPosition().y);
+        }
+        if(shape.getPosition().x > 809.f && shape.getPosition().y >324.f)
+        {
+            shape.setPosition(809.f, shape.getPosition().y);
+        }
+        if(shape.getPosition().x > 832.f && shape.getPosition().y >308.f)
+        {
+            shape.setPosition(832.f, shape.getPosition().y);
+        }
+        if(shape.getPosition().x > 878.f && shape.getPosition().y >293.f)
+        {
+            shape.setPosition(878.f, shape.getPosition().y);
+        }
+        if(shape.getPosition().x > 933.f && shape.getPosition().y >178.f)
+        {
+            shape.setPosition(933.f, shape.getPosition().y);
+        }
+        if(shape.getPosition().x > 947.f && shape.getPosition().y >148.f)
+        {
+            shape.setPosition(947.f, shape.getPosition().y);
+        }
+        if(shape.getPosition().x > 964.f && shape.getPosition().y > -93.f)
+        {
+            shape.setPosition(964.f, shape.getPosition().y);
+        }
+        if((shape.getPosition().x > 482.f && shape.getPosition().y < 90.f) && (shape.getPosition().x < 664.f && shape.getPosition().y < 90.f))
+        {
+            shape.setPosition(482.f, shape.getPosition().y);
+        }
     }
     else if((shape.getPosition().x + player.getPosition().x) > 0)
     {
@@ -128,6 +222,21 @@ public:
         xTexture*=80;
         shape.setTextureRect(IntRect(xTexture,152,80,76));
         shape.move(-1.0f,0.0f);
+
+        //kolizja
+        if(shape.getPosition().x < 381.f && shape.getPosition().y < 375.f)
+                {
+                shape.setPosition(381.f, shape.getPosition().y);
+                }
+            if(shape.getPosition().x < 420.f && shape.getPosition().y < 145.f)
+                {
+                shape.setPosition(420.f, shape.getPosition().y);
+                }
+
+            if((shape.getPosition().x > 551.f && shape.getPosition().y < 90.f) && (shape.getPosition().x < 664.f && shape.getPosition().y < 90.f))
+                {
+            shape.setPosition(664.f, shape.getPosition().y);
+                }
     }
      if((shape.getPosition().y - player.getPosition().y) < 0)
     {
@@ -152,12 +261,25 @@ public:
 
         shape.setTextureRect(IntRect(yTexture,76,80,76));
         shape.move(0.0f,-1.0f);
+
+        if(shape.getPosition().x < 381.f && shape.getPosition().y < 375.f)
+        {
+            shape.setPosition(shape.getPosition().x, 375.f);
+        }
+        if(shape.getPosition().x < 420.f && shape.getPosition().y < 145.f)
+        {
+            shape.setPosition(shape.getPosition().x, 145.f);
+        }
+
+        if((shape.getPosition().x > 551.f && shape.getPosition().y < 90.f) && (shape.getPosition().x < 664.f && shape.getPosition().y < 90.f))
+        {
+            shape.setPosition(shape.getPosition().x, 90.f);
+        }
     }
         }
 
     }
 
-    //zombie.setFillColor(); to na przyszlosc
     void bitka(RectangleShape & player, float &hp, sf::RenderWindow& window, bool powtorz, int &bitmapa, int &score)
     {
 
@@ -248,21 +370,21 @@ public:
 
                                         if(Mouse::isButtonPressed(Mouse::Left) && Mouse::getPosition(window).x > 480 && Mouse::getPosition(window).x < 615 && Mouse::getPosition(window).y >615 && Mouse::getPosition(window).y <712)
                                         {
-                                            Sleep(200);
-                                            exit(0);
+
+                                            //exit(0);
+                                            break;
                                         }
+
+
                                         //dokonczyc wychodzenie
 
                                             /*
-                                            Event event;
-                                            if (event.type == Event::Closed)
-                                                {
-                                                    window.close();
-                                                }
+
                                                 */
 
 
                                 }
+
                         }
 
 
@@ -294,5 +416,6 @@ public:
 //void sprawdz_zombie(vector <zombie> &wektor_zombie);
 
 void cale_menu(int & bitmapa, RenderWindow & window, int &done, RectangleShape & player, RectangleShape & player2, Texture & player1Texture, Texture & player2Texture,int &IdleAnim);
-void laduj_zombie(int &czas_respu, zombie zombi, vector <zombie> &zombie_wektor);
+void laduj_zombie(int &czas_respu, zombie zombi, vector <zombie> &zombie_wektor, int &score);
 void przyjmowanie_strzal(vector <zombie> &zombie_wektor,vector <strzal> &wektor_strzal,int &score);
+
