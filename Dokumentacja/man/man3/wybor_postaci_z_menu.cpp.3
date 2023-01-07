@@ -1,0 +1,69 @@
+.TH "wybor_postaci_z_menu.cpp" 3 "So, 7 sty 2023" "Atak Zombie" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+wybor_postaci_z_menu.cpp
+.SH SYNOPSIS
+.br
+.PP
+\fC#include <SFML/Graphics\&.hpp>\fP
+.br
+\fC#include <iostream>\fP
+.br
+\fC#include <windows\&.h>\fP
+.br
+\fC#include <math\&.h>\fP
+.br
+\fC#include 'wybor_postaci_z_menu\&.h'\fP
+.br
+
+.SS "Funkcje"
+
+.in +1c
+.ti -1c
+.RI "void \fBwybor_postaci\fP (int \fBbitmapa\fP, RenderWindow &window, RectangleShape &chooseplayer1, RectangleShape &chooseplayer2, Texture &chooseplayer1_texture, Texture &chooseplayer2_texture, int &\fBIdleAnim\fP, int &\fBdelay\fP, int &\fBdone\fP)"
+.br
+.RI "Deklaracja funkcji wybor postaci\&. "
+.in -1c
+.SH "Dokumentacja funkcji"
+.PP 
+.SS "void wybor_postaci (int bitmapa, RenderWindow & window, RectangleShape & chooseplayer1, RectangleShape & chooseplayer2, Texture & chooseplayer1_texture, Texture & chooseplayer2_texture, int & IdleAnim, int & delay, int & done)"
+
+.PP
+Deklaracja funkcji wybor postaci\&. 
+.PP
+\fBParametry\fP
+.RS 4
+\fIint\fP bitmapa - zawiera id uzywanej bitmapy 
+.br
+\fIRenderWindow\fP &window - wska�nik na okno 
+.br
+\fIRectangleShape\fP & chooseplayer1 - wskaznik na 1 postac 
+.br
+\fIRectangleShape\fP & chooseplayer2 - wskaznik na 2 postac 
+.br
+\fITexture\fP & chooseplayer1_texture - wskaznik na tekstury 1 postaci 
+.br
+\fITexture\fP & chooseplayer2_texture - wskaznik na tekstury 1 postaci 
+.br
+\fIint\fP &IdleAnim - iterator animacji tekstur 
+.br
+\fIint\fP &done - zmienna przechowuje numer wybranej postaci 
+.br
+\fIint\fP &delay - opoznienie 
+.RE
+.PP
+< Wybor pierwszej postaci z menu
+.PP
+< Zmienna do wyswietlenia danej postaci w main
+.PP
+< Animacja mrugania w menu
+.PP
+< Zmienna do wyswietlenia danej postaci w main
+.PP
+< Animacja mrugania w menu
+.PP
+Definicja w linii \fB25\fP pliku \fBwybor_postaci_z_menu\&.cpp\fP\&.
+.SH "Autor"
+.PP 
+Wygenerowano automatycznie z kodu źródłowego programem Doxygen dla Atak Zombie\&.

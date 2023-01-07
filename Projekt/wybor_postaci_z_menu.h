@@ -9,5 +9,10 @@ using namespace sf;
 using namespace std;
 
 
+/** @brief Deklaracja funkcji wybor postaci
+ *
+ * @see void wybor_postaci
+ *
+ */
 
 void wybor_postaci(int bitmapa, RenderWindow & window, RectangleShape & chooseplayer1,RectangleShape & chooseplayer2, Texture & chooseplayer1_texture, Texture & chooseplayer2_texture, int &IdleAnim, int &delay, int &done);

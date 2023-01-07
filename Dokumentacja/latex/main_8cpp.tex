@@ -1,0 +1,523 @@
+\hypertarget{main_8cpp}{}\doxysection{Dokumentacja pliku main.\+cpp}
+\label{main_8cpp}\index{main.cpp@{main.cpp}}
+{\ttfamily \#include $<$SFML/\+Graphics.\+hpp$>$}\newline
+{\ttfamily \#include $<$SFML/\+Audio.\+hpp$>$}\newline
+{\ttfamily \#include $<$iostream$>$}\newline
+{\ttfamily \#include $<$windows.\+h$>$}\newline
+{\ttfamily \#include $<$math.\+h$>$}\newline
+{\ttfamily \#include $<$vector$>$}\newline
+{\ttfamily \#include $<$time.\+h$>$}\newline
+{\ttfamily \#include $<$sstream$>$}\newline
+{\ttfamily \#include \char`\"{}pozycja\+\_\+gracza.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}is\+Any\+Key\+Pressed.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}wybor\+\_\+postaci\+\_\+z\+\_\+menu.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}cale\+\_\+menu\+\_\+lewy\+\_\+klik.\+h\char`\"{}}\newline
+Wykres zale≈ºno≈õci za≈ÇƒÖczania dla main.\+cpp\+:
+% FIG 0
+\doxysubsection*{Komponenty}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classgracz}{gracz}}
+\begin{DoxyCompactList}\small\item\em Klasa gracz. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Funkcje}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{main_8cpp_af4327960a235ee29f00326aa5c2f158a}{kolizja\+\_\+strzaly}} (\mbox{\hyperlink{classstrzal}{strzal}} strzalka)
+\begin{DoxyCompactList}\small\item\em Funkcja sprawdzajaca kolizje strzaly. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{main_8cpp_ae2f5037db40719401e9756b3f7ac2b75}{zombie\+\_\+pozycja}} ()
+\begin{DoxyCompactList}\small\item\em Funckja sprawdzajaca pozycje zombie, oraz ustawiajaca ich kolizje. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{main_8cpp_a8a3aad63c953ed8a7df5aff65e7b22b9}{convert\+\_\+score}} (int \&\mbox{\hyperlink{main_8cpp_aef160b7437d94056f1dc59646cd5b87d}{score}}, Text \&tekscior, stringstream \&score\+\_\+to\+\_\+string, Text \&poziomek, int \&\mbox{\hyperlink{main_8cpp_adf3f9636cdfb387bad5ffdef052bda59}{poziom}}, stringstream \&poziom\+\_\+to\+\_\+string)
+\begin{DoxyCompactList}\small\item\em Funckaja pozwalajaca na wyswietlanie punktow w grze. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{main_8cpp_a154409f4cb8a43c37bd48c276fa7812e}{ostateczne\+\_\+punkty}} (int \&\mbox{\hyperlink{main_8cpp_aef160b7437d94056f1dc59646cd5b87d}{score}}, Text \&end\+\_\+score, stringstream \&endzik\+\_\+score)
+\begin{DoxyCompactList}\small\item\em Funckja wyswietlajaca wszystkie punkty ktore zdobyl gracz. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{main_8cpp_a49ade5a51d290c0ad178dc988069e55a}{hp\+\_\+rowne\+\_\+zero}} (Rectangle\+Shape \&player, sf\+::\+Render\+Window \&window)
+\begin{DoxyCompactList}\small\item\em Funkcja sprawdza czy poziom zdrowia gracza jest rowne zero, jesli tak to wyswietla okno przegrania gry. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{main_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}{main}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Zmienne}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{main_8cpp_a49f3e17259835b0bfba5bf73c90e8916}{bitmapa}} = 0
+\begin{DoxyCompactList}\small\item\em Zmienna przechowuje stan aktualnej bitmapy. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{main_8cpp_a5992b274cfdcacdbc1fa8347fd01ebde}{done}} = 0
+\begin{DoxyCompactList}\small\item\em Zmienna odpowiadajaca za wybor postaci. \end{DoxyCompactList}\item 
+const unsigned \mbox{\hyperlink{main_8cpp_a27a420ec4683c7d9ebbc26410c4e5774}{WINDOW\+\_\+\+WIDTH}} = 1366
+\begin{DoxyCompactList}\small\item\em Zmienna przechowuje dlugosc mapy. \end{DoxyCompactList}\item 
+const unsigned \mbox{\hyperlink{main_8cpp_a0e25e160f353fa768adfdf022b48ca1f}{WINDOW\+\_\+\+HEIGHT}} = 768
+\begin{DoxyCompactList}\small\item\em Zmienna przechowuje szerokosc mapy. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{main_8cpp_a5d7bc75d40aa91845c99e2eae27ce7db}{pozycja}} = 0
+\begin{DoxyCompactList}\small\item\em Zmienna przechowuje aktualna pozycje gracza. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{main_8cpp_a6f1be1f780ff54ec75b41451cd4d90bd}{delay}} = 0
+\begin{DoxyCompactList}\small\item\em Zmienna pozwalajaca na opoznienie aktualnie wykonywanej tekstury. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{main_8cpp_a06c0dc845bc97c11846126121ef52eae}{Idle\+Anim}} = 0
+\begin{DoxyCompactList}\small\item\em Zmienna pozwalajaca na wyswietlenie tekstury w zaleznosci od pozycji gracza. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{main_8cpp_a40fdb8401d0ebf6f4c627b858b9d22f4}{czy\+\_\+strzela}} = false
+\begin{DoxyCompactList}\small\item\em Zmienna okreslajaca czy gracz wykonuje strzal. \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{main_8cpp_a0a13af434a54e9386af7084a36ba81fb}{ziara}} = 0
+\begin{DoxyCompactList}\small\item\em Zmienna pozwalajaca na wykonanie tekstury strzalu. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{main_8cpp_a4c627af561358316985314767df6b80d}{czas\+\_\+respu\+\_\+zombie}} =10000
+\begin{DoxyCompactList}\small\item\em Zmienna przechowujaca opoznienie dla pojawienia sie zombie. \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{main_8cpp_a09fbbe87083078f86ee37d794546dd12}{hp}} =10
+\begin{DoxyCompactList}\small\item\em Zmienna przechowujaca poziom zdrowia lucznika. \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{main_8cpp_ad19d02392da12c2e5a3ecf54021ace85}{hp\+\_\+berserker}} =7
+\begin{DoxyCompactList}\small\item\em Zmienna przechowujaca poziom zdrowia berserkera. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{main_8cpp_aef160b7437d94056f1dc59646cd5b87d}{score}} = 0
+\begin{DoxyCompactList}\small\item\em Zmienna przechowujaca zdobyte punkty przez gracza. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{main_8cpp_adf3f9636cdfb387bad5ffdef052bda59}{poziom}} = 1
+\begin{DoxyCompactList}\small\item\em Zmienna przechowujaca aktualny poziom gry. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{main_8cpp_a929b8b60b65ba8d72f7f9d428890f77f}{wykonaj}} = false
+\begin{DoxyCompactList}\small\item\em Zmienna pozwalajaca na wyswietlenie tekstury umierania playera. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{main_8cpp_a8a462205e6fec5c79973c9f80622ae8c}{ziara4}} = 0
+\begin{DoxyCompactList}\small\item\em Zmienna pozwalajaca na wykonanie tekstury umierania. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{main_8cpp_ad2b53279f6ac9528fc2319605ef637c7}{delay2}} = 0
+\begin{DoxyCompactList}\small\item\em Zmienna pozwalajaca na opoznienie aktualnie wykonywanej tekstury. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{main_8cpp_ac19b696272dc7c45d9337805f24140d4}{kontroluj\+\_\+strzal}} = 0
+\begin{DoxyCompactList}\small\item\em Zmienna pozwalajaca na zablokowaniu dublowania sie strzal w tym samym wektorze, sprawdzanie pozycji gracza, sprawdzanie ktorej metody ma uzyc z klasy. \end{DoxyCompactList}\item 
+vector$<$ \mbox{\hyperlink{classzombie}{zombie}} $>$ \mbox{\hyperlink{main_8cpp_a8d9621f5071f08cb30fb51297cbd4d8c}{wektor\+\_\+zombie}}
+\begin{DoxyCompactList}\small\item\em Wektor przechowujacy zombie. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Dokumentacja funkcji}
+\mbox{\Hypertarget{main_8cpp_a8a3aad63c953ed8a7df5aff65e7b22b9}\label{main_8cpp_a8a3aad63c953ed8a7df5aff65e7b22b9}} 
+\index{main.cpp@{main.cpp}!convert\_score@{convert\_score}}
+\index{convert\_score@{convert\_score}!main.cpp@{main.cpp}}
+\doxysubsubsection{\texorpdfstring{convert\_score()}{convert\_score()}}
+{\footnotesize\ttfamily void convert\+\_\+score (\begin{DoxyParamCaption}\item[{int \&}]{score,  }\item[{Text \&}]{tekscior,  }\item[{stringstream \&}]{score\+\_\+to\+\_\+string,  }\item[{Text \&}]{poziomek,  }\item[{int \&}]{poziom,  }\item[{stringstream \&}]{poziom\+\_\+to\+\_\+string }\end{DoxyParamCaption})}
+
+
+
+Funckaja pozwalajaca na wyswietlanie punktow w grze. 
+
+
+\begin{DoxyParams}{Parametry}
+{\em score} & -\/ przechowuje ilosc zdobytych punktow \\
+\hline
+{\em tekscior} & -\/ przechowuje czcionke do wyswietlania \\
+\hline
+{\em score\+\_\+to\+\_\+string} & -\/ wyswietla zdobyte przez gracza punkty \\
+\hline
+{\em poziomek} & -\/ przechowuje czcionke do wyswietlenia \\
+\hline
+{\em poziom} & -\/ przechowuje aktualny poziom gry \\
+\hline
+{\em poziom\+\_\+to\+\_\+string} & -\/ wyswietla aktualny poziom gry \\
+\hline
+\end{DoxyParams}
+
+
+Definicja w linii \mbox{\hyperlink{main_8cpp_source_l00684}{684}} pliku \mbox{\hyperlink{main_8cpp_source}{main.\+cpp}}.
+
+\mbox{\Hypertarget{main_8cpp_a49ade5a51d290c0ad178dc988069e55a}\label{main_8cpp_a49ade5a51d290c0ad178dc988069e55a}} 
+\index{main.cpp@{main.cpp}!hp\_rowne\_zero@{hp\_rowne\_zero}}
+\index{hp\_rowne\_zero@{hp\_rowne\_zero}!main.cpp@{main.cpp}}
+\doxysubsubsection{\texorpdfstring{hp\_rowne\_zero()}{hp\_rowne\_zero()}}
+{\footnotesize\ttfamily void hp\+\_\+rowne\+\_\+zero (\begin{DoxyParamCaption}\item[{Rectangle\+Shape \&}]{player,  }\item[{sf\+::\+Render\+Window \&}]{window }\end{DoxyParamCaption})}
+
+
+
+Funkcja sprawdza czy poziom zdrowia gracza jest rowne zero, jesli tak to wyswietla okno przegrania gry. 
+
+
+\begin{DoxyParams}{Parametry}
+{\em player} & -\/ pozwala wyswietlic tekstura gracza \\
+\hline
+{\em window} & -\/ wyswietla na ekranie odpowiednie tekstury \\
+\hline
+\end{DoxyParams}
+
+
+Definicja w linii \mbox{\hyperlink{main_8cpp_source_l00730}{730}} pliku \mbox{\hyperlink{main_8cpp_source}{main.\+cpp}}.
+
+\mbox{\Hypertarget{main_8cpp_af4327960a235ee29f00326aa5c2f158a}\label{main_8cpp_af4327960a235ee29f00326aa5c2f158a}} 
+\index{main.cpp@{main.cpp}!kolizja\_strzaly@{kolizja\_strzaly}}
+\index{kolizja\_strzaly@{kolizja\_strzaly}!main.cpp@{main.cpp}}
+\doxysubsubsection{\texorpdfstring{kolizja\_strzaly()}{kolizja\_strzaly()}}
+{\footnotesize\ttfamily bool kolizja\+\_\+strzaly (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classstrzal}{strzal}}}]{strzalka }\end{DoxyParamCaption})}
+
+
+
+Funkcja sprawdzajaca kolizje strzaly. 
+
+
+\begin{DoxyParams}{Parametry}
+{\em strzalka} & -\/ obiekt klasy strzal, tworzy strzale \\
+\hline
+\end{DoxyParams}
+
+
+Definicja w linii \mbox{\hyperlink{main_8cpp_source_l00053}{53}} pliku \mbox{\hyperlink{main_8cpp_source}{main.\+cpp}}.
+
+\mbox{\Hypertarget{main_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}\label{main_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}} 
+\index{main.cpp@{main.cpp}!main@{main}}
+\index{main@{main}!main.cpp@{main.cpp}}
+\doxysubsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily int main (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\texorpdfstring{$<$}{<} Stworzenie okna gry
+
+\texorpdfstring{$<$}{<} Ustawienie ilosci FPS w grze
+
+\texorpdfstring{$<$}{<} Tworzenie wektora strzaly, ktora leci w prawa strone. £adowanie tekstury dla strzaly.
+
+\texorpdfstring{$<$}{<} Tworzenie wektora strzaly, ktora leci w lewa strone. £adowanie tekstury dla strzaly.
+
+\texorpdfstring{$<$}{<} Tworzenie wektora strzaly, ktora leci w dol. £adowanie tekstury dla strzaly.
+
+\texorpdfstring{$<$}{<} Tworzenie wektora strzaly, ktora leci w gore. £adowanie tekstury dla strzaly.
+
+\texorpdfstring{$<$}{<} Stworzenie szurikena ktorym posluguje sie berserker. Szuriken porusza sie w prawo. Zaladowanie tekstury dla szurikena.
+
+\texorpdfstring{$<$}{<} Stworzenie szurikena ktorym posluguje sie berserker. Szuriken porusza sie w lewo. Zaladowanie tekstury dla szurikena.
+
+\texorpdfstring{$<$}{<} Stworzenie szurikena ktorym posluguje sie berserker. Szuriken porusza sie w dol. Zaladowanie tekstury dla szurikena.
+
+\texorpdfstring{$<$}{<} Stworzenie szurikena ktorym posluguje sie berserker. Szuriken porusza sie w gore. Zaladowanie tekstury dla szurikena.
+
+\texorpdfstring{$<$}{<} Stworzenie tekstur animacji dla wyboru postaci
+
+\texorpdfstring{$<$}{<} Stworzenie i ustawienie tekstury dla gracza berserker
+
+\texorpdfstring{$<$}{<} Stworzenie i ustawienie tekstury dla gracza lucznik
+
+\texorpdfstring{$<$}{<} Stworzenie tekstury dla zombie, oraz wywolanie metody zombie
+
+\texorpdfstring{$<$}{<} Stworzenie czcionki do wyswietlania punktow w grze
+
+\texorpdfstring{$<$}{<} Stworzenie czcionki do wyswietlania poziomu w grze
+
+\texorpdfstring{$<$}{<} Stworzenie tekstury menu
+
+\texorpdfstring{$<$}{<} Stworzenie tekstury wyboru postaci
+
+\texorpdfstring{$<$}{<} Stworzenie tesktury dla instruckji
+
+\texorpdfstring{$<$}{<} Stworzenie tekstury mapy docelowej
+
+\texorpdfstring{$<$}{<} Wyswietlenie postaci w wyborze postaci
+
+\texorpdfstring{$<$}{<} Stworzenie muzyki w grze
+
+\texorpdfstring{$<$}{<} Wywolanie funkcji menu
+
+\texorpdfstring{$<$}{<} Stworzenie obiektu klasy lucznik, wywolanie metod klasy
+
+\texorpdfstring{$<$}{<} Usuwanie strzal z pamieci
+
+\texorpdfstring{$<$}{<} Stworzenie obiektu klasy berserk, wywolanie metod klasy
+
+\texorpdfstring{$<$}{<} Usuwanie szurikenow z pamieci
+
+\texorpdfstring{$<$}{<} Ten if pozwala nam na zablokowaniu dublowania sie strzal, hp gracza, oraz na wyswietlaniu tesktury umierania gracza
+
+\texorpdfstring{$<$}{<} W zaleznosci od zdobytych punktow, poziom gry sie zwieksza i tworzy sie wiecej potworow
+
+\texorpdfstring{$<$}{<} W tych if\textquotesingle{}ach sprawdzamy w ktorym miejscu dokladnie jestesmy.
+
+Definicja w linii \mbox{\hyperlink{main_8cpp_source_l00784}{784}} pliku \mbox{\hyperlink{main_8cpp_source}{main.\+cpp}}.
+
+\mbox{\Hypertarget{main_8cpp_a154409f4cb8a43c37bd48c276fa7812e}\label{main_8cpp_a154409f4cb8a43c37bd48c276fa7812e}} 
+\index{main.cpp@{main.cpp}!ostateczne\_punkty@{ostateczne\_punkty}}
+\index{ostateczne\_punkty@{ostateczne\_punkty}!main.cpp@{main.cpp}}
+\doxysubsubsection{\texorpdfstring{ostateczne\_punkty()}{ostateczne\_punkty()}}
+{\footnotesize\ttfamily void ostateczne\+\_\+punkty (\begin{DoxyParamCaption}\item[{int \&}]{score,  }\item[{Text \&}]{end\+\_\+score,  }\item[{stringstream \&}]{endzik\+\_\+score }\end{DoxyParamCaption})}
+
+
+
+Funckja wyswietlajaca wszystkie punkty ktore zdobyl gracz. 
+
+
+\begin{DoxyParams}{Parametry}
+{\em score} & -\/ przechwytuje wszystkie zdobyte punkty przez gracza \\
+\hline
+{\em end\+\_\+score} & -\/ tekst do wyswietlenia \\
+\hline
+{\em endzik\+\_\+score} & -\/ wyswietla na ostatnim ekranie ostateczna ilosc zdobytych punktow \\
+\hline
+\end{DoxyParams}
+
+
+Definicja w linii \mbox{\hyperlink{main_8cpp_source_l00713}{713}} pliku \mbox{\hyperlink{main_8cpp_source}{main.\+cpp}}.
+
+\mbox{\Hypertarget{main_8cpp_ae2f5037db40719401e9756b3f7ac2b75}\label{main_8cpp_ae2f5037db40719401e9756b3f7ac2b75}} 
+\index{main.cpp@{main.cpp}!zombie\_pozycja@{zombie\_pozycja}}
+\index{zombie\_pozycja@{zombie\_pozycja}!main.cpp@{main.cpp}}
+\doxysubsubsection{\texorpdfstring{zombie\_pozycja()}{zombie\_pozycja()}}
+{\footnotesize\ttfamily void zombie\+\_\+pozycja (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Funckja sprawdzajaca pozycje zombie, oraz ustawiajaca ich kolizje. 
+
+
+
+Definicja w linii \mbox{\hyperlink{main_8cpp_source_l00657}{657}} pliku \mbox{\hyperlink{main_8cpp_source}{main.\+cpp}}.
+
+
+
+\doxysubsection{Dokumentacja zmiennych}
+\mbox{\Hypertarget{main_8cpp_a49f3e17259835b0bfba5bf73c90e8916}\label{main_8cpp_a49f3e17259835b0bfba5bf73c90e8916}} 
+\index{main.cpp@{main.cpp}!bitmapa@{bitmapa}}
+\index{bitmapa@{bitmapa}!main.cpp@{main.cpp}}
+\doxysubsubsection{\texorpdfstring{bitmapa}{bitmapa}}
+{\footnotesize\ttfamily int bitmapa = 0}
+
+
+
+Zmienna przechowuje stan aktualnej bitmapy. 
+
+
+
+Definicja w linii \mbox{\hyperlink{main_8cpp_source_l00028}{28}} pliku \mbox{\hyperlink{main_8cpp_source}{main.\+cpp}}.
+
+\mbox{\Hypertarget{main_8cpp_a4c627af561358316985314767df6b80d}\label{main_8cpp_a4c627af561358316985314767df6b80d}} 
+\index{main.cpp@{main.cpp}!czas\_respu\_zombie@{czas\_respu\_zombie}}
+\index{czas\_respu\_zombie@{czas\_respu\_zombie}!main.cpp@{main.cpp}}
+\doxysubsubsection{\texorpdfstring{czas\_respu\_zombie}{czas\_respu\_zombie}}
+{\footnotesize\ttfamily int czas\+\_\+respu\+\_\+zombie =10000}
+
+
+
+Zmienna przechowujaca opoznienie dla pojawienia sie zombie. 
+
+
+
+Definicja w linii \mbox{\hyperlink{main_8cpp_source_l00037}{37}} pliku \mbox{\hyperlink{main_8cpp_source}{main.\+cpp}}.
+
+\mbox{\Hypertarget{main_8cpp_a40fdb8401d0ebf6f4c627b858b9d22f4}\label{main_8cpp_a40fdb8401d0ebf6f4c627b858b9d22f4}} 
+\index{main.cpp@{main.cpp}!czy\_strzela@{czy\_strzela}}
+\index{czy\_strzela@{czy\_strzela}!main.cpp@{main.cpp}}
+\doxysubsubsection{\texorpdfstring{czy\_strzela}{czy\_strzela}}
+{\footnotesize\ttfamily bool czy\+\_\+strzela = false}
+
+
+
+Zmienna okreslajaca czy gracz wykonuje strzal. 
+
+
+
+Definicja w linii \mbox{\hyperlink{main_8cpp_source_l00035}{35}} pliku \mbox{\hyperlink{main_8cpp_source}{main.\+cpp}}.
+
+\mbox{\Hypertarget{main_8cpp_a6f1be1f780ff54ec75b41451cd4d90bd}\label{main_8cpp_a6f1be1f780ff54ec75b41451cd4d90bd}} 
+\index{main.cpp@{main.cpp}!delay@{delay}}
+\index{delay@{delay}!main.cpp@{main.cpp}}
+\doxysubsubsection{\texorpdfstring{delay}{delay}}
+{\footnotesize\ttfamily int delay = 0}
+
+
+
+Zmienna pozwalajaca na opoznienie aktualnie wykonywanej tekstury. 
+
+
+
+Definicja w linii \mbox{\hyperlink{main_8cpp_source_l00033}{33}} pliku \mbox{\hyperlink{main_8cpp_source}{main.\+cpp}}.
+
+\mbox{\Hypertarget{main_8cpp_ad2b53279f6ac9528fc2319605ef637c7}\label{main_8cpp_ad2b53279f6ac9528fc2319605ef637c7}} 
+\index{main.cpp@{main.cpp}!delay2@{delay2}}
+\index{delay2@{delay2}!main.cpp@{main.cpp}}
+\doxysubsubsection{\texorpdfstring{delay2}{delay2}}
+{\footnotesize\ttfamily int delay2 = 0}
+
+
+
+Zmienna pozwalajaca na opoznienie aktualnie wykonywanej tekstury. 
+
+
+
+Definicja w linii \mbox{\hyperlink{main_8cpp_source_l00044}{44}} pliku \mbox{\hyperlink{main_8cpp_source}{main.\+cpp}}.
+
+\mbox{\Hypertarget{main_8cpp_a5992b274cfdcacdbc1fa8347fd01ebde}\label{main_8cpp_a5992b274cfdcacdbc1fa8347fd01ebde}} 
+\index{main.cpp@{main.cpp}!done@{done}}
+\index{done@{done}!main.cpp@{main.cpp}}
+\doxysubsubsection{\texorpdfstring{done}{done}}
+{\footnotesize\ttfamily int done = 0}
+
+
+
+Zmienna odpowiadajaca za wybor postaci. 
+
+
+
+Definicja w linii \mbox{\hyperlink{main_8cpp_source_l00029}{29}} pliku \mbox{\hyperlink{main_8cpp_source}{main.\+cpp}}.
+
+\mbox{\Hypertarget{main_8cpp_a09fbbe87083078f86ee37d794546dd12}\label{main_8cpp_a09fbbe87083078f86ee37d794546dd12}} 
+\index{main.cpp@{main.cpp}!hp@{hp}}
+\index{hp@{hp}!main.cpp@{main.cpp}}
+\doxysubsubsection{\texorpdfstring{hp}{hp}}
+{\footnotesize\ttfamily float hp =10}
+
+
+
+Zmienna przechowujaca poziom zdrowia lucznika. 
+
+
+
+Definicja w linii \mbox{\hyperlink{main_8cpp_source_l00038}{38}} pliku \mbox{\hyperlink{main_8cpp_source}{main.\+cpp}}.
+
+\mbox{\Hypertarget{main_8cpp_ad19d02392da12c2e5a3ecf54021ace85}\label{main_8cpp_ad19d02392da12c2e5a3ecf54021ace85}} 
+\index{main.cpp@{main.cpp}!hp\_berserker@{hp\_berserker}}
+\index{hp\_berserker@{hp\_berserker}!main.cpp@{main.cpp}}
+\doxysubsubsection{\texorpdfstring{hp\_berserker}{hp\_berserker}}
+{\footnotesize\ttfamily float hp\+\_\+berserker =7}
+
+
+
+Zmienna przechowujaca poziom zdrowia berserkera. 
+
+
+
+Definicja w linii \mbox{\hyperlink{main_8cpp_source_l00039}{39}} pliku \mbox{\hyperlink{main_8cpp_source}{main.\+cpp}}.
+
+\mbox{\Hypertarget{main_8cpp_a06c0dc845bc97c11846126121ef52eae}\label{main_8cpp_a06c0dc845bc97c11846126121ef52eae}} 
+\index{main.cpp@{main.cpp}!IdleAnim@{IdleAnim}}
+\index{IdleAnim@{IdleAnim}!main.cpp@{main.cpp}}
+\doxysubsubsection{\texorpdfstring{IdleAnim}{IdleAnim}}
+{\footnotesize\ttfamily int Idle\+Anim = 0}
+
+
+
+Zmienna pozwalajaca na wyswietlenie tekstury w zaleznosci od pozycji gracza. 
+
+
+
+Definicja w linii \mbox{\hyperlink{main_8cpp_source_l00034}{34}} pliku \mbox{\hyperlink{main_8cpp_source}{main.\+cpp}}.
+
+\mbox{\Hypertarget{main_8cpp_ac19b696272dc7c45d9337805f24140d4}\label{main_8cpp_ac19b696272dc7c45d9337805f24140d4}} 
+\index{main.cpp@{main.cpp}!kontroluj\_strzal@{kontroluj\_strzal}}
+\index{kontroluj\_strzal@{kontroluj\_strzal}!main.cpp@{main.cpp}}
+\doxysubsubsection{\texorpdfstring{kontroluj\_strzal}{kontroluj\_strzal}}
+{\footnotesize\ttfamily int kontroluj\+\_\+strzal = 0}
+
+
+
+Zmienna pozwalajaca na zablokowaniu dublowania sie strzal w tym samym wektorze, sprawdzanie pozycji gracza, sprawdzanie ktorej metody ma uzyc z klasy. 
+
+
+
+Definicja w linii \mbox{\hyperlink{main_8cpp_source_l00045}{45}} pliku \mbox{\hyperlink{main_8cpp_source}{main.\+cpp}}.
+
+\mbox{\Hypertarget{main_8cpp_adf3f9636cdfb387bad5ffdef052bda59}\label{main_8cpp_adf3f9636cdfb387bad5ffdef052bda59}} 
+\index{main.cpp@{main.cpp}!poziom@{poziom}}
+\index{poziom@{poziom}!main.cpp@{main.cpp}}
+\doxysubsubsection{\texorpdfstring{poziom}{poziom}}
+{\footnotesize\ttfamily int poziom = 1}
+
+
+
+Zmienna przechowujaca aktualny poziom gry. 
+
+
+
+Definicja w linii \mbox{\hyperlink{main_8cpp_source_l00041}{41}} pliku \mbox{\hyperlink{main_8cpp_source}{main.\+cpp}}.
+
+\mbox{\Hypertarget{main_8cpp_a5d7bc75d40aa91845c99e2eae27ce7db}\label{main_8cpp_a5d7bc75d40aa91845c99e2eae27ce7db}} 
+\index{main.cpp@{main.cpp}!pozycja@{pozycja}}
+\index{pozycja@{pozycja}!main.cpp@{main.cpp}}
+\doxysubsubsection{\texorpdfstring{pozycja}{pozycja}}
+{\footnotesize\ttfamily int pozycja = 0}
+
+
+
+Zmienna przechowuje aktualna pozycje gracza. 
+
+
+
+Definicja w linii \mbox{\hyperlink{main_8cpp_source_l00032}{32}} pliku \mbox{\hyperlink{main_8cpp_source}{main.\+cpp}}.
+
+\mbox{\Hypertarget{main_8cpp_aef160b7437d94056f1dc59646cd5b87d}\label{main_8cpp_aef160b7437d94056f1dc59646cd5b87d}} 
+\index{main.cpp@{main.cpp}!score@{score}}
+\index{score@{score}!main.cpp@{main.cpp}}
+\doxysubsubsection{\texorpdfstring{score}{score}}
+{\footnotesize\ttfamily int score = 0}
+
+
+
+Zmienna przechowujaca zdobyte punkty przez gracza. 
+
+
+
+Definicja w linii \mbox{\hyperlink{main_8cpp_source_l00040}{40}} pliku \mbox{\hyperlink{main_8cpp_source}{main.\+cpp}}.
+
+\mbox{\Hypertarget{main_8cpp_a8d9621f5071f08cb30fb51297cbd4d8c}\label{main_8cpp_a8d9621f5071f08cb30fb51297cbd4d8c}} 
+\index{main.cpp@{main.cpp}!wektor\_zombie@{wektor\_zombie}}
+\index{wektor\_zombie@{wektor\_zombie}!main.cpp@{main.cpp}}
+\doxysubsubsection{\texorpdfstring{wektor\_zombie}{wektor\_zombie}}
+{\footnotesize\ttfamily vector$<$\mbox{\hyperlink{classzombie}{zombie}}$>$ wektor\+\_\+zombie}
+
+
+
+Wektor przechowujacy zombie. 
+
+
+
+Definicja w linii \mbox{\hyperlink{main_8cpp_source_l00046}{46}} pliku \mbox{\hyperlink{main_8cpp_source}{main.\+cpp}}.
+
+\mbox{\Hypertarget{main_8cpp_a0e25e160f353fa768adfdf022b48ca1f}\label{main_8cpp_a0e25e160f353fa768adfdf022b48ca1f}} 
+\index{main.cpp@{main.cpp}!WINDOW\_HEIGHT@{WINDOW\_HEIGHT}}
+\index{WINDOW\_HEIGHT@{WINDOW\_HEIGHT}!main.cpp@{main.cpp}}
+\doxysubsubsection{\texorpdfstring{WINDOW\_HEIGHT}{WINDOW\_HEIGHT}}
+{\footnotesize\ttfamily const unsigned WINDOW\+\_\+\+HEIGHT = 768}
+
+
+
+Zmienna przechowuje szerokosc mapy. 
+
+
+
+Definicja w linii \mbox{\hyperlink{main_8cpp_source_l00031}{31}} pliku \mbox{\hyperlink{main_8cpp_source}{main.\+cpp}}.
+
+\mbox{\Hypertarget{main_8cpp_a27a420ec4683c7d9ebbc26410c4e5774}\label{main_8cpp_a27a420ec4683c7d9ebbc26410c4e5774}} 
+\index{main.cpp@{main.cpp}!WINDOW\_WIDTH@{WINDOW\_WIDTH}}
+\index{WINDOW\_WIDTH@{WINDOW\_WIDTH}!main.cpp@{main.cpp}}
+\doxysubsubsection{\texorpdfstring{WINDOW\_WIDTH}{WINDOW\_WIDTH}}
+{\footnotesize\ttfamily const unsigned WINDOW\+\_\+\+WIDTH = 1366}
+
+
+
+Zmienna przechowuje dlugosc mapy. 
+
+
+
+Definicja w linii \mbox{\hyperlink{main_8cpp_source_l00030}{30}} pliku \mbox{\hyperlink{main_8cpp_source}{main.\+cpp}}.
+
+\mbox{\Hypertarget{main_8cpp_a929b8b60b65ba8d72f7f9d428890f77f}\label{main_8cpp_a929b8b60b65ba8d72f7f9d428890f77f}} 
+\index{main.cpp@{main.cpp}!wykonaj@{wykonaj}}
+\index{wykonaj@{wykonaj}!main.cpp@{main.cpp}}
+\doxysubsubsection{\texorpdfstring{wykonaj}{wykonaj}}
+{\footnotesize\ttfamily bool wykonaj = false}
+
+
+
+Zmienna pozwalajaca na wyswietlenie tekstury umierania playera. 
+
+
+
+Definicja w linii \mbox{\hyperlink{main_8cpp_source_l00042}{42}} pliku \mbox{\hyperlink{main_8cpp_source}{main.\+cpp}}.
+
+\mbox{\Hypertarget{main_8cpp_a0a13af434a54e9386af7084a36ba81fb}\label{main_8cpp_a0a13af434a54e9386af7084a36ba81fb}} 
+\index{main.cpp@{main.cpp}!ziara@{ziara}}
+\index{ziara@{ziara}!main.cpp@{main.cpp}}
+\doxysubsubsection{\texorpdfstring{ziara}{ziara}}
+{\footnotesize\ttfamily float ziara = 0}
+
+
+
+Zmienna pozwalajaca na wykonanie tekstury strzalu. 
+
+
+
+Definicja w linii \mbox{\hyperlink{main_8cpp_source_l00036}{36}} pliku \mbox{\hyperlink{main_8cpp_source}{main.\+cpp}}.
+
+\mbox{\Hypertarget{main_8cpp_a8a462205e6fec5c79973c9f80622ae8c}\label{main_8cpp_a8a462205e6fec5c79973c9f80622ae8c}} 
+\index{main.cpp@{main.cpp}!ziara4@{ziara4}}
+\index{ziara4@{ziara4}!main.cpp@{main.cpp}}
+\doxysubsubsection{\texorpdfstring{ziara4}{ziara4}}
+{\footnotesize\ttfamily int ziara4 = 0}
+
+
+
+Zmienna pozwalajaca na wykonanie tekstury umierania. 
+
+
+
+Definicja w linii \mbox{\hyperlink{main_8cpp_source_l00043}{43}} pliku \mbox{\hyperlink{main_8cpp_source}{main.\+cpp}}.
+

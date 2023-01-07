@@ -53,8 +53,6 @@
 		<Unit filename="cale_menu_lewy_klik.h" />
 		<Unit filename="isAnyKeyPressed.cpp" />
 		<Unit filename="isAnyKeyPressed.h" />
-		<Unit filename="klasa_postac.cpp" />
-		<Unit filename="klasa_postac.h" />
 		<Unit filename="main.cpp" />
 		<Unit filename="pozycja_gracza.cpp" />
 		<Unit filename="pozycja_gracza.h" />

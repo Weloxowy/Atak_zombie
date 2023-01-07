@@ -1,0 +1,139 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="pl">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.6"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Atak Zombie: Dokumentacja pliku pozycja_gracza.cpp</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectlogo"><img alt="Logo" src="logo.png"/></td>
+  <td id="projectalign">
+   <div id="projectname">Atak Zombie
+   </div>
+   <div id="projectbrief">Gra 2D stworzona w SFML, polegająca na zabijaniu nacierających potworów.</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Wygenerowano przez Doxygen 1.9.6 -->
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>Strona&#160;główna</span></a></li>
+      <li><a href="annotated.html"><span>Klasy</span></a></li>
+      <li class="current"><a href="files.html"><span>Pliki</span></a></li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>Lista&#160;plików</span></a></li>
+      <li><a href="globals.html"><span>Składowe&#160;plików</span></a></li>
+    </ul>
+  </div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#func-members">Funkcje</a>  </div>
+  <div class="headertitle"><div class="title">Dokumentacja pliku pozycja_gracza.cpp</div></div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><code>#include &lt;SFML/Graphics.hpp&gt;</code><br />
+<code>#include &lt;iostream&gt;</code><br />
+<code>#include &lt;windows.h&gt;</code><br />
+<code>#include &lt;math.h&gt;</code><br />
+<code>#include &quot;<a class="el" href="pozycja__gracza_8h_source.html">pozycja_gracza.h</a>&quot;</code><br />
+</div><div class="textblock"><div class="dynheader">
+Wykres zależności załączania dla pozycja_gracza.cpp:</div>
+<div class="dyncontent">
+<div class="center"><img src="pozycja__gracza_8cpp__incl.png" border="0" usemap="#apozycja__gracza_8cpp" alt=""/></div>
+</div>
+</div>
+<p><a href="pozycja__gracza_8cpp_source.html">Idź do kodu źródłowego tego pliku.</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
+Funkcje</h2></td></tr>
+<tr class="memitem:a475b039484d896dc7aa4aba0cb47505e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="pozycja__gracza_8cpp.html#a475b039484d896dc7aa4aba0cb47505e">sprawdz_pozycje</a> (RectangleShape &amp;player, int <a class="el" href="main_8cpp.html#a5d7bc75d40aa91845c99e2eae27ce7db">pozycja</a>, int &amp;<a class="el" href="main_8cpp.html#a06c0dc845bc97c11846126121ef52eae">IdleAnim</a>, int &amp;<a class="el" href="main_8cpp.html#a6f1be1f780ff54ec75b41451cd4d90bd">delay</a>, float &amp;<a class="el" href="main_8cpp.html#a09fbbe87083078f86ee37d794546dd12">hp</a>)</td></tr>
+<tr class="memdesc:a475b039484d896dc7aa4aba0cb47505e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Funkcja sprawdza aktualna pozycje gracza i kierunek w jakim jest on zwrocony aby dopasowac wlasciwa animacje.  <br /></td></tr>
+<tr class="separator:a475b039484d896dc7aa4aba0cb47505e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">Dokumentacja funkcji</h2>
+<a id="a475b039484d896dc7aa4aba0cb47505e" name="a475b039484d896dc7aa4aba0cb47505e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a475b039484d896dc7aa4aba0cb47505e">&#9670;&#160;</a></span>sprawdz_pozycje()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void sprawdz_pozycje </td>
+          <td>(</td>
+          <td class="paramtype">RectangleShape &amp;&#160;</td>
+          <td class="paramname"><em>player</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>pozycja</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int &amp;&#160;</td>
+          <td class="paramname"><em>IdleAnim</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int &amp;&#160;</td>
+          <td class="paramname"><em>delay</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float &amp;&#160;</td>
+          <td class="paramname"><em>hp</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Funkcja sprawdza aktualna pozycje gracza i kierunek w jakim jest on zwrocony aby dopasowac wlasciwa animacje. </p>
+<dl class="params"><dt>Parametry</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">RectangleShape</td><td>&amp; player - wskaznik na postac </td></tr>
+    <tr><td class="paramname">int</td><td>pozycja - kierunek zwrotu gracza: 1 = lewo, 2 = prawo, 3 = gora , 4 = dol </td></tr>
+    <tr><td class="paramname">int</td><td>&amp;IdleAnim - iterator animacji tekstur </td></tr>
+    <tr><td class="paramname">int</td><td>&amp;delay - opoznienie </td></tr>
+    <tr><td class="paramname">float</td><td>&amp;hp - aktualne zdrowie postaci </td></tr>
+  </table>
+  </dd>
+</dl>
+<p>&lt; Sprawdza czy gracz nie strzela lub nie idzie i zyje</p>
+
+<p class="definition">Definicja w linii <a class="el" href="pozycja__gracza_8cpp_source.html#l00025">25</a> pliku <a class="el" href="pozycja__gracza_8cpp_source.html">pozycja_gracza.cpp</a>.</p>
+
+</div>
+</div>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Wygenerowano przez&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.6
+</small></address>
+</body>
+</html>

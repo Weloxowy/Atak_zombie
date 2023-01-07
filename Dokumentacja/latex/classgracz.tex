@@ -1,0 +1,505 @@
+\hypertarget{classgracz}{}\doxysection{Dokumentacja klasy gracz}
+\label{classgracz}\index{gracz@{gracz}}
+
+
+Klasa gracz.  
+
+
+\doxysubsection*{Metody publiczne}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classgracz_a9dcba2fd5edd0553e8a48adc1d2297d2}{render\+\_\+hp}} (sf\+::\+Render\+Target \&target)
+\begin{DoxyCompactList}\small\item\em Funkcja wyswietlajaca dwa paski zdrowia gracza. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classgracz_aa1588fb740ca7da675cf36db12e73352}{init\+HP}} (Rectangle\+Shape \&player)
+\begin{DoxyCompactList}\small\item\em Funkcja pozwalajaca na ustawienie pozycji oraz kolorow paskow zdrowia. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classgracz_a567a955019653cc42aa8af10939f70d6}{update\+\_\+hp}} ()
+\begin{DoxyCompactList}\small\item\em Funckja sprawdza i modyfikuje aktualny poziom zdrowia. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classgracz_a1189d390559e5030bbb8c9d3630d27a2}{update\+\_\+hp\+\_\+berserker}} ()
+\begin{DoxyCompactList}\small\item\em Funckja sprawdza i modyfikuje aktualny poziom zdrowia. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classgracz_a7e9797a9a1572d0be7c24b104ddfdbab}{kolizja\+\_\+ogolna}} (Rectangle\+Shape \&player)
+\begin{DoxyCompactList}\small\item\em Funckja sprawdza aktualna pozycje playera, i blokuje mu wyjscie poza mape. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classgracz_ab667b4b02d75f77fe5ab5a0c02bf606b}{poruszanie\+\_\+lewo}} (Rectangle\+Shape \&player)
+\begin{DoxyCompactList}\small\item\em Funckja pozwala na poruszanie sie w lewo lucznika (wraz z kolizja), oraz wyswietla tekstury. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classgracz_a61321cb2a2a1e4c6c6b51c558a81cc79}{poruszanie\+\_\+lewo\+\_\+berserker}} (Rectangle\+Shape \&player)
+\begin{DoxyCompactList}\small\item\em Funckja pozwala na poruszanie sie w lewo berserkera (wraz z kolizja), oraz wyswietla tekstury. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classgracz_a60e2f4af74c39478cec367b02f7baca8}{poruszanie\+\_\+prawo}} (Rectangle\+Shape \&player)
+\begin{DoxyCompactList}\small\item\em Funckja pozwala na poruszanie sie w prawo lucznika (wraz z kolizja), oraz wyswietla tekstury. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classgracz_a175c552f98a8b6e81e6b08de750cd369}{poruszanie\+\_\+prawo\+\_\+berserker}} (Rectangle\+Shape \&player)
+\begin{DoxyCompactList}\small\item\em Funckja pozwala na poruszanie sie w prawo berserkera (wraz z kolizja), oraz wyswietla tekstury. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classgracz_a3c7eb928efe47084d27e537652824d76}{poruszanie\+\_\+gora}} (Rectangle\+Shape \&player)
+\begin{DoxyCompactList}\small\item\em Funckja pozwala na poruszanie sie w gore lucznika (wraz z kolizja), oraz wyswietla tekstury. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classgracz_ab2824ecb9a3d4527df47882bcf1de42a}{poruszanie\+\_\+gora\+\_\+berserker}} (Rectangle\+Shape \&player)
+\begin{DoxyCompactList}\small\item\em Funckja pozwala na poruszanie sie w gore berserkera (wraz z kolizja), oraz wyswietla tekstury. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classgracz_a17f7ec264952c5f97c1529d496496ece}{poruszanie\+\_\+dol}} (Rectangle\+Shape \&player)
+\begin{DoxyCompactList}\small\item\em Funckja pozwala na poruszanie sie w dol lucznika (wraz z kolizja), oraz wyswietla tekstury. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classgracz_ab71a4fd49df034310a4254ff1dc8e528}{poruszanie\+\_\+dol\+\_\+berserker}} (Rectangle\+Shape \&player)
+\begin{DoxyCompactList}\small\item\em Funckja pozwala na poruszanie sie w dol berserkera (wraz z kolizja), oraz wyswietla tekstury. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classgracz_ad7b950c0b961bdfe4043cc2d505e33d9}{poruszanie\+\_\+ukos\+\_\+lewo}} (Rectangle\+Shape \&player)
+\begin{DoxyCompactList}\small\item\em Funckja pozwala na poruszanie sie na ukos lewo gracza (wraz z kolizja), oraz wyswietla tekstury. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classgracz_a391cfdb68554e351e54953b20bccea63}{poruszanie\+\_\+ukos\+\_\+prawo}} (Rectangle\+Shape \&player)
+\begin{DoxyCompactList}\small\item\em Funckja pozwala na poruszanie sie na ukos prawo gracza (wraz z kolizja), oraz wyswietla tekstury. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classgracz_a8871a02731c63081cd307448995e468e}{strzelanie}} (Rectangle\+Shape \&player, Texture \&strzalka\+\_\+gora, Texture \&strzalka1, Texture \&strzalka\+\_\+lewo, Texture \&strzalka\+\_\+dol, vector$<$ \mbox{\hyperlink{classstrzal}{strzal}} $>$ \&wektor\+\_\+strzal\+\_\+1, vector$<$ \mbox{\hyperlink{classstrzal}{strzal}} $>$ \&wektor\+\_\+strzal, vector$<$ \mbox{\hyperlink{classstrzal}{strzal}} $>$ \&wektor\+\_\+strzal\+\_\+dol, vector$<$ \mbox{\hyperlink{classstrzal}{strzal}} $>$ \&wektor\+\_\+strzal\+\_\+gora, \mbox{\hyperlink{classstrzal}{strzal}} \&strzalka, \mbox{\hyperlink{classstrzal}{strzal}} \&strzalka\+\_\+lewoo, \mbox{\hyperlink{classstrzal}{strzal}} \&strzalka\+\_\+goraa, \mbox{\hyperlink{classstrzal}{strzal}} \&strzalka\+\_\+doll)
+\begin{DoxyCompactList}\small\item\em Funckja pozwalajaca na strzelanie playera, wykonuje rowniez odpowiednie tekstury. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classgracz_a0f485d51f887a6d29986d447af54cda5}{usun\+\_\+strzale\+\_\+z\+\_\+pamieci}} (vector$<$ \mbox{\hyperlink{classstrzal}{strzal}} $>$ \&wektor\+\_\+strzal)
+\begin{DoxyCompactList}\small\item\em Funkcja usuwajaca strzaly z pamieci. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Atrybuty publiczne}
+\begin{DoxyCompactItemize}
+\item 
+sf\+::\+Rectangle\+Shape \mbox{\hyperlink{classgracz_ae43aa08a575696a2838458acd9823568}{hp\+Bar\+Back}}
+\item 
+sf\+::\+Rectangle\+Shape \mbox{\hyperlink{classgracz_a787dd274560bfa06d509b3527e9f5b57}{hp\+Bar\+Inside}}
+\item 
+float \mbox{\hyperlink{classgracz_a843345d7cec6459c3aa80d167990b11a}{MAXhp\+\_\+lucznik}} = 10
+\item 
+float \mbox{\hyperlink{classgracz_a0ad6d11046243f487eb119f81c09c7b4}{MAXhp\+\_\+berserker}} = 7
+\item 
+float \mbox{\hyperlink{classgracz_aeb733087f23a5165d1ab6dc801430227}{width}} = 50.f
+\item 
+float \mbox{\hyperlink{classgracz_a4a423b5124b72c55fe7bccd7cbb8abc4}{hp\+Bar\+Max\+Width}} = \mbox{\hyperlink{classgracz_aeb733087f23a5165d1ab6dc801430227}{width}}
+\item 
+float \mbox{\hyperlink{classgracz_ad0cff7b5d76a778f9e26208f1abb61cc}{height}} = 10.f
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Opis szczegółowy}
+Klasa gracz. 
+
+
+\begin{DoxyParams}{Parametry}
+{\em hp\+Bar\+Back} & -\/ wyswietlanie szarego paska hp \\
+\hline
+{\em hp\+Bar\+Inside} & -\/ wyswietlanie czerwonego paska hp \\
+\hline
+{\em MAXhp\+\_\+lucznik} & -\/ maksymalny poziom zdrowia lucznika \\
+\hline
+{\em MAXhp\+\_\+berserker} & -\/ maksymalny poziom zdrowia berserkera \\
+\hline
+{\em width} & -\/ szerokosc paska zdrowia \\
+\hline
+{\em height} & -\/ wysokosc paska zdrowia \\
+\hline
+{\em hp\+Bar\+Max\+Width} & -\/ maksymalna szerokosc paska zdrowia \\
+\hline
+\end{DoxyParams}
+
+
+Definicja w linii \mbox{\hyperlink{main_8cpp_source_l00078}{78}} pliku \mbox{\hyperlink{main_8cpp_source}{main.\+cpp}}.
+
+
+
+\doxysubsection{Dokumentacja funkcji składowych}
+\mbox{\Hypertarget{classgracz_aa1588fb740ca7da675cf36db12e73352}\label{classgracz_aa1588fb740ca7da675cf36db12e73352}} 
+\index{gracz@{gracz}!initHP@{initHP}}
+\index{initHP@{initHP}!gracz@{gracz}}
+\doxysubsubsection{\texorpdfstring{initHP()}{initHP()}}
+{\footnotesize\ttfamily void gracz\+::init\+HP (\begin{DoxyParamCaption}\item[{Rectangle\+Shape \&}]{player }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Funkcja pozwalajaca na ustawienie pozycji oraz kolorow paskow zdrowia. 
+
+
+\begin{DoxyParams}{Parametry}
+{\em player} & -\/ ustawienie paskow zdrowia nad playerem \\
+\hline
+\end{DoxyParams}
+
+
+Definicja w linii \mbox{\hyperlink{main_8cpp_source_l00106}{106}} pliku \mbox{\hyperlink{main_8cpp_source}{main.\+cpp}}.
+
+\mbox{\Hypertarget{classgracz_a7e9797a9a1572d0be7c24b104ddfdbab}\label{classgracz_a7e9797a9a1572d0be7c24b104ddfdbab}} 
+\index{gracz@{gracz}!kolizja\_ogolna@{kolizja\_ogolna}}
+\index{kolizja\_ogolna@{kolizja\_ogolna}!gracz@{gracz}}
+\doxysubsubsection{\texorpdfstring{kolizja\_ogolna()}{kolizja\_ogolna()}}
+{\footnotesize\ttfamily void gracz\+::kolizja\+\_\+ogolna (\begin{DoxyParamCaption}\item[{Rectangle\+Shape \&}]{player }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Funckja sprawdza aktualna pozycje playera, i blokuje mu wyjscie poza mape. 
+
+
+\begin{DoxyParams}{Parametry}
+{\em player} & -\/ sprawdza pozycje playera \\
+\hline
+\end{DoxyParams}
+
+
+Definicja w linii \mbox{\hyperlink{main_8cpp_source_l00140}{140}} pliku \mbox{\hyperlink{main_8cpp_source}{main.\+cpp}}.
+
+\mbox{\Hypertarget{classgracz_a17f7ec264952c5f97c1529d496496ece}\label{classgracz_a17f7ec264952c5f97c1529d496496ece}} 
+\index{gracz@{gracz}!poruszanie\_dol@{poruszanie\_dol}}
+\index{poruszanie\_dol@{poruszanie\_dol}!gracz@{gracz}}
+\doxysubsubsection{\texorpdfstring{poruszanie\_dol()}{poruszanie\_dol()}}
+{\footnotesize\ttfamily void gracz\+::poruszanie\+\_\+dol (\begin{DoxyParamCaption}\item[{Rectangle\+Shape \&}]{player }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Funckja pozwala na poruszanie sie w dol lucznika (wraz z kolizja), oraz wyswietla tekstury. 
+
+
+\begin{DoxyParams}{Parametry}
+{\em player} & -\/ sprawdza pozycje playera \\
+\hline
+\end{DoxyParams}
+
+
+Definicja w linii \mbox{\hyperlink{main_8cpp_source_l00395}{395}} pliku \mbox{\hyperlink{main_8cpp_source}{main.\+cpp}}.
+
+\mbox{\Hypertarget{classgracz_ab71a4fd49df034310a4254ff1dc8e528}\label{classgracz_ab71a4fd49df034310a4254ff1dc8e528}} 
+\index{gracz@{gracz}!poruszanie\_dol\_berserker@{poruszanie\_dol\_berserker}}
+\index{poruszanie\_dol\_berserker@{poruszanie\_dol\_berserker}!gracz@{gracz}}
+\doxysubsubsection{\texorpdfstring{poruszanie\_dol\_berserker()}{poruszanie\_dol\_berserker()}}
+{\footnotesize\ttfamily void gracz\+::poruszanie\+\_\+dol\+\_\+berserker (\begin{DoxyParamCaption}\item[{Rectangle\+Shape \&}]{player }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Funckja pozwala na poruszanie sie w dol berserkera (wraz z kolizja), oraz wyswietla tekstury. 
+
+
+\begin{DoxyParams}{Parametry}
+{\em player} & -\/ sprawdza pozycje playera \\
+\hline
+\end{DoxyParams}
+
+
+Definicja w linii \mbox{\hyperlink{main_8cpp_source_l00449}{449}} pliku \mbox{\hyperlink{main_8cpp_source}{main.\+cpp}}.
+
+\mbox{\Hypertarget{classgracz_a3c7eb928efe47084d27e537652824d76}\label{classgracz_a3c7eb928efe47084d27e537652824d76}} 
+\index{gracz@{gracz}!poruszanie\_gora@{poruszanie\_gora}}
+\index{poruszanie\_gora@{poruszanie\_gora}!gracz@{gracz}}
+\doxysubsubsection{\texorpdfstring{poruszanie\_gora()}{poruszanie\_gora()}}
+{\footnotesize\ttfamily void gracz\+::poruszanie\+\_\+gora (\begin{DoxyParamCaption}\item[{Rectangle\+Shape \&}]{player }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Funckja pozwala na poruszanie sie w gore lucznika (wraz z kolizja), oraz wyswietla tekstury. 
+
+
+\begin{DoxyParams}{Parametry}
+{\em player} & -\/ sprawdza pozycje playera \\
+\hline
+\end{DoxyParams}
+
+
+Definicja w linii \mbox{\hyperlink{main_8cpp_source_l00333}{333}} pliku \mbox{\hyperlink{main_8cpp_source}{main.\+cpp}}.
+
+\mbox{\Hypertarget{classgracz_ab2824ecb9a3d4527df47882bcf1de42a}\label{classgracz_ab2824ecb9a3d4527df47882bcf1de42a}} 
+\index{gracz@{gracz}!poruszanie\_gora\_berserker@{poruszanie\_gora\_berserker}}
+\index{poruszanie\_gora\_berserker@{poruszanie\_gora\_berserker}!gracz@{gracz}}
+\doxysubsubsection{\texorpdfstring{poruszanie\_gora\_berserker()}{poruszanie\_gora\_berserker()}}
+{\footnotesize\ttfamily void gracz\+::poruszanie\+\_\+gora\+\_\+berserker (\begin{DoxyParamCaption}\item[{Rectangle\+Shape \&}]{player }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Funckja pozwala na poruszanie sie w gore berserkera (wraz z kolizja), oraz wyswietla tekstury. 
+
+
+\begin{DoxyParams}{Parametry}
+{\em player} & -\/ sprawdza pozycje playera \\
+\hline
+\end{DoxyParams}
+
+
+Definicja w linii \mbox{\hyperlink{main_8cpp_source_l00364}{364}} pliku \mbox{\hyperlink{main_8cpp_source}{main.\+cpp}}.
+
+\mbox{\Hypertarget{classgracz_ab667b4b02d75f77fe5ab5a0c02bf606b}\label{classgracz_ab667b4b02d75f77fe5ab5a0c02bf606b}} 
+\index{gracz@{gracz}!poruszanie\_lewo@{poruszanie\_lewo}}
+\index{poruszanie\_lewo@{poruszanie\_lewo}!gracz@{gracz}}
+\doxysubsubsection{\texorpdfstring{poruszanie\_lewo()}{poruszanie\_lewo()}}
+{\footnotesize\ttfamily void gracz\+::poruszanie\+\_\+lewo (\begin{DoxyParamCaption}\item[{Rectangle\+Shape \&}]{player }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Funckja pozwala na poruszanie sie w lewo lucznika (wraz z kolizja), oraz wyswietla tekstury. 
+
+
+\begin{DoxyParams}{Parametry}
+{\em player} & -\/ sprawdza pozycje playera \\
+\hline
+\end{DoxyParams}
+
+
+Definicja w linii \mbox{\hyperlink{main_8cpp_source_l00160}{160}} pliku \mbox{\hyperlink{main_8cpp_source}{main.\+cpp}}.
+
+\mbox{\Hypertarget{classgracz_a61321cb2a2a1e4c6c6b51c558a81cc79}\label{classgracz_a61321cb2a2a1e4c6c6b51c558a81cc79}} 
+\index{gracz@{gracz}!poruszanie\_lewo\_berserker@{poruszanie\_lewo\_berserker}}
+\index{poruszanie\_lewo\_berserker@{poruszanie\_lewo\_berserker}!gracz@{gracz}}
+\doxysubsubsection{\texorpdfstring{poruszanie\_lewo\_berserker()}{poruszanie\_lewo\_berserker()}}
+{\footnotesize\ttfamily void gracz\+::poruszanie\+\_\+lewo\+\_\+berserker (\begin{DoxyParamCaption}\item[{Rectangle\+Shape \&}]{player }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Funckja pozwala na poruszanie sie w lewo berserkera (wraz z kolizja), oraz wyswietla tekstury. 
+
+
+\begin{DoxyParams}{Parametry}
+{\em player} & -\/ sprawdza pozycje playera \\
+\hline
+\end{DoxyParams}
+
+
+Definicja w linii \mbox{\hyperlink{main_8cpp_source_l00192}{192}} pliku \mbox{\hyperlink{main_8cpp_source}{main.\+cpp}}.
+
+\mbox{\Hypertarget{classgracz_a60e2f4af74c39478cec367b02f7baca8}\label{classgracz_a60e2f4af74c39478cec367b02f7baca8}} 
+\index{gracz@{gracz}!poruszanie\_prawo@{poruszanie\_prawo}}
+\index{poruszanie\_prawo@{poruszanie\_prawo}!gracz@{gracz}}
+\doxysubsubsection{\texorpdfstring{poruszanie\_prawo()}{poruszanie\_prawo()}}
+{\footnotesize\ttfamily void gracz\+::poruszanie\+\_\+prawo (\begin{DoxyParamCaption}\item[{Rectangle\+Shape \&}]{player }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Funckja pozwala na poruszanie sie w prawo lucznika (wraz z kolizja), oraz wyswietla tekstury. 
+
+
+\begin{DoxyParams}{Parametry}
+{\em player} & -\/ sprawdza pozycje playera \\
+\hline
+\end{DoxyParams}
+
+
+Definicja w linii \mbox{\hyperlink{main_8cpp_source_l00224}{224}} pliku \mbox{\hyperlink{main_8cpp_source}{main.\+cpp}}.
+
+\mbox{\Hypertarget{classgracz_a175c552f98a8b6e81e6b08de750cd369}\label{classgracz_a175c552f98a8b6e81e6b08de750cd369}} 
+\index{gracz@{gracz}!poruszanie\_prawo\_berserker@{poruszanie\_prawo\_berserker}}
+\index{poruszanie\_prawo\_berserker@{poruszanie\_prawo\_berserker}!gracz@{gracz}}
+\doxysubsubsection{\texorpdfstring{poruszanie\_prawo\_berserker()}{poruszanie\_prawo\_berserker()}}
+{\footnotesize\ttfamily void gracz\+::poruszanie\+\_\+prawo\+\_\+berserker (\begin{DoxyParamCaption}\item[{Rectangle\+Shape \&}]{player }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Funckja pozwala na poruszanie sie w prawo berserkera (wraz z kolizja), oraz wyswietla tekstury. 
+
+
+\begin{DoxyParams}{Parametry}
+{\em player} & -\/ sprawdza pozycje playera \\
+\hline
+\end{DoxyParams}
+
+
+Definicja w linii \mbox{\hyperlink{main_8cpp_source_l00278}{278}} pliku \mbox{\hyperlink{main_8cpp_source}{main.\+cpp}}.
+
+\mbox{\Hypertarget{classgracz_ad7b950c0b961bdfe4043cc2d505e33d9}\label{classgracz_ad7b950c0b961bdfe4043cc2d505e33d9}} 
+\index{gracz@{gracz}!poruszanie\_ukos\_lewo@{poruszanie\_ukos\_lewo}}
+\index{poruszanie\_ukos\_lewo@{poruszanie\_ukos\_lewo}!gracz@{gracz}}
+\doxysubsubsection{\texorpdfstring{poruszanie\_ukos\_lewo()}{poruszanie\_ukos\_lewo()}}
+{\footnotesize\ttfamily void gracz\+::poruszanie\+\_\+ukos\+\_\+lewo (\begin{DoxyParamCaption}\item[{Rectangle\+Shape \&}]{player }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Funckja pozwala na poruszanie sie na ukos lewo gracza (wraz z kolizja), oraz wyswietla tekstury. 
+
+
+\begin{DoxyParams}{Parametry}
+{\em player} & -\/ sprawdza pozycje playera \\
+\hline
+\end{DoxyParams}
+
+
+Definicja w linii \mbox{\hyperlink{main_8cpp_source_l00503}{503}} pliku \mbox{\hyperlink{main_8cpp_source}{main.\+cpp}}.
+
+\mbox{\Hypertarget{classgracz_a391cfdb68554e351e54953b20bccea63}\label{classgracz_a391cfdb68554e351e54953b20bccea63}} 
+\index{gracz@{gracz}!poruszanie\_ukos\_prawo@{poruszanie\_ukos\_prawo}}
+\index{poruszanie\_ukos\_prawo@{poruszanie\_ukos\_prawo}!gracz@{gracz}}
+\doxysubsubsection{\texorpdfstring{poruszanie\_ukos\_prawo()}{poruszanie\_ukos\_prawo()}}
+{\footnotesize\ttfamily void gracz\+::poruszanie\+\_\+ukos\+\_\+prawo (\begin{DoxyParamCaption}\item[{Rectangle\+Shape \&}]{player }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Funckja pozwala na poruszanie sie na ukos prawo gracza (wraz z kolizja), oraz wyswietla tekstury. 
+
+
+\begin{DoxyParams}{Parametry}
+{\em player} & -\/ sprawdza pozycje playera \\
+\hline
+\end{DoxyParams}
+
+
+Definicja w linii \mbox{\hyperlink{main_8cpp_source_l00518}{518}} pliku \mbox{\hyperlink{main_8cpp_source}{main.\+cpp}}.
+
+\mbox{\Hypertarget{classgracz_a9dcba2fd5edd0553e8a48adc1d2297d2}\label{classgracz_a9dcba2fd5edd0553e8a48adc1d2297d2}} 
+\index{gracz@{gracz}!render\_hp@{render\_hp}}
+\index{render\_hp@{render\_hp}!gracz@{gracz}}
+\doxysubsubsection{\texorpdfstring{render\_hp()}{render\_hp()}}
+{\footnotesize\ttfamily void gracz\+::render\+\_\+hp (\begin{DoxyParamCaption}\item[{sf\+::\+Render\+Target \&}]{target }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Funkcja wyswietlajaca dwa paski zdrowia gracza. 
+
+
+\begin{DoxyParams}{Parametry}
+{\em target} & -\/ pozwala na wyswietlenie paskow zdrowia \\
+\hline
+\end{DoxyParams}
+
+
+Definicja w linii \mbox{\hyperlink{main_8cpp_source_l00095}{95}} pliku \mbox{\hyperlink{main_8cpp_source}{main.\+cpp}}.
+
+\mbox{\Hypertarget{classgracz_a8871a02731c63081cd307448995e468e}\label{classgracz_a8871a02731c63081cd307448995e468e}} 
+\index{gracz@{gracz}!strzelanie@{strzelanie}}
+\index{strzelanie@{strzelanie}!gracz@{gracz}}
+\doxysubsubsection{\texorpdfstring{strzelanie()}{strzelanie()}}
+{\footnotesize\ttfamily void gracz\+::strzelanie (\begin{DoxyParamCaption}\item[{Rectangle\+Shape \&}]{player,  }\item[{Texture \&}]{strzalka\+\_\+gora,  }\item[{Texture \&}]{strzalka1,  }\item[{Texture \&}]{strzalka\+\_\+lewo,  }\item[{Texture \&}]{strzalka\+\_\+dol,  }\item[{vector$<$ \mbox{\hyperlink{classstrzal}{strzal}} $>$ \&}]{wektor\+\_\+strzal\+\_\+1,  }\item[{vector$<$ \mbox{\hyperlink{classstrzal}{strzal}} $>$ \&}]{wektor\+\_\+strzal,  }\item[{vector$<$ \mbox{\hyperlink{classstrzal}{strzal}} $>$ \&}]{wektor\+\_\+strzal\+\_\+dol,  }\item[{vector$<$ \mbox{\hyperlink{classstrzal}{strzal}} $>$ \&}]{wektor\+\_\+strzal\+\_\+gora,  }\item[{\mbox{\hyperlink{classstrzal}{strzal}} \&}]{strzalka,  }\item[{\mbox{\hyperlink{classstrzal}{strzal}} \&}]{strzalka\+\_\+lewoo,  }\item[{\mbox{\hyperlink{classstrzal}{strzal}} \&}]{strzalka\+\_\+goraa,  }\item[{\mbox{\hyperlink{classstrzal}{strzal}} \&}]{strzalka\+\_\+doll }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Funckja pozwalajaca na strzelanie playera, wykonuje rowniez odpowiednie tekstury. 
+
+
+\begin{DoxyParams}{Parametry}
+{\em player} & -\/ nadaje playerowi odpowiednia teksture \\
+\hline
+{\em strzalka\+\_\+gora} & -\/ tekstura dla strzaly w gore \\
+\hline
+{\em strzalka1} & -\/ tekstura dla strzaly w prawo \\
+\hline
+{\em strzalka\+\_\+lewo} & -\/ tekstura dla strzaly w lewo \\
+\hline
+{\em strzalka\+\_\+dol} & -\/ tekstura dla strzaly w dol \\
+\hline
+{\em wektor\+\_\+strzal\+\_\+1} & -\/ wektor strzal przechowujacy strzaly ktore leca w lewa strone \\
+\hline
+{\em wektor\+\_\+strzal} & -\/ wektor strzal przechowujacy strzaly ktore leca w prawa strone \\
+\hline
+{\em wektor\+\_\+strzal\+\_\+dol} & -\/ wektor strzal przechowujacy strzaly ktore leca w dol \\
+\hline
+{\em wektor\+\_\+strzal\+\_\+gora} & -\/ wektor strzal przechowujacy strzaly ktore leca w gore \\
+\hline
+{\em strzalka} & -\/ obiekt klasy strzal, przechowuje strzale ktora leci w prawo \\
+\hline
+{\em strzalka\+\_\+lewoo} & -\/ obiekt klasy strzal, przechowuje strzale ktora leci w lewo \\
+\hline
+{\em strzalka\+\_\+goraa} & -\/ obiekt klasy strzal, przechowuje strzale ktora leci w gore \\
+\hline
+{\em strzalka\+\_\+doll} & -\/ obiekt klasy strzal, przechowuje strzale ktora leci w dol \\
+\hline
+\end{DoxyParams}
+
+
+Definicja w linii \mbox{\hyperlink{main_8cpp_source_l00547}{547}} pliku \mbox{\hyperlink{main_8cpp_source}{main.\+cpp}}.
+
+\mbox{\Hypertarget{classgracz_a567a955019653cc42aa8af10939f70d6}\label{classgracz_a567a955019653cc42aa8af10939f70d6}} 
+\index{gracz@{gracz}!update\_hp@{update\_hp}}
+\index{update\_hp@{update\_hp}!gracz@{gracz}}
+\doxysubsubsection{\texorpdfstring{update\_hp()}{update\_hp()}}
+{\footnotesize\ttfamily void gracz\+::update\+\_\+hp (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Funckja sprawdza i modyfikuje aktualny poziom zdrowia. 
+
+
+
+Definicja w linii \mbox{\hyperlink{main_8cpp_source_l00122}{122}} pliku \mbox{\hyperlink{main_8cpp_source}{main.\+cpp}}.
+
+\mbox{\Hypertarget{classgracz_a1189d390559e5030bbb8c9d3630d27a2}\label{classgracz_a1189d390559e5030bbb8c9d3630d27a2}} 
+\index{gracz@{gracz}!update\_hp\_berserker@{update\_hp\_berserker}}
+\index{update\_hp\_berserker@{update\_hp\_berserker}!gracz@{gracz}}
+\doxysubsubsection{\texorpdfstring{update\_hp\_berserker()}{update\_hp\_berserker()}}
+{\footnotesize\ttfamily void gracz\+::update\+\_\+hp\+\_\+berserker (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Funckja sprawdza i modyfikuje aktualny poziom zdrowia. 
+
+
+
+Definicja w linii \mbox{\hyperlink{main_8cpp_source_l00130}{130}} pliku \mbox{\hyperlink{main_8cpp_source}{main.\+cpp}}.
+
+\mbox{\Hypertarget{classgracz_a0f485d51f887a6d29986d447af54cda5}\label{classgracz_a0f485d51f887a6d29986d447af54cda5}} 
+\index{gracz@{gracz}!usun\_strzale\_z\_pamieci@{usun\_strzale\_z\_pamieci}}
+\index{usun\_strzale\_z\_pamieci@{usun\_strzale\_z\_pamieci}!gracz@{gracz}}
+\doxysubsubsection{\texorpdfstring{usun\_strzale\_z\_pamieci()}{usun\_strzale\_z\_pamieci()}}
+{\footnotesize\ttfamily void gracz\+::usun\+\_\+strzale\+\_\+z\+\_\+pamieci (\begin{DoxyParamCaption}\item[{vector$<$ \mbox{\hyperlink{classstrzal}{strzal}} $>$ \&}]{wektor\+\_\+strzal }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Funkcja usuwajaca strzaly z pamieci. 
+
+
+\begin{DoxyParams}{Parametry}
+{\em wektor\+\_\+strzal} & -\/ wektor przechowujacy strzaly \\
+\hline
+\end{DoxyParams}
+
+
+Definicja w linii \mbox{\hyperlink{main_8cpp_source_l00641}{641}} pliku \mbox{\hyperlink{main_8cpp_source}{main.\+cpp}}.
+
+
+
+\doxysubsection{Dokumentacja atrybutów składowych}
+\mbox{\Hypertarget{classgracz_ad0cff7b5d76a778f9e26208f1abb61cc}\label{classgracz_ad0cff7b5d76a778f9e26208f1abb61cc}} 
+\index{gracz@{gracz}!height@{height}}
+\index{height@{height}!gracz@{gracz}}
+\doxysubsubsection{\texorpdfstring{height}{height}}
+{\footnotesize\ttfamily float gracz\+::height = 10.f}
+
+
+
+Definicja w linii \mbox{\hyperlink{main_8cpp_source_l00087}{87}} pliku \mbox{\hyperlink{main_8cpp_source}{main.\+cpp}}.
+
+\mbox{\Hypertarget{classgracz_ae43aa08a575696a2838458acd9823568}\label{classgracz_ae43aa08a575696a2838458acd9823568}} 
+\index{gracz@{gracz}!hpBarBack@{hpBarBack}}
+\index{hpBarBack@{hpBarBack}!gracz@{gracz}}
+\doxysubsubsection{\texorpdfstring{hpBarBack}{hpBarBack}}
+{\footnotesize\ttfamily sf\+::\+Rectangle\+Shape gracz\+::hp\+Bar\+Back}
+
+
+
+Definicja w linii \mbox{\hyperlink{main_8cpp_source_l00081}{81}} pliku \mbox{\hyperlink{main_8cpp_source}{main.\+cpp}}.
+
+\mbox{\Hypertarget{classgracz_a787dd274560bfa06d509b3527e9f5b57}\label{classgracz_a787dd274560bfa06d509b3527e9f5b57}} 
+\index{gracz@{gracz}!hpBarInside@{hpBarInside}}
+\index{hpBarInside@{hpBarInside}!gracz@{gracz}}
+\doxysubsubsection{\texorpdfstring{hpBarInside}{hpBarInside}}
+{\footnotesize\ttfamily sf\+::\+Rectangle\+Shape gracz\+::hp\+Bar\+Inside}
+
+
+
+Definicja w linii \mbox{\hyperlink{main_8cpp_source_l00082}{82}} pliku \mbox{\hyperlink{main_8cpp_source}{main.\+cpp}}.
+
+\mbox{\Hypertarget{classgracz_a4a423b5124b72c55fe7bccd7cbb8abc4}\label{classgracz_a4a423b5124b72c55fe7bccd7cbb8abc4}} 
+\index{gracz@{gracz}!hpBarMaxWidth@{hpBarMaxWidth}}
+\index{hpBarMaxWidth@{hpBarMaxWidth}!gracz@{gracz}}
+\doxysubsubsection{\texorpdfstring{hpBarMaxWidth}{hpBarMaxWidth}}
+{\footnotesize\ttfamily float gracz\+::hp\+Bar\+Max\+Width = \mbox{\hyperlink{classgracz_aeb733087f23a5165d1ab6dc801430227}{width}}}
+
+
+
+Definicja w linii \mbox{\hyperlink{main_8cpp_source_l00086}{86}} pliku \mbox{\hyperlink{main_8cpp_source}{main.\+cpp}}.
+
+\mbox{\Hypertarget{classgracz_a0ad6d11046243f487eb119f81c09c7b4}\label{classgracz_a0ad6d11046243f487eb119f81c09c7b4}} 
+\index{gracz@{gracz}!MAXhp\_berserker@{MAXhp\_berserker}}
+\index{MAXhp\_berserker@{MAXhp\_berserker}!gracz@{gracz}}
+\doxysubsubsection{\texorpdfstring{MAXhp\_berserker}{MAXhp\_berserker}}
+{\footnotesize\ttfamily float gracz\+::\+MAXhp\+\_\+berserker = 7}
+
+
+
+Definicja w linii \mbox{\hyperlink{main_8cpp_source_l00084}{84}} pliku \mbox{\hyperlink{main_8cpp_source}{main.\+cpp}}.
+
+\mbox{\Hypertarget{classgracz_a843345d7cec6459c3aa80d167990b11a}\label{classgracz_a843345d7cec6459c3aa80d167990b11a}} 
+\index{gracz@{gracz}!MAXhp\_lucznik@{MAXhp\_lucznik}}
+\index{MAXhp\_lucznik@{MAXhp\_lucznik}!gracz@{gracz}}
+\doxysubsubsection{\texorpdfstring{MAXhp\_lucznik}{MAXhp\_lucznik}}
+{\footnotesize\ttfamily float gracz\+::\+MAXhp\+\_\+lucznik = 10}
+
+
+
+Definicja w linii \mbox{\hyperlink{main_8cpp_source_l00083}{83}} pliku \mbox{\hyperlink{main_8cpp_source}{main.\+cpp}}.
+
+\mbox{\Hypertarget{classgracz_aeb733087f23a5165d1ab6dc801430227}\label{classgracz_aeb733087f23a5165d1ab6dc801430227}} 
+\index{gracz@{gracz}!width@{width}}
+\index{width@{width}!gracz@{gracz}}
+\doxysubsubsection{\texorpdfstring{width}{width}}
+{\footnotesize\ttfamily float gracz\+::width = 50.f}
+
+
+
+Definicja w linii \mbox{\hyperlink{main_8cpp_source_l00085}{85}} pliku \mbox{\hyperlink{main_8cpp_source}{main.\+cpp}}.
+
+
+
+Dokumentacja dla tej klasy została wygenerowana z pliku\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{main_8cpp}{main.\+cpp}}\end{DoxyCompactItemize}

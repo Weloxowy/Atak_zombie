@@ -1,0 +1,310 @@
+.TH "zombie" 3 "So, 7 sty 2023" "Atak Zombie" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+zombie \- Klasa zombie\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <cale_menu_lewy_klik\&.h>\fP
+.SS "Metody publiczne"
+
+.in +1c
+.ti -1c
+.RI "\fBzombie\fP (Texture *zombie_txt)"
+.br
+.RI "Kontruktor klasy zombie\&. "
+.ti -1c
+.RI "void \fBrender_hp\fP (sf::RenderTarget &target)"
+.br
+.RI "Funkcja wyswietlajaca dwa paski zdrowia zombie\&. "
+.ti -1c
+.RI "void \fBinitHP\fP ()"
+.br
+.RI "Funkcja pozwalajaca na ustawienie pozycji oraz kolorow paskow zdrowia\&. "
+.ti -1c
+.RI "void \fBupdate_hp\fP ()"
+.br
+.RI "Funckja sprawdza i modyfikuje aktualny poziom zdrowia\&. "
+.ti -1c
+.RI "void \fBrespienie_zombie\fP (int &\fBscore\fP)"
+.br
+.RI "Funckja wyswietla animacje zombiego, ktory wstaje z Ziemii\&. "
+.ti -1c
+.RI "void \fBporuszanie\fP (RectangleShape &player)"
+.br
+.RI "Funckja pozwala na poruszanie sie zombi\&. Dodalismy rowniez kolizje dla zombie\&. "
+.ti -1c
+.RI "void \fBbitka\fP (RectangleShape &player, float &\fBhp\fP)"
+.br
+.RI "Funckja pokazuje animacje ataku zombie na gracza\&. "
+.in -1c
+.SS "Atrybuty publiczne"
+
+.in +1c
+.ti -1c
+.RI "sf::RectangleShape \fBhpBarBack\fP"
+.br
+.ti -1c
+.RI "sf::RectangleShape \fBhpBarInside\fP"
+.br
+.ti -1c
+.RI "float \fBMAXhp\fP = 3"
+.br
+.ti -1c
+.RI "float \fBhp_zombie\fP = 3"
+.br
+.ti -1c
+.RI "float \fBwidth\fP = 50\&.f"
+.br
+.ti -1c
+.RI "float \fBhpBarMaxWidth\fP = \fBwidth\fP"
+.br
+.ti -1c
+.RI "float \fBheight\fP = 10\&.f"
+.br
+.ti -1c
+.RI "int \fBziara2\fP = 0"
+.br
+.ti -1c
+.RI "int \fBziara3\fP = 0"
+.br
+.ti -1c
+.RI "int \fBziara4\fP = 0"
+.br
+.ti -1c
+.RI "bool \fBczy_sie_respi\fP = true"
+.br
+.ti -1c
+.RI "bool \fBatak\fP = false"
+.br
+.ti -1c
+.RI "bool \fBzablokuj_ruszanie_sie\fP = false"
+.br
+.ti -1c
+.RI "Sprite \fBshape\fP"
+.br
+.ti -1c
+.RI "int \fBdelay\fP =0"
+.br
+.ti -1c
+.RI "int \fBdelay1\fP =0"
+.br
+.ti -1c
+.RI "int \fBdelay2\fP =0"
+.br
+.ti -1c
+.RI "int \fBspr_pozycje_zombie\fP =0"
+.br
+.in -1c
+.SH "Opis szczegółowy"
+.PP 
+Klasa zombie\&. 
+
+
+.PP
+\fBParametry\fP
+.RS 4
+\fIhpBarBack\fP - wyswietlanie szarego paska hp 
+.br
+\fIhpBarInside\fP - wyswietlanie czerwonego paska hp 
+.br
+\fIMAXhp_lucznik\fP - maksymalny poziom zdrowia lucznika 
+.br
+\fIMAXhp_berserker\fP - maksymalny poziom zdrowia berserkera 
+.br
+\fIwidth\fP - szerokosc paska zdrowia 
+.br
+\fIheight\fP - wysokosc paska zdrowia 
+.br
+\fIhpBarMaxWidth\fP - maksymalna szerokosc paska zdrowia 
+.br
+\fIziara2\fP - pozwala na wyswietlenie tekstury (animacji) potwora 
+.br
+\fIziara3\fP - pozwala na wyswietlenie tekstury (animacji) potwora 
+.br
+\fIziara4\fP - pozwala na wyswietlenie tekstury (animacji) potwora 
+.br
+\fIczy_sie_respi\fP - pozwala na sprawdzenie, czy potwor sie pojawil 
+.br
+\fIatak\fP - pozwala na sprawdzenie czy potwor zaatakowal gracza 
+.br
+\fIzablokuj_ruszanie_sie\fP - pozwala na zablokowanie potworow gdy na siebie nachodza 
+.br
+\fIshape\fP - pozwala na wyswietlenie tekstur 
+.br
+\fIdelay\fP - pozwalajaca na opoznienie aktualnie wykonywanej tekstury 
+.br
+\fIdelay1\fP - pozwalajaca na opoznienie aktualnie wykonywanej tekstury 
+.br
+\fIdelay2\fP - pozwalajaca na opoznienie aktualnie wykonywanej tekstury 
+.br
+\fIspr_pozycje_zombie\fP - sprawdza aktualna pozycje zombie, w zaleznosci od pozycji wyswietla sie odpowiednia tekstura 
+.RE
+.PP
+
+.PP
+Definicja w linii \fB34\fP pliku \fBcale_menu_lewy_klik\&.h\fP\&.
+.SH "Dokumentacja konstruktora i destruktora"
+.PP 
+.SS "zombie::zombie (Texture * zombie_txt)\fC [inline]\fP"
+
+.PP
+Kontruktor klasy zombie\&. 
+.PP
+\fBParametry\fP
+.RS 4
+\fIzombie_txt\fP - pozwala na wyswietlenie tekstury zombie 
+.RE
+.PP
+
+.PP
+Definicja w linii \fB67\fP pliku \fBcale_menu_lewy_klik\&.h\fP\&.
+.SH "Dokumentacja funkcji składowych"
+.PP 
+.SS "void zombie::bitka (RectangleShape & player, float & hp)\fC [inline]\fP"
+
+.PP
+Funckja pokazuje animacje ataku zombie na gracza\&. 
+.PP
+\fBParametry\fP
+.RS 4
+\fIplayer\fP - sprawdzamy czy zombie wchodzi w interakcje z playerem 
+.br
+\fIhp\fP - pobieramy poziom zdrowia gracza, po ataku zombie na gracza poziom zdrowia sie zmiejsza 
+.RE
+.PP
+
+.PP
+Definicja w linii \fB303\fP pliku \fBcale_menu_lewy_klik\&.h\fP\&.
+.SS "void zombie::initHP ()\fC [inline]\fP"
+
+.PP
+Funkcja pozwalajaca na ustawienie pozycji oraz kolorow paskow zdrowia\&. 
+.PP
+Definicja w linii \fB85\fP pliku \fBcale_menu_lewy_klik\&.h\fP\&.
+.SS "void zombie::poruszanie (RectangleShape & player)\fC [inline]\fP"
+
+.PP
+Funckja pozwala na poruszanie sie zombi\&. Dodalismy rowniez kolizje dla zombie\&. 
+.PP
+\fBParametry\fP
+.RS 4
+\fIplayer\fP - pobieramy sobie playera aby zombie znalazl do gracza najktotsza droge 
+.RE
+.PP
+
+.PP
+Definicja w linii \fB155\fP pliku \fBcale_menu_lewy_klik\&.h\fP\&.
+.SS "void zombie::render_hp (sf::RenderTarget & target)\fC [inline]\fP"
+
+.PP
+Funkcja wyswietlajaca dwa paski zdrowia zombie\&. 
+.PP
+\fBParametry\fP
+.RS 4
+\fItarget\fP - pozwala na wyswietlenie paskow zdrowia 
+.RE
+.PP
+
+.PP
+Definicja w linii \fB76\fP pliku \fBcale_menu_lewy_klik\&.h\fP\&.
+.SS "void zombie::respienie_zombie (int & score)\fC [inline]\fP"
+
+.PP
+Funckja wyswietla animacje zombiego, ktory wstaje z Ziemii\&. 
+.PP
+\fBParametry\fP
+.RS 4
+\fIscore\fP - W zaleznosci od zdobytych punktow, poziom zdrowia zombie sie zwieksza 
+.RE
+.PP
+
+.PP
+Definicja w linii \fB111\fP pliku \fBcale_menu_lewy_klik\&.h\fP\&.
+.SS "void zombie::update_hp ()\fC [inline]\fP"
+
+.PP
+Funckja sprawdza i modyfikuje aktualny poziom zdrowia\&. 
+.PP
+Definicja w linii \fB98\fP pliku \fBcale_menu_lewy_klik\&.h\fP\&.
+.SH "Dokumentacja atrybutów składowych"
+.PP 
+.SS "bool zombie::atak = false"
+
+.PP
+Definicja w linii \fB50\fP pliku \fBcale_menu_lewy_klik\&.h\fP\&.
+.SS "bool zombie::czy_sie_respi = true"
+
+.PP
+Definicja w linii \fB49\fP pliku \fBcale_menu_lewy_klik\&.h\fP\&.
+.SS "int zombie::delay =0"
+
+.PP
+Definicja w linii \fB54\fP pliku \fBcale_menu_lewy_klik\&.h\fP\&.
+.SS "int zombie::delay1 =0"
+
+.PP
+Definicja w linii \fB55\fP pliku \fBcale_menu_lewy_klik\&.h\fP\&.
+.SS "int zombie::delay2 =0"
+
+.PP
+Definicja w linii \fB56\fP pliku \fBcale_menu_lewy_klik\&.h\fP\&.
+.SS "float zombie::height = 10\&.f"
+
+.PP
+Definicja w linii \fB44\fP pliku \fBcale_menu_lewy_klik\&.h\fP\&.
+.SS "float zombie::hp_zombie = 3"
+
+.PP
+Definicja w linii \fB41\fP pliku \fBcale_menu_lewy_klik\&.h\fP\&.
+.SS "sf::RectangleShape zombie::hpBarBack"
+
+.PP
+Definicja w linii \fB38\fP pliku \fBcale_menu_lewy_klik\&.h\fP\&.
+.SS "sf::RectangleShape zombie::hpBarInside"
+
+.PP
+Definicja w linii \fB39\fP pliku \fBcale_menu_lewy_klik\&.h\fP\&.
+.SS "float zombie::hpBarMaxWidth = \fBwidth\fP"
+
+.PP
+Definicja w linii \fB43\fP pliku \fBcale_menu_lewy_klik\&.h\fP\&.
+.SS "float zombie::MAXhp = 3"
+
+.PP
+Definicja w linii \fB40\fP pliku \fBcale_menu_lewy_klik\&.h\fP\&.
+.SS "Sprite zombie::shape"
+
+.PP
+Definicja w linii \fB53\fP pliku \fBcale_menu_lewy_klik\&.h\fP\&.
+.SS "int zombie::spr_pozycje_zombie =0"
+
+.PP
+Definicja w linii \fB57\fP pliku \fBcale_menu_lewy_klik\&.h\fP\&.
+.SS "float zombie::width = 50\&.f"
+
+.PP
+Definicja w linii \fB42\fP pliku \fBcale_menu_lewy_klik\&.h\fP\&.
+.SS "bool zombie::zablokuj_ruszanie_sie = false"
+
+.PP
+Definicja w linii \fB51\fP pliku \fBcale_menu_lewy_klik\&.h\fP\&.
+.SS "int zombie::ziara2 = 0"
+
+.PP
+Definicja w linii \fB46\fP pliku \fBcale_menu_lewy_klik\&.h\fP\&.
+.SS "int zombie::ziara3 = 0"
+
+.PP
+Definicja w linii \fB47\fP pliku \fBcale_menu_lewy_klik\&.h\fP\&.
+.SS "int zombie::ziara4 = 0"
+
+.PP
+Definicja w linii \fB48\fP pliku \fBcale_menu_lewy_klik\&.h\fP\&.
+
+.SH "Autor"
+.PP 
+Wygenerowano automatycznie z kodu źródłowego programem Doxygen dla Atak Zombie\&.

@@ -1,0 +1,216 @@
+\hypertarget{strzelanie__player1_8cpp}{}\doxysection{Dokumentacja pliku strzelanie\+\_\+player1.\+cpp}
+\label{strzelanie__player1_8cpp}\index{strzelanie\_player1.cpp@{strzelanie\_player1.cpp}}
+{\ttfamily \#include $<$SFML/\+Graphics.\+hpp$>$}\newline
+{\ttfamily \#include $<$iostream$>$}\newline
+{\ttfamily \#include $<$windows.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}strzelanie\+\_\+player1.\+h\char`\"{}}\newline
+{\ttfamily \#include $<$vector$>$}\newline
+{\ttfamily \#include $<$math.\+h$>$}\newline
+Wykres zależności załączania dla strzelanie\+\_\+player1.\+cpp\+:
+% FIG 0
+\doxysubsection*{Funkcje}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{strzelanie__player1_8cpp_a6e2708f6a7531fc52993810e5d5e3af3}{dodaj\+\_\+strzale}} (\mbox{\hyperlink{classstrzal}{strzal}} strzalka, vector$<$ \mbox{\hyperlink{classstrzal}{strzal}} $>$ \&wektor\+\_\+strzal, Rectangle\+Shape \&player)
+\begin{DoxyCompactList}\small\item\em Tworzy strzale lecaca w prawo. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{strzelanie__player1_8cpp_a6fbbd5c396f6fc0c96647f009cc66dcf}{dodaj\+\_\+strzale\+\_\+lewo}} (\mbox{\hyperlink{classstrzal}{strzal}} strzalka, vector$<$ \mbox{\hyperlink{classstrzal}{strzal}} $>$ \&wektor\+\_\+strzal\+\_\+1, Rectangle\+Shape \&player)
+\begin{DoxyCompactList}\small\item\em Tworzy strzale lecaca w lewo. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{strzelanie__player1_8cpp_a8c7725acfe016f11a0a51b2813decec1}{dodaj\+\_\+strzale\+\_\+dol}} (\mbox{\hyperlink{classstrzal}{strzal}} strzalka, vector$<$ \mbox{\hyperlink{classstrzal}{strzal}} $>$ \&wektor\+\_\+strzal\+\_\+dol, Rectangle\+Shape \&player)
+\begin{DoxyCompactList}\small\item\em Tworzy strzale lecaca w dol. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{strzelanie__player1_8cpp_ab9ab79b3c41c2f7dc97e9e6dcb3e36f2}{dodaj\+\_\+strzale\+\_\+gora}} (\mbox{\hyperlink{classstrzal}{strzal}} strzalka, vector$<$ \mbox{\hyperlink{classstrzal}{strzal}} $>$ \&wektor\+\_\+strzal\+\_\+gora, Rectangle\+Shape \&player)
+\begin{DoxyCompactList}\small\item\em Tworzy strzale lecaca w gora. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{strzelanie__player1_8cpp_ae65fbfdb50f14c9ff4d4dee43b8012e0}{narysuj\+\_\+strzale}} (vector$<$ \mbox{\hyperlink{classstrzal}{strzal}} $>$ \&wektor\+\_\+strzal, Render\+Window \&window)
+\begin{DoxyCompactList}\small\item\em Naklada teksture na strzale lecaca w prawo. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{strzelanie__player1_8cpp_a06e8c23b2075962ddb81b7d3682fb7a3}{narysuj\+\_\+strzale\+\_\+lewo}} (vector$<$ \mbox{\hyperlink{classstrzal}{strzal}} $>$ \&wektor\+\_\+strzal\+\_\+1, Render\+Window \&window)
+\begin{DoxyCompactList}\small\item\em Naklada teksture na strzale lecaca w lewo. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{strzelanie__player1_8cpp_a14cb79e642b8c919f5870d6850e1c3b5}{narysuj\+\_\+strzale\+\_\+dol}} (vector$<$ \mbox{\hyperlink{classstrzal}{strzal}} $>$ \&wektor\+\_\+strzal\+\_\+dol, Render\+Window \&window)
+\begin{DoxyCompactList}\small\item\em Naklada teksture na strzale lecaca w dol. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{strzelanie__player1_8cpp_add2296e87145ac6658373052e3be966e}{narysuj\+\_\+strzale\+\_\+gora}} (vector$<$ \mbox{\hyperlink{classstrzal}{strzal}} $>$ \&wektor\+\_\+strzal\+\_\+gora, Render\+Window \&window)
+\begin{DoxyCompactList}\small\item\em Naklada teksture na strzale lecaca w gore. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Dokumentacja funkcji}
+\mbox{\Hypertarget{strzelanie__player1_8cpp_a6e2708f6a7531fc52993810e5d5e3af3}\label{strzelanie__player1_8cpp_a6e2708f6a7531fc52993810e5d5e3af3}} 
+\index{strzelanie\_player1.cpp@{strzelanie\_player1.cpp}!dodaj\_strzale@{dodaj\_strzale}}
+\index{dodaj\_strzale@{dodaj\_strzale}!strzelanie\_player1.cpp@{strzelanie\_player1.cpp}}
+\doxysubsubsection{\texorpdfstring{dodaj\_strzale()}{dodaj\_strzale()}}
+{\footnotesize\ttfamily void dodaj\+\_\+strzale (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classstrzal}{strzal}}}]{strzalka,  }\item[{vector$<$ \mbox{\hyperlink{classstrzal}{strzal}} $>$ \&}]{wektor\+\_\+strzal,  }\item[{Rectangle\+Shape \&}]{player }\end{DoxyParamCaption})}
+
+
+
+Tworzy strzale lecaca w prawo. 
+
+
+\begin{DoxyParams}{Parametry}
+{\em strzal} & strzalka -\/ wywolanie klasy strzal \\
+\hline
+{\em vector} & $<$strzal$>$ \&wektor\+\_\+strzal -\/ wywolanie wektora przechowujacego strzaly \\
+\hline
+{\em Rectangle\+Shape} & \& player -\/ wskaznik na postac \\
+\hline
+\end{DoxyParams}
+
+
+Definicja w linii \mbox{\hyperlink{strzelanie__player1_8cpp_source_l00026}{26}} pliku \mbox{\hyperlink{strzelanie__player1_8cpp_source}{strzelanie\+\_\+player1.\+cpp}}.
+
+\mbox{\Hypertarget{strzelanie__player1_8cpp_a8c7725acfe016f11a0a51b2813decec1}\label{strzelanie__player1_8cpp_a8c7725acfe016f11a0a51b2813decec1}} 
+\index{strzelanie\_player1.cpp@{strzelanie\_player1.cpp}!dodaj\_strzale\_dol@{dodaj\_strzale\_dol}}
+\index{dodaj\_strzale\_dol@{dodaj\_strzale\_dol}!strzelanie\_player1.cpp@{strzelanie\_player1.cpp}}
+\doxysubsubsection{\texorpdfstring{dodaj\_strzale\_dol()}{dodaj\_strzale\_dol()}}
+{\footnotesize\ttfamily void dodaj\+\_\+strzale\+\_\+dol (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classstrzal}{strzal}}}]{strzalka,  }\item[{vector$<$ \mbox{\hyperlink{classstrzal}{strzal}} $>$ \&}]{wektor\+\_\+strzal\+\_\+dol,  }\item[{Rectangle\+Shape \&}]{player }\end{DoxyParamCaption})}
+
+
+
+Tworzy strzale lecaca w dol. 
+
+
+\begin{DoxyParams}{Parametry}
+{\em strzal} & strzalka -\/ wywolanie klasy strzal \\
+\hline
+{\em vector} & $<$strzal$>$ \&wektor\+\_\+strzal -\/ wywolanie wektora przechowujacego strzaly \\
+\hline
+{\em Rectangle\+Shape} & \& player -\/ wskaznik na postac \\
+\hline
+\end{DoxyParams}
+
+
+Definicja w linii \mbox{\hyperlink{strzelanie__player1_8cpp_source_l00056}{56}} pliku \mbox{\hyperlink{strzelanie__player1_8cpp_source}{strzelanie\+\_\+player1.\+cpp}}.
+
+\mbox{\Hypertarget{strzelanie__player1_8cpp_ab9ab79b3c41c2f7dc97e9e6dcb3e36f2}\label{strzelanie__player1_8cpp_ab9ab79b3c41c2f7dc97e9e6dcb3e36f2}} 
+\index{strzelanie\_player1.cpp@{strzelanie\_player1.cpp}!dodaj\_strzale\_gora@{dodaj\_strzale\_gora}}
+\index{dodaj\_strzale\_gora@{dodaj\_strzale\_gora}!strzelanie\_player1.cpp@{strzelanie\_player1.cpp}}
+\doxysubsubsection{\texorpdfstring{dodaj\_strzale\_gora()}{dodaj\_strzale\_gora()}}
+{\footnotesize\ttfamily void dodaj\+\_\+strzale\+\_\+gora (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classstrzal}{strzal}}}]{strzalka,  }\item[{vector$<$ \mbox{\hyperlink{classstrzal}{strzal}} $>$ \&}]{wektor\+\_\+strzal\+\_\+gora,  }\item[{Rectangle\+Shape \&}]{player }\end{DoxyParamCaption})}
+
+
+
+Tworzy strzale lecaca w gora. 
+
+
+\begin{DoxyParams}{Parametry}
+{\em strzal} & strzalka -\/ wywolanie klasy strzal \\
+\hline
+{\em vector} & $<$strzal$>$ \&wektor\+\_\+strzal -\/ wywolanie wektora przechowujacego strzaly \\
+\hline
+{\em Rectangle\+Shape} & \& player -\/ wskaznik na postac \\
+\hline
+\end{DoxyParams}
+
+
+Definicja w linii \mbox{\hyperlink{strzelanie__player1_8cpp_source_l00070}{70}} pliku \mbox{\hyperlink{strzelanie__player1_8cpp_source}{strzelanie\+\_\+player1.\+cpp}}.
+
+\mbox{\Hypertarget{strzelanie__player1_8cpp_a6fbbd5c396f6fc0c96647f009cc66dcf}\label{strzelanie__player1_8cpp_a6fbbd5c396f6fc0c96647f009cc66dcf}} 
+\index{strzelanie\_player1.cpp@{strzelanie\_player1.cpp}!dodaj\_strzale\_lewo@{dodaj\_strzale\_lewo}}
+\index{dodaj\_strzale\_lewo@{dodaj\_strzale\_lewo}!strzelanie\_player1.cpp@{strzelanie\_player1.cpp}}
+\doxysubsubsection{\texorpdfstring{dodaj\_strzale\_lewo()}{dodaj\_strzale\_lewo()}}
+{\footnotesize\ttfamily void dodaj\+\_\+strzale\+\_\+lewo (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classstrzal}{strzal}}}]{strzalka,  }\item[{vector$<$ \mbox{\hyperlink{classstrzal}{strzal}} $>$ \&}]{wektor\+\_\+strzal\+\_\+1,  }\item[{Rectangle\+Shape \&}]{player }\end{DoxyParamCaption})}
+
+
+
+Tworzy strzale lecaca w lewo. 
+
+
+\begin{DoxyParams}{Parametry}
+{\em strzal} & strzalka -\/ wywolanie klasy strzal \\
+\hline
+{\em vector} & $<$strzal$>$ \&wektor\+\_\+strzal -\/ wywolanie wektora przechowujacego strzaly \\
+\hline
+{\em Rectangle\+Shape} & \& player -\/ wskaznik na postac \\
+\hline
+\end{DoxyParams}
+
+
+Definicja w linii \mbox{\hyperlink{strzelanie__player1_8cpp_source_l00042}{42}} pliku \mbox{\hyperlink{strzelanie__player1_8cpp_source}{strzelanie\+\_\+player1.\+cpp}}.
+
+\mbox{\Hypertarget{strzelanie__player1_8cpp_ae65fbfdb50f14c9ff4d4dee43b8012e0}\label{strzelanie__player1_8cpp_ae65fbfdb50f14c9ff4d4dee43b8012e0}} 
+\index{strzelanie\_player1.cpp@{strzelanie\_player1.cpp}!narysuj\_strzale@{narysuj\_strzale}}
+\index{narysuj\_strzale@{narysuj\_strzale}!strzelanie\_player1.cpp@{strzelanie\_player1.cpp}}
+\doxysubsubsection{\texorpdfstring{narysuj\_strzale()}{narysuj\_strzale()}}
+{\footnotesize\ttfamily void narysuj\+\_\+strzale (\begin{DoxyParamCaption}\item[{vector$<$ \mbox{\hyperlink{classstrzal}{strzal}} $>$ \&}]{wektor\+\_\+strzal,  }\item[{Render\+Window \&}]{window }\end{DoxyParamCaption})}
+
+
+
+Naklada teksture na strzale lecaca w prawo. 
+
+
+\begin{DoxyParams}{Parametry}
+{\em strzal} & strzalka -\/ wywolanie klasy strzal \\
+\hline
+{\em vector} & $<$strzal$>$ \&wektor\+\_\+strzal -\/ wywolanie wektora przechowujacego strzaly \\
+\hline
+{\em Rectangle\+Shape} & \& player -\/ wskaznik na postac \\
+\hline
+\end{DoxyParams}
+
+
+Definicja w linii \mbox{\hyperlink{strzelanie__player1_8cpp_source_l00084}{84}} pliku \mbox{\hyperlink{strzelanie__player1_8cpp_source}{strzelanie\+\_\+player1.\+cpp}}.
+
+\mbox{\Hypertarget{strzelanie__player1_8cpp_a14cb79e642b8c919f5870d6850e1c3b5}\label{strzelanie__player1_8cpp_a14cb79e642b8c919f5870d6850e1c3b5}} 
+\index{strzelanie\_player1.cpp@{strzelanie\_player1.cpp}!narysuj\_strzale\_dol@{narysuj\_strzale\_dol}}
+\index{narysuj\_strzale\_dol@{narysuj\_strzale\_dol}!strzelanie\_player1.cpp@{strzelanie\_player1.cpp}}
+\doxysubsubsection{\texorpdfstring{narysuj\_strzale\_dol()}{narysuj\_strzale\_dol()}}
+{\footnotesize\ttfamily void narysuj\+\_\+strzale\+\_\+dol (\begin{DoxyParamCaption}\item[{vector$<$ \mbox{\hyperlink{classstrzal}{strzal}} $>$ \&}]{wektor\+\_\+strzal\+\_\+dol,  }\item[{Render\+Window \&}]{window }\end{DoxyParamCaption})}
+
+
+
+Naklada teksture na strzale lecaca w dol. 
+
+
+\begin{DoxyParams}{Parametry}
+{\em strzal} & strzalka -\/ wywolanie klasy strzal \\
+\hline
+{\em vector} & $<$strzal$>$ \&wektor\+\_\+strzal -\/ wywolanie wektora przechowujacego strzaly \\
+\hline
+{\em Rectangle\+Shape} & \& player -\/ wskaznik na postac \\
+\hline
+\end{DoxyParams}
+
+
+Definicja w linii \mbox{\hyperlink{strzelanie__player1_8cpp_source_l00116}{116}} pliku \mbox{\hyperlink{strzelanie__player1_8cpp_source}{strzelanie\+\_\+player1.\+cpp}}.
+
+\mbox{\Hypertarget{strzelanie__player1_8cpp_add2296e87145ac6658373052e3be966e}\label{strzelanie__player1_8cpp_add2296e87145ac6658373052e3be966e}} 
+\index{strzelanie\_player1.cpp@{strzelanie\_player1.cpp}!narysuj\_strzale\_gora@{narysuj\_strzale\_gora}}
+\index{narysuj\_strzale\_gora@{narysuj\_strzale\_gora}!strzelanie\_player1.cpp@{strzelanie\_player1.cpp}}
+\doxysubsubsection{\texorpdfstring{narysuj\_strzale\_gora()}{narysuj\_strzale\_gora()}}
+{\footnotesize\ttfamily void narysuj\+\_\+strzale\+\_\+gora (\begin{DoxyParamCaption}\item[{vector$<$ \mbox{\hyperlink{classstrzal}{strzal}} $>$ \&}]{wektor\+\_\+strzal\+\_\+gora,  }\item[{Render\+Window \&}]{window }\end{DoxyParamCaption})}
+
+
+
+Naklada teksture na strzale lecaca w gore. 
+
+
+\begin{DoxyParams}{Parametry}
+{\em strzal} & strzalka -\/ wywolanie klasy strzal \\
+\hline
+{\em vector} & $<$strzal$>$ \&wektor\+\_\+strzal -\/ wywolanie wektora przechowujacego strzaly \\
+\hline
+{\em Rectangle\+Shape} & \& player -\/ wskaznik na postac \\
+\hline
+\end{DoxyParams}
+
+
+Definicja w linii \mbox{\hyperlink{strzelanie__player1_8cpp_source_l00132}{132}} pliku \mbox{\hyperlink{strzelanie__player1_8cpp_source}{strzelanie\+\_\+player1.\+cpp}}.
+
+\mbox{\Hypertarget{strzelanie__player1_8cpp_a06e8c23b2075962ddb81b7d3682fb7a3}\label{strzelanie__player1_8cpp_a06e8c23b2075962ddb81b7d3682fb7a3}} 
+\index{strzelanie\_player1.cpp@{strzelanie\_player1.cpp}!narysuj\_strzale\_lewo@{narysuj\_strzale\_lewo}}
+\index{narysuj\_strzale\_lewo@{narysuj\_strzale\_lewo}!strzelanie\_player1.cpp@{strzelanie\_player1.cpp}}
+\doxysubsubsection{\texorpdfstring{narysuj\_strzale\_lewo()}{narysuj\_strzale\_lewo()}}
+{\footnotesize\ttfamily void narysuj\+\_\+strzale\+\_\+lewo (\begin{DoxyParamCaption}\item[{vector$<$ \mbox{\hyperlink{classstrzal}{strzal}} $>$ \&}]{wektor\+\_\+strzal\+\_\+1,  }\item[{Render\+Window \&}]{window }\end{DoxyParamCaption})}
+
+
+
+Naklada teksture na strzale lecaca w lewo. 
+
+
+\begin{DoxyParams}{Parametry}
+{\em strzal} & strzalka -\/ wywolanie klasy strzal \\
+\hline
+{\em vector} & $<$strzal$>$ \&wektor\+\_\+strzal -\/ wywolanie wektora przechowujacego strzaly \\
+\hline
+{\em Rectangle\+Shape} & \& player -\/ wskaznik na postac \\
+\hline
+\end{DoxyParams}
+
+
+Definicja w linii \mbox{\hyperlink{strzelanie__player1_8cpp_source_l00100}{100}} pliku \mbox{\hyperlink{strzelanie__player1_8cpp_source}{strzelanie\+\_\+player1.\+cpp}}.
+

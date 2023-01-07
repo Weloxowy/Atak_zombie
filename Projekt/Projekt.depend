@@ -1837,7 +1837,7 @@
 	"cale_menu_lewy_klik.h"
 	"klasa_postac.h"
 
-1673053329 source:d:\code blocks\projekt sfml\projektnajnowszy\cale_menu_lewy_klik.cpp
+1673104781 source:d:\code blocks\projekt sfml\projektnajnowszy\cale_menu_lewy_klik.cpp
 	<SFML/Graphics.hpp>
 	<iostream>
 	<windows.h>
@@ -1845,7 +1845,7 @@
 	"cale_menu_lewy_klik.h"
 	"isAnyKeyPressed.h"
 
-1672957866 d:\code blocks\projekt sfml\projektnajnowszy\cale_menu_lewy_klik.h
+1673106515 d:\code blocks\projekt sfml\projektnajnowszy\cale_menu_lewy_klik.h
 	<SFML/Graphics.hpp>
 	<iostream>
 	<windows.h>
@@ -1853,19 +1853,19 @@
 	<vector>
 	"strzelanie_player1.h"
 
-1670957798 d:\code blocks\projekt sfml\projektnajnowszy\strzelanie_player1.h
+1673107587 d:\code blocks\projekt sfml\projektnajnowszy\strzelanie_player1.h
 	<SFML/Graphics.hpp>
 	<iostream>
 	<windows.h>
 	<math.h>
 
-1670957797 d:\code blocks\projekt sfml\projektnajnowszy\isanykeypressed.h
+1673107587 d:\code blocks\projekt sfml\projektnajnowszy\isanykeypressed.h
 	<SFML/Graphics.hpp>
 	<iostream>
 	<windows.h>
 	<math.h>
 
-1670957797 source:d:\code blocks\projekt sfml\projektnajnowszy\isanykeypressed.cpp
+1673106323 source:d:\code blocks\projekt sfml\projektnajnowszy\isanykeypressed.cpp
 	<SFML/Graphics.hpp>
 	<iostream>
 	<windows.h>
@@ -1885,7 +1885,7 @@
 	<windows.h>
 	<math.h>
 
-1672966565 source:d:\code blocks\projekt sfml\projektnajnowszy\main.cpp
+1673106246 source:d:\code blocks\projekt sfml\projektnajnowszy\main.cpp
 	<SFML/Graphics.hpp>
 	<SFML/Audio.hpp>
 	<iostream>
@@ -1898,23 +1898,22 @@
 	"isAnyKeyPressed.h"
 	"wybor_postaci_z_menu.h"
 	"cale_menu_lewy_klik.h"
-	"klasa_postac.h"
 
-1672960567 d:\code blocks\projekt sfml\projektnajnowszy\pozycja_gracza.h
+1673106539 d:\code blocks\projekt sfml\projektnajnowszy\pozycja_gracza.h
 	<SFML/Graphics.hpp>
 	<iostream>
 	<windows.h>
 	<math.h>
 	"isAnyKeyPressed.h"
 
-1670957798 d:\code blocks\projekt sfml\projektnajnowszy\wybor_postaci_z_menu.h
+1673106547 d:\code blocks\projekt sfml\projektnajnowszy\wybor_postaci_z_menu.h
 	<SFML/Graphics.hpp>
 	<iostream>
 	<windows.h>
 	<math.h>
 	"isAnyKeyPressed.h"
 
-1672960567 source:d:\code blocks\projekt sfml\projektnajnowszy\pozycja_gracza.cpp
+1673106502 source:d:\code blocks\projekt sfml\projektnajnowszy\pozycja_gracza.cpp
 	<SFML/Graphics.hpp>
 	<iostream>
 	<windows.h>
@@ -1924,7 +1923,7 @@
 1670957800 source:d:\code blocks\projekt sfml\projektnajnowszy\src\animation.cpp
 	<SFML/Graphics.hpp>
 
-1670957798 source:d:\code blocks\projekt sfml\projektnajnowszy\strzelanie_player1.cpp
+1673106542 source:d:\code blocks\projekt sfml\projektnajnowszy\strzelanie_player1.cpp
 	<SFML/Graphics.hpp>
 	<iostream>
 	<windows.h>
@@ -1932,7 +1931,7 @@
 	<vector>
 	<math.h>
 
-1670957798 source:d:\code blocks\projekt sfml\projektnajnowszy\wybor_postaci_z_menu.cpp
+1673106546 source:d:\code blocks\projekt sfml\projektnajnowszy\wybor_postaci_z_menu.cpp
 	<SFML/Graphics.hpp>
 	<iostream>
 	<windows.h>

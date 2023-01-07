@@ -1,0 +1,760 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="pl">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.6"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Atak Zombie: Dokumentacja pliku main.cpp</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectlogo"><img alt="Logo" src="logo.png"/></td>
+  <td id="projectalign">
+   <div id="projectname">Atak Zombie
+   </div>
+   <div id="projectbrief">Gra 2D stworzona w SFML, polegaj膮ca na zabijaniu nacieraj膮cych potwor贸w.</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Wygenerowano przez Doxygen 1.9.6 -->
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>Strona&#160;g艂贸wna</span></a></li>
+      <li><a href="annotated.html"><span>Klasy</span></a></li>
+      <li class="current"><a href="files.html"><span>Pliki</span></a></li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>Lista&#160;plik贸w</span></a></li>
+      <li><a href="globals.html"><span>Sk艂adowe&#160;plik贸w</span></a></li>
+    </ul>
+  </div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#nested-classes">Komponenty</a> &#124;
+<a href="#func-members">Funkcje</a> &#124;
+<a href="#var-members">Zmienne</a>  </div>
+  <div class="headertitle"><div class="title">Dokumentacja pliku main.cpp</div></div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><code>#include &lt;SFML/Graphics.hpp&gt;</code><br />
+<code>#include &lt;SFML/Audio.hpp&gt;</code><br />
+<code>#include &lt;iostream&gt;</code><br />
+<code>#include &lt;windows.h&gt;</code><br />
+<code>#include &lt;math.h&gt;</code><br />
+<code>#include &lt;vector&gt;</code><br />
+<code>#include &lt;time.h&gt;</code><br />
+<code>#include &lt;sstream&gt;</code><br />
+<code>#include &quot;<a class="el" href="pozycja__gracza_8h_source.html">pozycja_gracza.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="is_any_key_pressed_8h_source.html">isAnyKeyPressed.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="wybor__postaci__z__menu_8h_source.html">wybor_postaci_z_menu.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="cale__menu__lewy__klik_8h_source.html">cale_menu_lewy_klik.h</a>&quot;</code><br />
+</div><div class="textblock"><div class="dynheader">
+Wykres zale偶no艣ci za艂膮czania dla main.cpp:</div>
+<div class="dyncontent">
+<div class="center"><img src="main_8cpp__incl.png" border="0" usemap="#amain_8cpp" alt=""/></div>
+</div>
+</div>
+<p><a href="main_8cpp_source.html">Id藕 do kodu 藕r贸d艂owego tego pliku.</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="nested-classes" name="nested-classes"></a>
+Komponenty</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgracz.html">gracz</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Klasa gracz.  <a href="classgracz.html#details">Wi臋cej...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
+Funkcje</h2></td></tr>
+<tr class="memitem:af4327960a235ee29f00326aa5c2f158a"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8cpp.html#af4327960a235ee29f00326aa5c2f158a">kolizja_strzaly</a> (<a class="el" href="classstrzal.html">strzal</a> strzalka)</td></tr>
+<tr class="memdesc:af4327960a235ee29f00326aa5c2f158a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Funkcja sprawdzajaca kolizje strzaly.  <br /></td></tr>
+<tr class="separator:af4327960a235ee29f00326aa5c2f158a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae2f5037db40719401e9756b3f7ac2b75"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8cpp.html#ae2f5037db40719401e9756b3f7ac2b75">zombie_pozycja</a> ()</td></tr>
+<tr class="memdesc:ae2f5037db40719401e9756b3f7ac2b75"><td class="mdescLeft">&#160;</td><td class="mdescRight">Funckja sprawdzajaca pozycje zombie, oraz ustawiajaca ich kolizje.  <br /></td></tr>
+<tr class="separator:ae2f5037db40719401e9756b3f7ac2b75"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8a3aad63c953ed8a7df5aff65e7b22b9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8cpp.html#a8a3aad63c953ed8a7df5aff65e7b22b9">convert_score</a> (int &amp;<a class="el" href="main_8cpp.html#aef160b7437d94056f1dc59646cd5b87d">score</a>, Text &amp;tekscior, stringstream &amp;score_to_string, Text &amp;poziomek, int &amp;<a class="el" href="main_8cpp.html#adf3f9636cdfb387bad5ffdef052bda59">poziom</a>, stringstream &amp;poziom_to_string)</td></tr>
+<tr class="memdesc:a8a3aad63c953ed8a7df5aff65e7b22b9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Funckaja pozwalajaca na wyswietlanie punktow w grze.  <br /></td></tr>
+<tr class="separator:a8a3aad63c953ed8a7df5aff65e7b22b9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a154409f4cb8a43c37bd48c276fa7812e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8cpp.html#a154409f4cb8a43c37bd48c276fa7812e">ostateczne_punkty</a> (int &amp;<a class="el" href="main_8cpp.html#aef160b7437d94056f1dc59646cd5b87d">score</a>, Text &amp;end_score, stringstream &amp;endzik_score)</td></tr>
+<tr class="memdesc:a154409f4cb8a43c37bd48c276fa7812e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Funckja wyswietlajaca wszystkie punkty ktore zdobyl gracz.  <br /></td></tr>
+<tr class="separator:a154409f4cb8a43c37bd48c276fa7812e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a49ade5a51d290c0ad178dc988069e55a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8cpp.html#a49ade5a51d290c0ad178dc988069e55a">hp_rowne_zero</a> (RectangleShape &amp;player, sf::RenderWindow &amp;window)</td></tr>
+<tr class="memdesc:a49ade5a51d290c0ad178dc988069e55a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Funkcja sprawdza czy poziom zdrowia gracza jest rowne zero, jesli tak to wyswietla okno przegrania gry.  <br /></td></tr>
+<tr class="separator:a49ade5a51d290c0ad178dc988069e55a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae66f6b31b5ad750f1fe042a706a4e3d4"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4">main</a> ()</td></tr>
+<tr class="separator:ae66f6b31b5ad750f1fe042a706a4e3d4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="var-members" name="var-members"></a>
+Zmienne</h2></td></tr>
+<tr class="memitem:a49f3e17259835b0bfba5bf73c90e8916"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8cpp.html#a49f3e17259835b0bfba5bf73c90e8916">bitmapa</a> = 0</td></tr>
+<tr class="memdesc:a49f3e17259835b0bfba5bf73c90e8916"><td class="mdescLeft">&#160;</td><td class="mdescRight">Zmienna przechowuje stan aktualnej bitmapy.  <br /></td></tr>
+<tr class="separator:a49f3e17259835b0bfba5bf73c90e8916"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5992b274cfdcacdbc1fa8347fd01ebde"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8cpp.html#a5992b274cfdcacdbc1fa8347fd01ebde">done</a> = 0</td></tr>
+<tr class="memdesc:a5992b274cfdcacdbc1fa8347fd01ebde"><td class="mdescLeft">&#160;</td><td class="mdescRight">Zmienna odpowiadajaca za wybor postaci.  <br /></td></tr>
+<tr class="separator:a5992b274cfdcacdbc1fa8347fd01ebde"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a27a420ec4683c7d9ebbc26410c4e5774"><td class="memItemLeft" align="right" valign="top">const unsigned&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8cpp.html#a27a420ec4683c7d9ebbc26410c4e5774">WINDOW_WIDTH</a> = 1366</td></tr>
+<tr class="memdesc:a27a420ec4683c7d9ebbc26410c4e5774"><td class="mdescLeft">&#160;</td><td class="mdescRight">Zmienna przechowuje dlugosc mapy.  <br /></td></tr>
+<tr class="separator:a27a420ec4683c7d9ebbc26410c4e5774"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0e25e160f353fa768adfdf022b48ca1f"><td class="memItemLeft" align="right" valign="top">const unsigned&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8cpp.html#a0e25e160f353fa768adfdf022b48ca1f">WINDOW_HEIGHT</a> = 768</td></tr>
+<tr class="memdesc:a0e25e160f353fa768adfdf022b48ca1f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Zmienna przechowuje szerokosc mapy.  <br /></td></tr>
+<tr class="separator:a0e25e160f353fa768adfdf022b48ca1f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5d7bc75d40aa91845c99e2eae27ce7db"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8cpp.html#a5d7bc75d40aa91845c99e2eae27ce7db">pozycja</a> = 0</td></tr>
+<tr class="memdesc:a5d7bc75d40aa91845c99e2eae27ce7db"><td class="mdescLeft">&#160;</td><td class="mdescRight">Zmienna przechowuje aktualna pozycje gracza.  <br /></td></tr>
+<tr class="separator:a5d7bc75d40aa91845c99e2eae27ce7db"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6f1be1f780ff54ec75b41451cd4d90bd"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8cpp.html#a6f1be1f780ff54ec75b41451cd4d90bd">delay</a> = 0</td></tr>
+<tr class="memdesc:a6f1be1f780ff54ec75b41451cd4d90bd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Zmienna pozwalajaca na opoznienie aktualnie wykonywanej tekstury.  <br /></td></tr>
+<tr class="separator:a6f1be1f780ff54ec75b41451cd4d90bd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a06c0dc845bc97c11846126121ef52eae"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8cpp.html#a06c0dc845bc97c11846126121ef52eae">IdleAnim</a> = 0</td></tr>
+<tr class="memdesc:a06c0dc845bc97c11846126121ef52eae"><td class="mdescLeft">&#160;</td><td class="mdescRight">Zmienna pozwalajaca na wyswietlenie tekstury w zaleznosci od pozycji gracza.  <br /></td></tr>
+<tr class="separator:a06c0dc845bc97c11846126121ef52eae"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a40fdb8401d0ebf6f4c627b858b9d22f4"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8cpp.html#a40fdb8401d0ebf6f4c627b858b9d22f4">czy_strzela</a> = false</td></tr>
+<tr class="memdesc:a40fdb8401d0ebf6f4c627b858b9d22f4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Zmienna okreslajaca czy gracz wykonuje strzal.  <br /></td></tr>
+<tr class="separator:a40fdb8401d0ebf6f4c627b858b9d22f4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0a13af434a54e9386af7084a36ba81fb"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8cpp.html#a0a13af434a54e9386af7084a36ba81fb">ziara</a> = 0</td></tr>
+<tr class="memdesc:a0a13af434a54e9386af7084a36ba81fb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Zmienna pozwalajaca na wykonanie tekstury strzalu.  <br /></td></tr>
+<tr class="separator:a0a13af434a54e9386af7084a36ba81fb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4c627af561358316985314767df6b80d"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8cpp.html#a4c627af561358316985314767df6b80d">czas_respu_zombie</a> =10000</td></tr>
+<tr class="memdesc:a4c627af561358316985314767df6b80d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Zmienna przechowujaca opoznienie dla pojawienia sie zombie.  <br /></td></tr>
+<tr class="separator:a4c627af561358316985314767df6b80d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a09fbbe87083078f86ee37d794546dd12"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8cpp.html#a09fbbe87083078f86ee37d794546dd12">hp</a> =10</td></tr>
+<tr class="memdesc:a09fbbe87083078f86ee37d794546dd12"><td class="mdescLeft">&#160;</td><td class="mdescRight">Zmienna przechowujaca poziom zdrowia lucznika.  <br /></td></tr>
+<tr class="separator:a09fbbe87083078f86ee37d794546dd12"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad19d02392da12c2e5a3ecf54021ace85"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8cpp.html#ad19d02392da12c2e5a3ecf54021ace85">hp_berserker</a> =7</td></tr>
+<tr class="memdesc:ad19d02392da12c2e5a3ecf54021ace85"><td class="mdescLeft">&#160;</td><td class="mdescRight">Zmienna przechowujaca poziom zdrowia berserkera.  <br /></td></tr>
+<tr class="separator:ad19d02392da12c2e5a3ecf54021ace85"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aef160b7437d94056f1dc59646cd5b87d"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8cpp.html#aef160b7437d94056f1dc59646cd5b87d">score</a> = 0</td></tr>
+<tr class="memdesc:aef160b7437d94056f1dc59646cd5b87d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Zmienna przechowujaca zdobyte punkty przez gracza.  <br /></td></tr>
+<tr class="separator:aef160b7437d94056f1dc59646cd5b87d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adf3f9636cdfb387bad5ffdef052bda59"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8cpp.html#adf3f9636cdfb387bad5ffdef052bda59">poziom</a> = 1</td></tr>
+<tr class="memdesc:adf3f9636cdfb387bad5ffdef052bda59"><td class="mdescLeft">&#160;</td><td class="mdescRight">Zmienna przechowujaca aktualny poziom gry.  <br /></td></tr>
+<tr class="separator:adf3f9636cdfb387bad5ffdef052bda59"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a929b8b60b65ba8d72f7f9d428890f77f"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8cpp.html#a929b8b60b65ba8d72f7f9d428890f77f">wykonaj</a> = false</td></tr>
+<tr class="memdesc:a929b8b60b65ba8d72f7f9d428890f77f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Zmienna pozwalajaca na wyswietlenie tekstury umierania playera.  <br /></td></tr>
+<tr class="separator:a929b8b60b65ba8d72f7f9d428890f77f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8a462205e6fec5c79973c9f80622ae8c"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8cpp.html#a8a462205e6fec5c79973c9f80622ae8c">ziara4</a> = 0</td></tr>
+<tr class="memdesc:a8a462205e6fec5c79973c9f80622ae8c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Zmienna pozwalajaca na wykonanie tekstury umierania.  <br /></td></tr>
+<tr class="separator:a8a462205e6fec5c79973c9f80622ae8c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad2b53279f6ac9528fc2319605ef637c7"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8cpp.html#ad2b53279f6ac9528fc2319605ef637c7">delay2</a> = 0</td></tr>
+<tr class="memdesc:ad2b53279f6ac9528fc2319605ef637c7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Zmienna pozwalajaca na opoznienie aktualnie wykonywanej tekstury.  <br /></td></tr>
+<tr class="separator:ad2b53279f6ac9528fc2319605ef637c7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac19b696272dc7c45d9337805f24140d4"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8cpp.html#ac19b696272dc7c45d9337805f24140d4">kontroluj_strzal</a> = 0</td></tr>
+<tr class="memdesc:ac19b696272dc7c45d9337805f24140d4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Zmienna pozwalajaca na zablokowaniu dublowania sie strzal w tym samym wektorze, sprawdzanie pozycji gracza, sprawdzanie ktorej metody ma uzyc z klasy.  <br /></td></tr>
+<tr class="separator:ac19b696272dc7c45d9337805f24140d4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8d9621f5071f08cb30fb51297cbd4d8c"><td class="memItemLeft" align="right" valign="top">vector&lt; <a class="el" href="classzombie.html">zombie</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8cpp.html#a8d9621f5071f08cb30fb51297cbd4d8c">wektor_zombie</a></td></tr>
+<tr class="memdesc:a8d9621f5071f08cb30fb51297cbd4d8c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Wektor przechowujacy zombie.  <br /></td></tr>
+<tr class="separator:a8d9621f5071f08cb30fb51297cbd4d8c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">Dokumentacja funkcji</h2>
+<a id="a8a3aad63c953ed8a7df5aff65e7b22b9" name="a8a3aad63c953ed8a7df5aff65e7b22b9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8a3aad63c953ed8a7df5aff65e7b22b9">&#9670;&#160;</a></span>convert_score()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void convert_score </td>
+          <td>(</td>
+          <td class="paramtype">int &amp;&#160;</td>
+          <td class="paramname"><em>score</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Text &amp;&#160;</td>
+          <td class="paramname"><em>tekscior</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">stringstream &amp;&#160;</td>
+          <td class="paramname"><em>score_to_string</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Text &amp;&#160;</td>
+          <td class="paramname"><em>poziomek</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int &amp;&#160;</td>
+          <td class="paramname"><em>poziom</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">stringstream &amp;&#160;</td>
+          <td class="paramname"><em>poziom_to_string</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Funckaja pozwalajaca na wyswietlanie punktow w grze. </p>
+<dl class="params"><dt>Parametry</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">score</td><td>- przechowuje ilosc zdobytych punktow </td></tr>
+    <tr><td class="paramname">tekscior</td><td>- przechowuje czcionke do wyswietlania </td></tr>
+    <tr><td class="paramname">score_to_string</td><td>- wyswietla zdobyte przez gracza punkty </td></tr>
+    <tr><td class="paramname">poziomek</td><td>- przechowuje czcionke do wyswietlenia </td></tr>
+    <tr><td class="paramname">poziom</td><td>- przechowuje aktualny poziom gry </td></tr>
+    <tr><td class="paramname">poziom_to_string</td><td>- wyswietla aktualny poziom gry </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definicja w linii <a class="el" href="main_8cpp_source.html#l00684">684</a> pliku <a class="el" href="main_8cpp_source.html">main.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a49ade5a51d290c0ad178dc988069e55a" name="a49ade5a51d290c0ad178dc988069e55a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a49ade5a51d290c0ad178dc988069e55a">&#9670;&#160;</a></span>hp_rowne_zero()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void hp_rowne_zero </td>
+          <td>(</td>
+          <td class="paramtype">RectangleShape &amp;&#160;</td>
+          <td class="paramname"><em>player</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">sf::RenderWindow &amp;&#160;</td>
+          <td class="paramname"><em>window</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Funkcja sprawdza czy poziom zdrowia gracza jest rowne zero, jesli tak to wyswietla okno przegrania gry. </p>
+<dl class="params"><dt>Parametry</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">player</td><td>- pozwala wyswietlic tekstura gracza </td></tr>
+    <tr><td class="paramname">window</td><td>- wyswietla na ekranie odpowiednie tekstury </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definicja w linii <a class="el" href="main_8cpp_source.html#l00730">730</a> pliku <a class="el" href="main_8cpp_source.html">main.cpp</a>.</p>
+
+</div>
+</div>
+<a id="af4327960a235ee29f00326aa5c2f158a" name="af4327960a235ee29f00326aa5c2f158a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af4327960a235ee29f00326aa5c2f158a">&#9670;&#160;</a></span>kolizja_strzaly()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool kolizja_strzaly </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classstrzal.html">strzal</a>&#160;</td>
+          <td class="paramname"><em>strzalka</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Funkcja sprawdzajaca kolizje strzaly. </p>
+<dl class="params"><dt>Parametry</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">strzalka</td><td>- obiekt klasy strzal, tworzy strzale </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definicja w linii <a class="el" href="main_8cpp_source.html#l00053">53</a> pliku <a class="el" href="main_8cpp_source.html">main.cpp</a>.</p>
+
+</div>
+</div>
+<a id="ae66f6b31b5ad750f1fe042a706a4e3d4" name="ae66f6b31b5ad750f1fe042a706a4e3d4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae66f6b31b5ad750f1fe042a706a4e3d4">&#9670;&#160;</a></span>main()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int main </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>&lt; Stworzenie okna gry</p>
+<p>&lt; Ustawienie ilosci FPS w grze</p>
+<p>&lt; Tworzenie wektora strzaly, ktora leci w prawa strone. dowanie tekstury dla strzaly.</p>
+<p>&lt; Tworzenie wektora strzaly, ktora leci w lewa strone. dowanie tekstury dla strzaly.</p>
+<p>&lt; Tworzenie wektora strzaly, ktora leci w dol. dowanie tekstury dla strzaly.</p>
+<p>&lt; Tworzenie wektora strzaly, ktora leci w gore. dowanie tekstury dla strzaly.</p>
+<p>&lt; Stworzenie szurikena ktorym posluguje sie berserker. Szuriken porusza sie w prawo. Zaladowanie tekstury dla szurikena.</p>
+<p>&lt; Stworzenie szurikena ktorym posluguje sie berserker. Szuriken porusza sie w lewo. Zaladowanie tekstury dla szurikena.</p>
+<p>&lt; Stworzenie szurikena ktorym posluguje sie berserker. Szuriken porusza sie w dol. Zaladowanie tekstury dla szurikena.</p>
+<p>&lt; Stworzenie szurikena ktorym posluguje sie berserker. Szuriken porusza sie w gore. Zaladowanie tekstury dla szurikena.</p>
+<p>&lt; Stworzenie tekstur animacji dla wyboru postaci</p>
+<p>&lt; Stworzenie i ustawienie tekstury dla gracza berserker</p>
+<p>&lt; Stworzenie i ustawienie tekstury dla gracza lucznik</p>
+<p>&lt; Stworzenie tekstury dla zombie, oraz wywolanie metody zombie</p>
+<p>&lt; Stworzenie czcionki do wyswietlania punktow w grze</p>
+<p>&lt; Stworzenie czcionki do wyswietlania poziomu w grze</p>
+<p>&lt; Stworzenie tekstury menu</p>
+<p>&lt; Stworzenie tekstury wyboru postaci</p>
+<p>&lt; Stworzenie tesktury dla instruckji</p>
+<p>&lt; Stworzenie tekstury mapy docelowej</p>
+<p>&lt; Wyswietlenie postaci w wyborze postaci</p>
+<p>&lt; Stworzenie muzyki w grze</p>
+<p>&lt; Wywolanie funkcji menu</p>
+<p>&lt; Stworzenie obiektu klasy lucznik, wywolanie metod klasy</p>
+<p>&lt; Usuwanie strzal z pamieci</p>
+<p>&lt; Stworzenie obiektu klasy berserk, wywolanie metod klasy</p>
+<p>&lt; Usuwanie szurikenow z pamieci</p>
+<p>&lt; Ten if pozwala nam na zablokowaniu dublowania sie strzal, hp gracza, oraz na wyswietlaniu tesktury umierania gracza</p>
+<p>&lt; W zaleznosci od zdobytych punktow, poziom gry sie zwieksza i tworzy sie wiecej potworow</p>
+<p>&lt; W tych if'ach sprawdzamy w ktorym miejscu dokladnie jestesmy.</p>
+
+<p class="definition">Definicja w linii <a class="el" href="main_8cpp_source.html#l00784">784</a> pliku <a class="el" href="main_8cpp_source.html">main.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a154409f4cb8a43c37bd48c276fa7812e" name="a154409f4cb8a43c37bd48c276fa7812e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a154409f4cb8a43c37bd48c276fa7812e">&#9670;&#160;</a></span>ostateczne_punkty()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ostateczne_punkty </td>
+          <td>(</td>
+          <td class="paramtype">int &amp;&#160;</td>
+          <td class="paramname"><em>score</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Text &amp;&#160;</td>
+          <td class="paramname"><em>end_score</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">stringstream &amp;&#160;</td>
+          <td class="paramname"><em>endzik_score</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Funckja wyswietlajaca wszystkie punkty ktore zdobyl gracz. </p>
+<dl class="params"><dt>Parametry</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">score</td><td>- przechwytuje wszystkie zdobyte punkty przez gracza </td></tr>
+    <tr><td class="paramname">end_score</td><td>- tekst do wyswietlenia </td></tr>
+    <tr><td class="paramname">endzik_score</td><td>- wyswietla na ostatnim ekranie ostateczna ilosc zdobytych punktow </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definicja w linii <a class="el" href="main_8cpp_source.html#l00713">713</a> pliku <a class="el" href="main_8cpp_source.html">main.cpp</a>.</p>
+
+</div>
+</div>
+<a id="ae2f5037db40719401e9756b3f7ac2b75" name="ae2f5037db40719401e9756b3f7ac2b75"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae2f5037db40719401e9756b3f7ac2b75">&#9670;&#160;</a></span>zombie_pozycja()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void zombie_pozycja </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Funckja sprawdzajaca pozycje zombie, oraz ustawiajaca ich kolizje. </p>
+
+<p class="definition">Definicja w linii <a class="el" href="main_8cpp_source.html#l00657">657</a> pliku <a class="el" href="main_8cpp_source.html">main.cpp</a>.</p>
+
+</div>
+</div>
+<h2 class="groupheader">Dokumentacja zmiennych</h2>
+<a id="a49f3e17259835b0bfba5bf73c90e8916" name="a49f3e17259835b0bfba5bf73c90e8916"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a49f3e17259835b0bfba5bf73c90e8916">&#9670;&#160;</a></span>bitmapa</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int bitmapa = 0</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Zmienna przechowuje stan aktualnej bitmapy. </p>
+
+<p class="definition">Definicja w linii <a class="el" href="main_8cpp_source.html#l00028">28</a> pliku <a class="el" href="main_8cpp_source.html">main.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a4c627af561358316985314767df6b80d" name="a4c627af561358316985314767df6b80d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4c627af561358316985314767df6b80d">&#9670;&#160;</a></span>czas_respu_zombie</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int czas_respu_zombie =10000</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Zmienna przechowujaca opoznienie dla pojawienia sie zombie. </p>
+
+<p class="definition">Definicja w linii <a class="el" href="main_8cpp_source.html#l00037">37</a> pliku <a class="el" href="main_8cpp_source.html">main.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a40fdb8401d0ebf6f4c627b858b9d22f4" name="a40fdb8401d0ebf6f4c627b858b9d22f4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a40fdb8401d0ebf6f4c627b858b9d22f4">&#9670;&#160;</a></span>czy_strzela</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool czy_strzela = false</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Zmienna okreslajaca czy gracz wykonuje strzal. </p>
+
+<p class="definition">Definicja w linii <a class="el" href="main_8cpp_source.html#l00035">35</a> pliku <a class="el" href="main_8cpp_source.html">main.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a6f1be1f780ff54ec75b41451cd4d90bd" name="a6f1be1f780ff54ec75b41451cd4d90bd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6f1be1f780ff54ec75b41451cd4d90bd">&#9670;&#160;</a></span>delay</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int delay = 0</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Zmienna pozwalajaca na opoznienie aktualnie wykonywanej tekstury. </p>
+
+<p class="definition">Definicja w linii <a class="el" href="main_8cpp_source.html#l00033">33</a> pliku <a class="el" href="main_8cpp_source.html">main.cpp</a>.</p>
+
+</div>
+</div>
+<a id="ad2b53279f6ac9528fc2319605ef637c7" name="ad2b53279f6ac9528fc2319605ef637c7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad2b53279f6ac9528fc2319605ef637c7">&#9670;&#160;</a></span>delay2</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int delay2 = 0</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Zmienna pozwalajaca na opoznienie aktualnie wykonywanej tekstury. </p>
+
+<p class="definition">Definicja w linii <a class="el" href="main_8cpp_source.html#l00044">44</a> pliku <a class="el" href="main_8cpp_source.html">main.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a5992b274cfdcacdbc1fa8347fd01ebde" name="a5992b274cfdcacdbc1fa8347fd01ebde"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5992b274cfdcacdbc1fa8347fd01ebde">&#9670;&#160;</a></span>done</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int done = 0</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Zmienna odpowiadajaca za wybor postaci. </p>
+
+<p class="definition">Definicja w linii <a class="el" href="main_8cpp_source.html#l00029">29</a> pliku <a class="el" href="main_8cpp_source.html">main.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a09fbbe87083078f86ee37d794546dd12" name="a09fbbe87083078f86ee37d794546dd12"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a09fbbe87083078f86ee37d794546dd12">&#9670;&#160;</a></span>hp</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">float hp =10</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Zmienna przechowujaca poziom zdrowia lucznika. </p>
+
+<p class="definition">Definicja w linii <a class="el" href="main_8cpp_source.html#l00038">38</a> pliku <a class="el" href="main_8cpp_source.html">main.cpp</a>.</p>
+
+</div>
+</div>
+<a id="ad19d02392da12c2e5a3ecf54021ace85" name="ad19d02392da12c2e5a3ecf54021ace85"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad19d02392da12c2e5a3ecf54021ace85">&#9670;&#160;</a></span>hp_berserker</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">float hp_berserker =7</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Zmienna przechowujaca poziom zdrowia berserkera. </p>
+
+<p class="definition">Definicja w linii <a class="el" href="main_8cpp_source.html#l00039">39</a> pliku <a class="el" href="main_8cpp_source.html">main.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a06c0dc845bc97c11846126121ef52eae" name="a06c0dc845bc97c11846126121ef52eae"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a06c0dc845bc97c11846126121ef52eae">&#9670;&#160;</a></span>IdleAnim</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int IdleAnim = 0</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Zmienna pozwalajaca na wyswietlenie tekstury w zaleznosci od pozycji gracza. </p>
+
+<p class="definition">Definicja w linii <a class="el" href="main_8cpp_source.html#l00034">34</a> pliku <a class="el" href="main_8cpp_source.html">main.cpp</a>.</p>
+
+</div>
+</div>
+<a id="ac19b696272dc7c45d9337805f24140d4" name="ac19b696272dc7c45d9337805f24140d4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac19b696272dc7c45d9337805f24140d4">&#9670;&#160;</a></span>kontroluj_strzal</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int kontroluj_strzal = 0</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Zmienna pozwalajaca na zablokowaniu dublowania sie strzal w tym samym wektorze, sprawdzanie pozycji gracza, sprawdzanie ktorej metody ma uzyc z klasy. </p>
+
+<p class="definition">Definicja w linii <a class="el" href="main_8cpp_source.html#l00045">45</a> pliku <a class="el" href="main_8cpp_source.html">main.cpp</a>.</p>
+
+</div>
+</div>
+<a id="adf3f9636cdfb387bad5ffdef052bda59" name="adf3f9636cdfb387bad5ffdef052bda59"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adf3f9636cdfb387bad5ffdef052bda59">&#9670;&#160;</a></span>poziom</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int poziom = 1</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Zmienna przechowujaca aktualny poziom gry. </p>
+
+<p class="definition">Definicja w linii <a class="el" href="main_8cpp_source.html#l00041">41</a> pliku <a class="el" href="main_8cpp_source.html">main.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a5d7bc75d40aa91845c99e2eae27ce7db" name="a5d7bc75d40aa91845c99e2eae27ce7db"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5d7bc75d40aa91845c99e2eae27ce7db">&#9670;&#160;</a></span>pozycja</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int pozycja = 0</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Zmienna przechowuje aktualna pozycje gracza. </p>
+
+<p class="definition">Definicja w linii <a class="el" href="main_8cpp_source.html#l00032">32</a> pliku <a class="el" href="main_8cpp_source.html">main.cpp</a>.</p>
+
+</div>
+</div>
+<a id="aef160b7437d94056f1dc59646cd5b87d" name="aef160b7437d94056f1dc59646cd5b87d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aef160b7437d94056f1dc59646cd5b87d">&#9670;&#160;</a></span>score</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int score = 0</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Zmienna przechowujaca zdobyte punkty przez gracza. </p>
+
+<p class="definition">Definicja w linii <a class="el" href="main_8cpp_source.html#l00040">40</a> pliku <a class="el" href="main_8cpp_source.html">main.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a8d9621f5071f08cb30fb51297cbd4d8c" name="a8d9621f5071f08cb30fb51297cbd4d8c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8d9621f5071f08cb30fb51297cbd4d8c">&#9670;&#160;</a></span>wektor_zombie</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">vector&lt;<a class="el" href="classzombie.html">zombie</a>&gt; wektor_zombie</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Wektor przechowujacy zombie. </p>
+
+<p class="definition">Definicja w linii <a class="el" href="main_8cpp_source.html#l00046">46</a> pliku <a class="el" href="main_8cpp_source.html">main.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a0e25e160f353fa768adfdf022b48ca1f" name="a0e25e160f353fa768adfdf022b48ca1f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0e25e160f353fa768adfdf022b48ca1f">&#9670;&#160;</a></span>WINDOW_HEIGHT</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const unsigned WINDOW_HEIGHT = 768</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Zmienna przechowuje szerokosc mapy. </p>
+
+<p class="definition">Definicja w linii <a class="el" href="main_8cpp_source.html#l00031">31</a> pliku <a class="el" href="main_8cpp_source.html">main.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a27a420ec4683c7d9ebbc26410c4e5774" name="a27a420ec4683c7d9ebbc26410c4e5774"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a27a420ec4683c7d9ebbc26410c4e5774">&#9670;&#160;</a></span>WINDOW_WIDTH</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const unsigned WINDOW_WIDTH = 1366</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Zmienna przechowuje dlugosc mapy. </p>
+
+<p class="definition">Definicja w linii <a class="el" href="main_8cpp_source.html#l00030">30</a> pliku <a class="el" href="main_8cpp_source.html">main.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a929b8b60b65ba8d72f7f9d428890f77f" name="a929b8b60b65ba8d72f7f9d428890f77f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a929b8b60b65ba8d72f7f9d428890f77f">&#9670;&#160;</a></span>wykonaj</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool wykonaj = false</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Zmienna pozwalajaca na wyswietlenie tekstury umierania playera. </p>
+
+<p class="definition">Definicja w linii <a class="el" href="main_8cpp_source.html#l00042">42</a> pliku <a class="el" href="main_8cpp_source.html">main.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a0a13af434a54e9386af7084a36ba81fb" name="a0a13af434a54e9386af7084a36ba81fb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0a13af434a54e9386af7084a36ba81fb">&#9670;&#160;</a></span>ziara</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">float ziara = 0</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Zmienna pozwalajaca na wykonanie tekstury strzalu. </p>
+
+<p class="definition">Definicja w linii <a class="el" href="main_8cpp_source.html#l00036">36</a> pliku <a class="el" href="main_8cpp_source.html">main.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a8a462205e6fec5c79973c9f80622ae8c" name="a8a462205e6fec5c79973c9f80622ae8c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8a462205e6fec5c79973c9f80622ae8c">&#9670;&#160;</a></span>ziara4</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int ziara4 = 0</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Zmienna pozwalajaca na wykonanie tekstury umierania. </p>
+
+<p class="definition">Definicja w linii <a class="el" href="main_8cpp_source.html#l00043">43</a> pliku <a class="el" href="main_8cpp_source.html">main.cpp</a>.</p>
+
+</div>
+</div>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Wygenerowano przez&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.6
+</small></address>
+</body>
+</html>

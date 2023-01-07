@@ -1,0 +1,49 @@
+\hypertarget{pozycja__gracza_8cpp_source}{}\doxysection{pozycja\+\_\+gracza.\+cpp}
+\mbox{\hyperlink{pozycja__gracza_8cpp}{Idź do dokumentacji tego pliku.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{pozycja__gracza_8cpp_source_l00001}00001\ }
+\DoxyCodeLine{\Hypertarget{pozycja__gracza_8cpp_source_l00004}00004\ \textcolor{preprocessor}{\#include\ <SFML/Graphics.hpp>}}
+\DoxyCodeLine{\Hypertarget{pozycja__gracza_8cpp_source_l00005}00005\ \textcolor{preprocessor}{\#include\ <iostream>}}
+\DoxyCodeLine{\Hypertarget{pozycja__gracza_8cpp_source_l00006}00006\ \textcolor{preprocessor}{\#include\ <windows.h>}}
+\DoxyCodeLine{\Hypertarget{pozycja__gracza_8cpp_source_l00007}00007\ \textcolor{preprocessor}{\#include\ <math.h>}}
+\DoxyCodeLine{\Hypertarget{pozycja__gracza_8cpp_source_l00008}00008\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{pozycja__gracza_8h}{pozycja\_gracza.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{pozycja__gracza_8cpp_source_l00009}00009\ }
+\DoxyCodeLine{\Hypertarget{pozycja__gracza_8cpp_source_l00010}00010\ }
+\DoxyCodeLine{\Hypertarget{pozycja__gracza_8cpp_source_l00011}00011\ \textcolor{keyword}{using\ namespace\ }sf;}
+\DoxyCodeLine{\Hypertarget{pozycja__gracza_8cpp_source_l00012}00012\ \textcolor{keyword}{using\ namespace\ }std;}
+\DoxyCodeLine{\Hypertarget{pozycja__gracza_8cpp_source_l00013}00013\ }
+\DoxyCodeLine{\Hypertarget{pozycja__gracza_8cpp_source_l00014}00014\ }
+\DoxyCodeLine{\Hypertarget{pozycja__gracza_8cpp_source_l00025}\mbox{\hyperlink{pozycja__gracza_8cpp_a475b039484d896dc7aa4aba0cb47505e}{00025}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{pozycja__gracza_8cpp_a475b039484d896dc7aa4aba0cb47505e}{sprawdz\_pozycje}}(RectangleShape\ \&\ player,\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{main_8cpp_a5d7bc75d40aa91845c99e2eae27ce7db}{pozycja}},\ \textcolor{keywordtype}{int}\ \&\mbox{\hyperlink{main_8cpp_a06c0dc845bc97c11846126121ef52eae}{IdleAnim}},\ \textcolor{keywordtype}{int}\ \&\mbox{\hyperlink{main_8cpp_a6f1be1f780ff54ec75b41451cd4d90bd}{delay}},\ \textcolor{keywordtype}{float}\ \&\mbox{\hyperlink{main_8cpp_a09fbbe87083078f86ee37d794546dd12}{hp}})}
+\DoxyCodeLine{\Hypertarget{pozycja__gracza_8cpp_source_l00026}00026\ \{}
+\DoxyCodeLine{\Hypertarget{pozycja__gracza_8cpp_source_l00027}00027\ \textcolor{keywordflow}{if}(\mbox{\hyperlink{main_8cpp_a09fbbe87083078f86ee37d794546dd12}{hp}}\ >\ 0)}
+\DoxyCodeLine{\Hypertarget{pozycja__gracza_8cpp_source_l00028}00028\ \{}
+\DoxyCodeLine{\Hypertarget{pozycja__gracza_8cpp_source_l00029}00029\ \ \ \ \ \textcolor{keywordflow}{if}(!\mbox{\hyperlink{is_any_key_pressed_8cpp_a923658f32cdd59f0fd78c87245556898}{isAnyKeyPressed}}()\ \&\&\ \mbox{\hyperlink{main_8cpp_a6f1be1f780ff54ec75b41451cd4d90bd}{delay}}\ >=\ 15)\ }
+\DoxyCodeLine{\Hypertarget{pozycja__gracza_8cpp_source_l00030}00030\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{pozycja__gracza_8cpp_source_l00031}00031\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(\mbox{\hyperlink{main_8cpp_a5d7bc75d40aa91845c99e2eae27ce7db}{pozycja}}\ ==\ 1)}
+\DoxyCodeLine{\Hypertarget{pozycja__gracza_8cpp_source_l00032}00032\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{pozycja__gracza_8cpp_source_l00033}00033\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ player.setTextureRect(IntRect(\mbox{\hyperlink{main_8cpp_a06c0dc845bc97c11846126121ef52eae}{IdleAnim}}*69,960,69,96));}
+\DoxyCodeLine{\Hypertarget{pozycja__gracza_8cpp_source_l00034}00034\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{pozycja__gracza_8cpp_source_l00035}00035\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(\mbox{\hyperlink{main_8cpp_a5d7bc75d40aa91845c99e2eae27ce7db}{pozycja}}\ ==\ 2)}
+\DoxyCodeLine{\Hypertarget{pozycja__gracza_8cpp_source_l00036}00036\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{pozycja__gracza_8cpp_source_l00037}00037\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ player.setTextureRect(IntRect(\mbox{\hyperlink{main_8cpp_a06c0dc845bc97c11846126121ef52eae}{IdleAnim}}*69,0,69,96));}
+\DoxyCodeLine{\Hypertarget{pozycja__gracza_8cpp_source_l00038}00038\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{pozycja__gracza_8cpp_source_l00039}00039\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(\mbox{\hyperlink{main_8cpp_a5d7bc75d40aa91845c99e2eae27ce7db}{pozycja}}\ ==\ 3)}
+\DoxyCodeLine{\Hypertarget{pozycja__gracza_8cpp_source_l00040}00040\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{pozycja__gracza_8cpp_source_l00041}00041\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ player.setTextureRect(IntRect(\mbox{\hyperlink{main_8cpp_a06c0dc845bc97c11846126121ef52eae}{IdleAnim}}*69,480,69,96));}
+\DoxyCodeLine{\Hypertarget{pozycja__gracza_8cpp_source_l00042}00042\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{pozycja__gracza_8cpp_source_l00043}00043\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(\mbox{\hyperlink{main_8cpp_a5d7bc75d40aa91845c99e2eae27ce7db}{pozycja}}\ ==\ 4)}
+\DoxyCodeLine{\Hypertarget{pozycja__gracza_8cpp_source_l00044}00044\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{pozycja__gracza_8cpp_source_l00045}00045\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ player.setTextureRect(IntRect(\mbox{\hyperlink{main_8cpp_a06c0dc845bc97c11846126121ef52eae}{IdleAnim}}*69,96,69,96));}
+\DoxyCodeLine{\Hypertarget{pozycja__gracza_8cpp_source_l00046}00046\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{pozycja__gracza_8cpp_source_l00047}00047\ }
+\DoxyCodeLine{\Hypertarget{pozycja__gracza_8cpp_source_l00048}00048\ ++\mbox{\hyperlink{main_8cpp_a06c0dc845bc97c11846126121ef52eae}{IdleAnim}};}
+\DoxyCodeLine{\Hypertarget{pozycja__gracza_8cpp_source_l00049}00049\ \textcolor{keywordflow}{if}(\mbox{\hyperlink{main_8cpp_a06c0dc845bc97c11846126121ef52eae}{IdleAnim}}\ ==\ 9)}
+\DoxyCodeLine{\Hypertarget{pozycja__gracza_8cpp_source_l00050}00050\ \{}
+\DoxyCodeLine{\Hypertarget{pozycja__gracza_8cpp_source_l00051}00051\ \ \ \ \ \mbox{\hyperlink{main_8cpp_a06c0dc845bc97c11846126121ef52eae}{IdleAnim}}\ =\ 0;}
+\DoxyCodeLine{\Hypertarget{pozycja__gracza_8cpp_source_l00052}00052\ \}}
+\DoxyCodeLine{\Hypertarget{pozycja__gracza_8cpp_source_l00053}00053\ \mbox{\hyperlink{main_8cpp_a6f1be1f780ff54ec75b41451cd4d90bd}{delay}}\ =\ 1;}
+\DoxyCodeLine{\Hypertarget{pozycja__gracza_8cpp_source_l00054}00054\ \}}
+\DoxyCodeLine{\Hypertarget{pozycja__gracza_8cpp_source_l00055}00055\ \}}
+\DoxyCodeLine{\Hypertarget{pozycja__gracza_8cpp_source_l00056}00056\ \}}
+
+\end{DoxyCode}

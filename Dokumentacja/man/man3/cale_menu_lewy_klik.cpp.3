@@ -1,0 +1,101 @@
+.TH "cale_menu_lewy_klik.cpp" 3 "So, 7 sty 2023" "Atak Zombie" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+cale_menu_lewy_klik.cpp
+.SH SYNOPSIS
+.br
+.PP
+\fC#include <SFML/Graphics\&.hpp>\fP
+.br
+\fC#include <iostream>\fP
+.br
+\fC#include <windows\&.h>\fP
+.br
+\fC#include <vector>\fP
+.br
+\fC#include 'cale_menu_lewy_klik\&.h'\fP
+.br
+\fC#include 'isAnyKeyPressed\&.h'\fP
+.br
+
+.SS "Funkcje"
+
+.in +1c
+.ti -1c
+.RI "void \fBladuj_zombie\fP (int &czas_respu, \fBzombie\fP zombi, vector< \fBzombie\fP > &zombie_wektor, int &\fBscore\fP)"
+.br
+.RI "Funkcja pozwala na zaladowanie zombie do programu w odpowiednim czasie, jest tu rowniez sprawdzany poziom\&. "
+.ti -1c
+.RI "void \fBprzyjmowanie_strzal\fP (vector< \fBzombie\fP > &zombie_wektor, vector< \fBstrzal\fP > &wektor_strzal, int &\fBscore\fP)"
+.br
+.RI "Funckja pobiera aktualne miejsca tekstur (zombie oraz strzaly), gdy napotkaja na siebie to potworowi odejmuja sie punkty zdrowia\&. "
+.ti -1c
+.RI "void \fBcale_menu\fP (int &\fBbitmapa\fP, RenderWindow &window, int &\fBdone\fP, RectangleShape &player, RectangleShape &player2, Texture &player1Texture, Texture &player2Texture)"
+.br
+.RI "Funkcja pokazuje cale menu\&. Sprawdza rowniez czy przyciski zostaly wcisniete\&. "
+.in -1c
+.SH "Dokumentacja funkcji"
+.PP 
+.SS "void cale_menu (int & bitmapa, RenderWindow & window, int & done, RectangleShape & player, RectangleShape & player2, Texture & player1Texture, Texture & player2Texture)"
+
+.PP
+Funkcja pokazuje cale menu\&. Sprawdza rowniez czy przyciski zostaly wcisniete\&. 
+.PP
+\fBParametry\fP
+.RS 4
+\fIbitmapa\fP - Sprawdza w ktorym miejscu dokladnie jestesmy\&. Wywoluje odpowiednie instrukcje\&. 
+.br
+\fIwindow\fP - Pozwala na wyswietlenie tekstur\&. 
+.br
+\fIplayer\fP - tworzy gracza lucznik 
+.br
+\fIplayer2\fP - tworzy gracza berserker 
+.br
+\fIplayer1Texture\fP - tworzy teksture dla playera 
+.br
+\fIplayer2Texture\fP - tworzy teksture dla playera 
+.RE
+.PP
+
+.PP
+Definicja w linii \fB133\fP pliku \fBcale_menu_lewy_klik\&.cpp\fP\&.
+.SS "void laduj_zombie (int & czas_respu, \fBzombie\fP zombi, vector< \fBzombie\fP > & zombie_wektor, int & score)"
+
+.PP
+Funkcja pozwala na zaladowanie zombie do programu w odpowiednim czasie, jest tu rowniez sprawdzany poziom\&. 
+.PP
+\fBParametry\fP
+.RS 4
+\fIczas_respu\fP - ustawia czas pojawiania sie potworow 
+.br
+\fIzombi\fP - wywolanie klasy zombie 
+.br
+\fIzombie_wektor\fP - dodaje zombie do wektora 
+.br
+\fIscore\fP - w zaleznosci ile zdobilismy punktow, tyle zombi sie wyswietla 
+.RE
+.PP
+
+.PP
+Definicja w linii \fB22\fP pliku \fBcale_menu_lewy_klik\&.cpp\fP\&.
+.SS "void przyjmowanie_strzal (vector< \fBzombie\fP > & zombie_wektor, vector< \fBstrzal\fP > & wektor_strzal, int & score)"
+
+.PP
+Funckja pobiera aktualne miejsca tekstur (zombie oraz strzaly), gdy napotkaja na siebie to potworowi odejmuja sie punkty zdrowia\&. 
+.PP
+\fBParametry\fP
+.RS 4
+\fIzombie_wektor\fP - modyfikuje wektor zombi, gdy strzala napotka na zombiego to zombi traci punkty zdrowia 
+.br
+\fIwektor_strzal\fP - przechowuje strzaly w wektorze 
+.br
+\fIscore\fP - gdy zombie ginie, to dodaje nam ilosc punktow 
+.RE
+.PP
+
+.PP
+Definicja w linii \fB99\fP pliku \fBcale_menu_lewy_klik\&.cpp\fP\&.
+.SH "Autor"
+.PP 
+Wygenerowano automatycznie z kodu źródłowego programem Doxygen dla Atak Zombie\&.

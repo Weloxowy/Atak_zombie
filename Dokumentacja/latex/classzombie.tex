@@ -1,0 +1,434 @@
+\hypertarget{classzombie}{}\doxysection{Dokumentacja klasy zombie}
+\label{classzombie}\index{zombie@{zombie}}
+
+
+Klasa zombie.  
+
+
+
+
+{\ttfamily \#include $<$cale\+\_\+menu\+\_\+lewy\+\_\+klik.\+h$>$}
+
+\doxysubsection*{Metody publiczne}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classzombie_a754fb4d3a09ab51bfac94afc47e37cec}{zombie}} (Texture $\ast$zombie\+\_\+txt)
+\begin{DoxyCompactList}\small\item\em Kontruktor klasy zombie. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classzombie_a9c2af90db5c101149caacc79e31b1add}{render\+\_\+hp}} (sf\+::\+Render\+Target \&target)
+\begin{DoxyCompactList}\small\item\em Funkcja wyswietlajaca dwa paski zdrowia zombie. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classzombie_a7e63c47d590ad6c42f99f3a7f6a454c5}{init\+HP}} ()
+\begin{DoxyCompactList}\small\item\em Funkcja pozwalajaca na ustawienie pozycji oraz kolorow paskow zdrowia. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classzombie_a9356cdbb7d10e997f3e394cdc13feae6}{update\+\_\+hp}} ()
+\begin{DoxyCompactList}\small\item\em Funckja sprawdza i modyfikuje aktualny poziom zdrowia. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classzombie_af873da942450d1664e8dbd9c781f8a92}{respienie\+\_\+zombie}} (int \&\mbox{\hyperlink{main_8cpp_aef160b7437d94056f1dc59646cd5b87d}{score}})
+\begin{DoxyCompactList}\small\item\em Funckja wyswietla animacje zombiego, ktory wstaje z Ziemii. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classzombie_a8fbdeb6f471ef08b253190fe4af0d1db}{poruszanie}} (Rectangle\+Shape \&player)
+\begin{DoxyCompactList}\small\item\em Funckja pozwala na poruszanie sie zombi. Dodalismy rowniez kolizje dla zombie. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classzombie_ada0b442f876d1c55d2a3f2bddcd3dbd0}{bitka}} (Rectangle\+Shape \&player, float \&\mbox{\hyperlink{main_8cpp_a09fbbe87083078f86ee37d794546dd12}{hp}})
+\begin{DoxyCompactList}\small\item\em Funckja pokazuje animacje ataku zombie na gracza. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Atrybuty publiczne}
+\begin{DoxyCompactItemize}
+\item 
+sf\+::\+Rectangle\+Shape \mbox{\hyperlink{classzombie_a9a0f1a9f750d25593f7135382d762940}{hp\+Bar\+Back}}
+\item 
+sf\+::\+Rectangle\+Shape \mbox{\hyperlink{classzombie_a15e14ed6f97df8bcb38a20cbd42dc86d}{hp\+Bar\+Inside}}
+\item 
+float \mbox{\hyperlink{classzombie_a4b868c44539139fefee240d3a8f606aa}{MAXhp}} = 3
+\item 
+float \mbox{\hyperlink{classzombie_a2f6515ab50296f0da348a34ee37b3900}{hp\+\_\+zombie}} = 3
+\item 
+float \mbox{\hyperlink{classzombie_a30b9b9e93d131b1abb30d9f5f01d032e}{width}} = 50.f
+\item 
+float \mbox{\hyperlink{classzombie_a6960cf343e25d5a3a9ddbc50ca78b6e0}{hp\+Bar\+Max\+Width}} = \mbox{\hyperlink{classzombie_a30b9b9e93d131b1abb30d9f5f01d032e}{width}}
+\item 
+float \mbox{\hyperlink{classzombie_af2ce7464f40439861d35c313159d1943}{height}} = 10.f
+\item 
+int \mbox{\hyperlink{classzombie_af14de4f02513236aefd7870309bba88a}{ziara2}} = 0
+\item 
+int \mbox{\hyperlink{classzombie_ab0c35dd97171b9a43b5d2f100f3fd0e6}{ziara3}} = 0
+\item 
+int \mbox{\hyperlink{classzombie_a590b935feb350f689f5c3f734533e1e0}{ziara4}} = 0
+\item 
+bool \mbox{\hyperlink{classzombie_af0e20bf282741f73fb99e8609bdf9dc2}{czy\+\_\+sie\+\_\+respi}} = true
+\item 
+bool \mbox{\hyperlink{classzombie_a554c81def67cee97a5875443f3beead5}{atak}} = false
+\item 
+bool \mbox{\hyperlink{classzombie_a5795d244930ac98d1b406d87b9a024d1}{zablokuj\+\_\+ruszanie\+\_\+sie}} = false
+\item 
+Sprite \mbox{\hyperlink{classzombie_a7072b95bdc0934e7e163f4c1f2c1fb82}{shape}}
+\item 
+int \mbox{\hyperlink{classzombie_a91cf8620dd460baecf87d49414572d2d}{delay}} =0
+\item 
+int \mbox{\hyperlink{classzombie_aadc032d09633004c11e7935cc731946a}{delay1}} =0
+\item 
+int \mbox{\hyperlink{classzombie_af3356fd30f98af766dedbd6e35e90c2a}{delay2}} =0
+\item 
+int \mbox{\hyperlink{classzombie_a1915aeee89f97cfdb5668c1d87e4f080}{spr\+\_\+pozycje\+\_\+zombie}} =0
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Opis szczegółowy}
+Klasa zombie. 
+
+
+\begin{DoxyParams}{Parametry}
+{\em hp\+Bar\+Back} & -\/ wyswietlanie szarego paska hp \\
+\hline
+{\em hp\+Bar\+Inside} & -\/ wyswietlanie czerwonego paska hp \\
+\hline
+{\em MAXhp\+\_\+lucznik} & -\/ maksymalny poziom zdrowia lucznika \\
+\hline
+{\em MAXhp\+\_\+berserker} & -\/ maksymalny poziom zdrowia berserkera \\
+\hline
+{\em width} & -\/ szerokosc paska zdrowia \\
+\hline
+{\em height} & -\/ wysokosc paska zdrowia \\
+\hline
+{\em hp\+Bar\+Max\+Width} & -\/ maksymalna szerokosc paska zdrowia \\
+\hline
+{\em ziara2} & -\/ pozwala na wyswietlenie tekstury (animacji) potwora \\
+\hline
+{\em ziara3} & -\/ pozwala na wyswietlenie tekstury (animacji) potwora \\
+\hline
+{\em ziara4} & -\/ pozwala na wyswietlenie tekstury (animacji) potwora \\
+\hline
+{\em czy\+\_\+sie\+\_\+respi} & -\/ pozwala na sprawdzenie, czy potwor sie pojawil \\
+\hline
+{\em atak} & -\/ pozwala na sprawdzenie czy potwor zaatakowal gracza \\
+\hline
+{\em zablokuj\+\_\+ruszanie\+\_\+sie} & -\/ pozwala na zablokowanie potworow gdy na siebie nachodza \\
+\hline
+{\em shape} & -\/ pozwala na wyswietlenie tekstur \\
+\hline
+{\em delay} & -\/ pozwalajaca na opoznienie aktualnie wykonywanej tekstury \\
+\hline
+{\em delay1} & -\/ pozwalajaca na opoznienie aktualnie wykonywanej tekstury \\
+\hline
+{\em delay2} & -\/ pozwalajaca na opoznienie aktualnie wykonywanej tekstury \\
+\hline
+{\em spr\+\_\+pozycje\+\_\+zombie} & -\/ sprawdza aktualna pozycje zombie, w zaleznosci od pozycji wyswietla sie odpowiednia tekstura \\
+\hline
+\end{DoxyParams}
+
+
+Definicja w linii \mbox{\hyperlink{cale__menu__lewy__klik_8h_source_l00034}{34}} pliku \mbox{\hyperlink{cale__menu__lewy__klik_8h_source}{cale\+\_\+menu\+\_\+lewy\+\_\+klik.\+h}}.
+
+
+
+\doxysubsection{Dokumentacja konstruktora i destruktora}
+\mbox{\Hypertarget{classzombie_a754fb4d3a09ab51bfac94afc47e37cec}\label{classzombie_a754fb4d3a09ab51bfac94afc47e37cec}} 
+\index{zombie@{zombie}!zombie@{zombie}}
+\index{zombie@{zombie}!zombie@{zombie}}
+\doxysubsubsection{\texorpdfstring{zombie()}{zombie()}}
+{\footnotesize\ttfamily zombie\+::zombie (\begin{DoxyParamCaption}\item[{Texture $\ast$}]{zombie\+\_\+txt }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Kontruktor klasy zombie. 
+
+
+\begin{DoxyParams}{Parametry}
+{\em zombie\+\_\+txt} & -\/ pozwala na wyswietlenie tekstury zombie \\
+\hline
+\end{DoxyParams}
+
+
+Definicja w linii \mbox{\hyperlink{cale__menu__lewy__klik_8h_source_l00067}{67}} pliku \mbox{\hyperlink{cale__menu__lewy__klik_8h_source}{cale\+\_\+menu\+\_\+lewy\+\_\+klik.\+h}}.
+
+
+
+\doxysubsection{Dokumentacja funkcji składowych}
+\mbox{\Hypertarget{classzombie_ada0b442f876d1c55d2a3f2bddcd3dbd0}\label{classzombie_ada0b442f876d1c55d2a3f2bddcd3dbd0}} 
+\index{zombie@{zombie}!bitka@{bitka}}
+\index{bitka@{bitka}!zombie@{zombie}}
+\doxysubsubsection{\texorpdfstring{bitka()}{bitka()}}
+{\footnotesize\ttfamily void zombie\+::bitka (\begin{DoxyParamCaption}\item[{Rectangle\+Shape \&}]{player,  }\item[{float \&}]{hp }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Funckja pokazuje animacje ataku zombie na gracza. 
+
+
+\begin{DoxyParams}{Parametry}
+{\em player} & -\/ sprawdzamy czy zombie wchodzi w interakcje z playerem \\
+\hline
+{\em hp} & -\/ pobieramy poziom zdrowia gracza, po ataku zombie na gracza poziom zdrowia sie zmiejsza \\
+\hline
+\end{DoxyParams}
+
+
+Definicja w linii \mbox{\hyperlink{cale__menu__lewy__klik_8h_source_l00303}{303}} pliku \mbox{\hyperlink{cale__menu__lewy__klik_8h_source}{cale\+\_\+menu\+\_\+lewy\+\_\+klik.\+h}}.
+
+\mbox{\Hypertarget{classzombie_a7e63c47d590ad6c42f99f3a7f6a454c5}\label{classzombie_a7e63c47d590ad6c42f99f3a7f6a454c5}} 
+\index{zombie@{zombie}!initHP@{initHP}}
+\index{initHP@{initHP}!zombie@{zombie}}
+\doxysubsubsection{\texorpdfstring{initHP()}{initHP()}}
+{\footnotesize\ttfamily void zombie\+::init\+HP (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Funkcja pozwalajaca na ustawienie pozycji oraz kolorow paskow zdrowia. 
+
+
+
+Definicja w linii \mbox{\hyperlink{cale__menu__lewy__klik_8h_source_l00085}{85}} pliku \mbox{\hyperlink{cale__menu__lewy__klik_8h_source}{cale\+\_\+menu\+\_\+lewy\+\_\+klik.\+h}}.
+
+\mbox{\Hypertarget{classzombie_a8fbdeb6f471ef08b253190fe4af0d1db}\label{classzombie_a8fbdeb6f471ef08b253190fe4af0d1db}} 
+\index{zombie@{zombie}!poruszanie@{poruszanie}}
+\index{poruszanie@{poruszanie}!zombie@{zombie}}
+\doxysubsubsection{\texorpdfstring{poruszanie()}{poruszanie()}}
+{\footnotesize\ttfamily void zombie\+::poruszanie (\begin{DoxyParamCaption}\item[{Rectangle\+Shape \&}]{player }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Funckja pozwala na poruszanie sie zombi. Dodalismy rowniez kolizje dla zombie. 
+
+
+\begin{DoxyParams}{Parametry}
+{\em player} & -\/ pobieramy sobie playera aby zombie znalazl do gracza najktotsza droge \\
+\hline
+\end{DoxyParams}
+
+
+Definicja w linii \mbox{\hyperlink{cale__menu__lewy__klik_8h_source_l00155}{155}} pliku \mbox{\hyperlink{cale__menu__lewy__klik_8h_source}{cale\+\_\+menu\+\_\+lewy\+\_\+klik.\+h}}.
+
+\mbox{\Hypertarget{classzombie_a9c2af90db5c101149caacc79e31b1add}\label{classzombie_a9c2af90db5c101149caacc79e31b1add}} 
+\index{zombie@{zombie}!render\_hp@{render\_hp}}
+\index{render\_hp@{render\_hp}!zombie@{zombie}}
+\doxysubsubsection{\texorpdfstring{render\_hp()}{render\_hp()}}
+{\footnotesize\ttfamily void zombie\+::render\+\_\+hp (\begin{DoxyParamCaption}\item[{sf\+::\+Render\+Target \&}]{target }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Funkcja wyswietlajaca dwa paski zdrowia zombie. 
+
+
+\begin{DoxyParams}{Parametry}
+{\em target} & -\/ pozwala na wyswietlenie paskow zdrowia \\
+\hline
+\end{DoxyParams}
+
+
+Definicja w linii \mbox{\hyperlink{cale__menu__lewy__klik_8h_source_l00076}{76}} pliku \mbox{\hyperlink{cale__menu__lewy__klik_8h_source}{cale\+\_\+menu\+\_\+lewy\+\_\+klik.\+h}}.
+
+\mbox{\Hypertarget{classzombie_af873da942450d1664e8dbd9c781f8a92}\label{classzombie_af873da942450d1664e8dbd9c781f8a92}} 
+\index{zombie@{zombie}!respienie\_zombie@{respienie\_zombie}}
+\index{respienie\_zombie@{respienie\_zombie}!zombie@{zombie}}
+\doxysubsubsection{\texorpdfstring{respienie\_zombie()}{respienie\_zombie()}}
+{\footnotesize\ttfamily void zombie\+::respienie\+\_\+zombie (\begin{DoxyParamCaption}\item[{int \&}]{score }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Funckja wyswietla animacje zombiego, ktory wstaje z Ziemii. 
+
+
+\begin{DoxyParams}{Parametry}
+{\em score} & -\/ W zaleznosci od zdobytych punktow, poziom zdrowia zombie sie zwieksza \\
+\hline
+\end{DoxyParams}
+
+
+Definicja w linii \mbox{\hyperlink{cale__menu__lewy__klik_8h_source_l00111}{111}} pliku \mbox{\hyperlink{cale__menu__lewy__klik_8h_source}{cale\+\_\+menu\+\_\+lewy\+\_\+klik.\+h}}.
+
+\mbox{\Hypertarget{classzombie_a9356cdbb7d10e997f3e394cdc13feae6}\label{classzombie_a9356cdbb7d10e997f3e394cdc13feae6}} 
+\index{zombie@{zombie}!update\_hp@{update\_hp}}
+\index{update\_hp@{update\_hp}!zombie@{zombie}}
+\doxysubsubsection{\texorpdfstring{update\_hp()}{update\_hp()}}
+{\footnotesize\ttfamily void zombie\+::update\+\_\+hp (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Funckja sprawdza i modyfikuje aktualny poziom zdrowia. 
+
+
+
+Definicja w linii \mbox{\hyperlink{cale__menu__lewy__klik_8h_source_l00098}{98}} pliku \mbox{\hyperlink{cale__menu__lewy__klik_8h_source}{cale\+\_\+menu\+\_\+lewy\+\_\+klik.\+h}}.
+
+
+
+\doxysubsection{Dokumentacja atrybutów składowych}
+\mbox{\Hypertarget{classzombie_a554c81def67cee97a5875443f3beead5}\label{classzombie_a554c81def67cee97a5875443f3beead5}} 
+\index{zombie@{zombie}!atak@{atak}}
+\index{atak@{atak}!zombie@{zombie}}
+\doxysubsubsection{\texorpdfstring{atak}{atak}}
+{\footnotesize\ttfamily bool zombie\+::atak = false}
+
+
+
+Definicja w linii \mbox{\hyperlink{cale__menu__lewy__klik_8h_source_l00050}{50}} pliku \mbox{\hyperlink{cale__menu__lewy__klik_8h_source}{cale\+\_\+menu\+\_\+lewy\+\_\+klik.\+h}}.
+
+\mbox{\Hypertarget{classzombie_af0e20bf282741f73fb99e8609bdf9dc2}\label{classzombie_af0e20bf282741f73fb99e8609bdf9dc2}} 
+\index{zombie@{zombie}!czy\_sie\_respi@{czy\_sie\_respi}}
+\index{czy\_sie\_respi@{czy\_sie\_respi}!zombie@{zombie}}
+\doxysubsubsection{\texorpdfstring{czy\_sie\_respi}{czy\_sie\_respi}}
+{\footnotesize\ttfamily bool zombie\+::czy\+\_\+sie\+\_\+respi = true}
+
+
+
+Definicja w linii \mbox{\hyperlink{cale__menu__lewy__klik_8h_source_l00049}{49}} pliku \mbox{\hyperlink{cale__menu__lewy__klik_8h_source}{cale\+\_\+menu\+\_\+lewy\+\_\+klik.\+h}}.
+
+\mbox{\Hypertarget{classzombie_a91cf8620dd460baecf87d49414572d2d}\label{classzombie_a91cf8620dd460baecf87d49414572d2d}} 
+\index{zombie@{zombie}!delay@{delay}}
+\index{delay@{delay}!zombie@{zombie}}
+\doxysubsubsection{\texorpdfstring{delay}{delay}}
+{\footnotesize\ttfamily int zombie\+::delay =0}
+
+
+
+Definicja w linii \mbox{\hyperlink{cale__menu__lewy__klik_8h_source_l00054}{54}} pliku \mbox{\hyperlink{cale__menu__lewy__klik_8h_source}{cale\+\_\+menu\+\_\+lewy\+\_\+klik.\+h}}.
+
+\mbox{\Hypertarget{classzombie_aadc032d09633004c11e7935cc731946a}\label{classzombie_aadc032d09633004c11e7935cc731946a}} 
+\index{zombie@{zombie}!delay1@{delay1}}
+\index{delay1@{delay1}!zombie@{zombie}}
+\doxysubsubsection{\texorpdfstring{delay1}{delay1}}
+{\footnotesize\ttfamily int zombie\+::delay1 =0}
+
+
+
+Definicja w linii \mbox{\hyperlink{cale__menu__lewy__klik_8h_source_l00055}{55}} pliku \mbox{\hyperlink{cale__menu__lewy__klik_8h_source}{cale\+\_\+menu\+\_\+lewy\+\_\+klik.\+h}}.
+
+\mbox{\Hypertarget{classzombie_af3356fd30f98af766dedbd6e35e90c2a}\label{classzombie_af3356fd30f98af766dedbd6e35e90c2a}} 
+\index{zombie@{zombie}!delay2@{delay2}}
+\index{delay2@{delay2}!zombie@{zombie}}
+\doxysubsubsection{\texorpdfstring{delay2}{delay2}}
+{\footnotesize\ttfamily int zombie\+::delay2 =0}
+
+
+
+Definicja w linii \mbox{\hyperlink{cale__menu__lewy__klik_8h_source_l00056}{56}} pliku \mbox{\hyperlink{cale__menu__lewy__klik_8h_source}{cale\+\_\+menu\+\_\+lewy\+\_\+klik.\+h}}.
+
+\mbox{\Hypertarget{classzombie_af2ce7464f40439861d35c313159d1943}\label{classzombie_af2ce7464f40439861d35c313159d1943}} 
+\index{zombie@{zombie}!height@{height}}
+\index{height@{height}!zombie@{zombie}}
+\doxysubsubsection{\texorpdfstring{height}{height}}
+{\footnotesize\ttfamily float zombie\+::height = 10.f}
+
+
+
+Definicja w linii \mbox{\hyperlink{cale__menu__lewy__klik_8h_source_l00044}{44}} pliku \mbox{\hyperlink{cale__menu__lewy__klik_8h_source}{cale\+\_\+menu\+\_\+lewy\+\_\+klik.\+h}}.
+
+\mbox{\Hypertarget{classzombie_a2f6515ab50296f0da348a34ee37b3900}\label{classzombie_a2f6515ab50296f0da348a34ee37b3900}} 
+\index{zombie@{zombie}!hp\_zombie@{hp\_zombie}}
+\index{hp\_zombie@{hp\_zombie}!zombie@{zombie}}
+\doxysubsubsection{\texorpdfstring{hp\_zombie}{hp\_zombie}}
+{\footnotesize\ttfamily float zombie\+::hp\+\_\+zombie = 3}
+
+
+
+Definicja w linii \mbox{\hyperlink{cale__menu__lewy__klik_8h_source_l00041}{41}} pliku \mbox{\hyperlink{cale__menu__lewy__klik_8h_source}{cale\+\_\+menu\+\_\+lewy\+\_\+klik.\+h}}.
+
+\mbox{\Hypertarget{classzombie_a9a0f1a9f750d25593f7135382d762940}\label{classzombie_a9a0f1a9f750d25593f7135382d762940}} 
+\index{zombie@{zombie}!hpBarBack@{hpBarBack}}
+\index{hpBarBack@{hpBarBack}!zombie@{zombie}}
+\doxysubsubsection{\texorpdfstring{hpBarBack}{hpBarBack}}
+{\footnotesize\ttfamily sf\+::\+Rectangle\+Shape zombie\+::hp\+Bar\+Back}
+
+
+
+Definicja w linii \mbox{\hyperlink{cale__menu__lewy__klik_8h_source_l00038}{38}} pliku \mbox{\hyperlink{cale__menu__lewy__klik_8h_source}{cale\+\_\+menu\+\_\+lewy\+\_\+klik.\+h}}.
+
+\mbox{\Hypertarget{classzombie_a15e14ed6f97df8bcb38a20cbd42dc86d}\label{classzombie_a15e14ed6f97df8bcb38a20cbd42dc86d}} 
+\index{zombie@{zombie}!hpBarInside@{hpBarInside}}
+\index{hpBarInside@{hpBarInside}!zombie@{zombie}}
+\doxysubsubsection{\texorpdfstring{hpBarInside}{hpBarInside}}
+{\footnotesize\ttfamily sf\+::\+Rectangle\+Shape zombie\+::hp\+Bar\+Inside}
+
+
+
+Definicja w linii \mbox{\hyperlink{cale__menu__lewy__klik_8h_source_l00039}{39}} pliku \mbox{\hyperlink{cale__menu__lewy__klik_8h_source}{cale\+\_\+menu\+\_\+lewy\+\_\+klik.\+h}}.
+
+\mbox{\Hypertarget{classzombie_a6960cf343e25d5a3a9ddbc50ca78b6e0}\label{classzombie_a6960cf343e25d5a3a9ddbc50ca78b6e0}} 
+\index{zombie@{zombie}!hpBarMaxWidth@{hpBarMaxWidth}}
+\index{hpBarMaxWidth@{hpBarMaxWidth}!zombie@{zombie}}
+\doxysubsubsection{\texorpdfstring{hpBarMaxWidth}{hpBarMaxWidth}}
+{\footnotesize\ttfamily float zombie\+::hp\+Bar\+Max\+Width = \mbox{\hyperlink{classzombie_a30b9b9e93d131b1abb30d9f5f01d032e}{width}}}
+
+
+
+Definicja w linii \mbox{\hyperlink{cale__menu__lewy__klik_8h_source_l00043}{43}} pliku \mbox{\hyperlink{cale__menu__lewy__klik_8h_source}{cale\+\_\+menu\+\_\+lewy\+\_\+klik.\+h}}.
+
+\mbox{\Hypertarget{classzombie_a4b868c44539139fefee240d3a8f606aa}\label{classzombie_a4b868c44539139fefee240d3a8f606aa}} 
+\index{zombie@{zombie}!MAXhp@{MAXhp}}
+\index{MAXhp@{MAXhp}!zombie@{zombie}}
+\doxysubsubsection{\texorpdfstring{MAXhp}{MAXhp}}
+{\footnotesize\ttfamily float zombie\+::\+MAXhp = 3}
+
+
+
+Definicja w linii \mbox{\hyperlink{cale__menu__lewy__klik_8h_source_l00040}{40}} pliku \mbox{\hyperlink{cale__menu__lewy__klik_8h_source}{cale\+\_\+menu\+\_\+lewy\+\_\+klik.\+h}}.
+
+\mbox{\Hypertarget{classzombie_a7072b95bdc0934e7e163f4c1f2c1fb82}\label{classzombie_a7072b95bdc0934e7e163f4c1f2c1fb82}} 
+\index{zombie@{zombie}!shape@{shape}}
+\index{shape@{shape}!zombie@{zombie}}
+\doxysubsubsection{\texorpdfstring{shape}{shape}}
+{\footnotesize\ttfamily Sprite zombie\+::shape}
+
+
+
+Definicja w linii \mbox{\hyperlink{cale__menu__lewy__klik_8h_source_l00053}{53}} pliku \mbox{\hyperlink{cale__menu__lewy__klik_8h_source}{cale\+\_\+menu\+\_\+lewy\+\_\+klik.\+h}}.
+
+\mbox{\Hypertarget{classzombie_a1915aeee89f97cfdb5668c1d87e4f080}\label{classzombie_a1915aeee89f97cfdb5668c1d87e4f080}} 
+\index{zombie@{zombie}!spr\_pozycje\_zombie@{spr\_pozycje\_zombie}}
+\index{spr\_pozycje\_zombie@{spr\_pozycje\_zombie}!zombie@{zombie}}
+\doxysubsubsection{\texorpdfstring{spr\_pozycje\_zombie}{spr\_pozycje\_zombie}}
+{\footnotesize\ttfamily int zombie\+::spr\+\_\+pozycje\+\_\+zombie =0}
+
+
+
+Definicja w linii \mbox{\hyperlink{cale__menu__lewy__klik_8h_source_l00057}{57}} pliku \mbox{\hyperlink{cale__menu__lewy__klik_8h_source}{cale\+\_\+menu\+\_\+lewy\+\_\+klik.\+h}}.
+
+\mbox{\Hypertarget{classzombie_a30b9b9e93d131b1abb30d9f5f01d032e}\label{classzombie_a30b9b9e93d131b1abb30d9f5f01d032e}} 
+\index{zombie@{zombie}!width@{width}}
+\index{width@{width}!zombie@{zombie}}
+\doxysubsubsection{\texorpdfstring{width}{width}}
+{\footnotesize\ttfamily float zombie\+::width = 50.f}
+
+
+
+Definicja w linii \mbox{\hyperlink{cale__menu__lewy__klik_8h_source_l00042}{42}} pliku \mbox{\hyperlink{cale__menu__lewy__klik_8h_source}{cale\+\_\+menu\+\_\+lewy\+\_\+klik.\+h}}.
+
+\mbox{\Hypertarget{classzombie_a5795d244930ac98d1b406d87b9a024d1}\label{classzombie_a5795d244930ac98d1b406d87b9a024d1}} 
+\index{zombie@{zombie}!zablokuj\_ruszanie\_sie@{zablokuj\_ruszanie\_sie}}
+\index{zablokuj\_ruszanie\_sie@{zablokuj\_ruszanie\_sie}!zombie@{zombie}}
+\doxysubsubsection{\texorpdfstring{zablokuj\_ruszanie\_sie}{zablokuj\_ruszanie\_sie}}
+{\footnotesize\ttfamily bool zombie\+::zablokuj\+\_\+ruszanie\+\_\+sie = false}
+
+
+
+Definicja w linii \mbox{\hyperlink{cale__menu__lewy__klik_8h_source_l00051}{51}} pliku \mbox{\hyperlink{cale__menu__lewy__klik_8h_source}{cale\+\_\+menu\+\_\+lewy\+\_\+klik.\+h}}.
+
+\mbox{\Hypertarget{classzombie_af14de4f02513236aefd7870309bba88a}\label{classzombie_af14de4f02513236aefd7870309bba88a}} 
+\index{zombie@{zombie}!ziara2@{ziara2}}
+\index{ziara2@{ziara2}!zombie@{zombie}}
+\doxysubsubsection{\texorpdfstring{ziara2}{ziara2}}
+{\footnotesize\ttfamily int zombie\+::ziara2 = 0}
+
+
+
+Definicja w linii \mbox{\hyperlink{cale__menu__lewy__klik_8h_source_l00046}{46}} pliku \mbox{\hyperlink{cale__menu__lewy__klik_8h_source}{cale\+\_\+menu\+\_\+lewy\+\_\+klik.\+h}}.
+
+\mbox{\Hypertarget{classzombie_ab0c35dd97171b9a43b5d2f100f3fd0e6}\label{classzombie_ab0c35dd97171b9a43b5d2f100f3fd0e6}} 
+\index{zombie@{zombie}!ziara3@{ziara3}}
+\index{ziara3@{ziara3}!zombie@{zombie}}
+\doxysubsubsection{\texorpdfstring{ziara3}{ziara3}}
+{\footnotesize\ttfamily int zombie\+::ziara3 = 0}
+
+
+
+Definicja w linii \mbox{\hyperlink{cale__menu__lewy__klik_8h_source_l00047}{47}} pliku \mbox{\hyperlink{cale__menu__lewy__klik_8h_source}{cale\+\_\+menu\+\_\+lewy\+\_\+klik.\+h}}.
+
+\mbox{\Hypertarget{classzombie_a590b935feb350f689f5c3f734533e1e0}\label{classzombie_a590b935feb350f689f5c3f734533e1e0}} 
+\index{zombie@{zombie}!ziara4@{ziara4}}
+\index{ziara4@{ziara4}!zombie@{zombie}}
+\doxysubsubsection{\texorpdfstring{ziara4}{ziara4}}
+{\footnotesize\ttfamily int zombie\+::ziara4 = 0}
+
+
+
+Definicja w linii \mbox{\hyperlink{cale__menu__lewy__klik_8h_source_l00048}{48}} pliku \mbox{\hyperlink{cale__menu__lewy__klik_8h_source}{cale\+\_\+menu\+\_\+lewy\+\_\+klik.\+h}}.
+
+
+
+Dokumentacja dla tej klasy została wygenerowana z pliku\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{cale__menu__lewy__klik_8h}{cale\+\_\+menu\+\_\+lewy\+\_\+klik.\+h}}\end{DoxyCompactItemize}

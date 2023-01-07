@@ -1,0 +1,74 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="pl">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.6"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Atak Zombie: Plik źródłowy wybor_postaci_z_menu.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectlogo"><img alt="Logo" src="logo.png"/></td>
+  <td id="projectalign">
+   <div id="projectname">Atak Zombie
+   </div>
+   <div id="projectbrief">Gra 2D stworzona w SFML, polegająca na zabijaniu nacierających potworów.</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Wygenerowano przez Doxygen 1.9.6 -->
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>Strona&#160;główna</span></a></li>
+      <li><a href="annotated.html"><span>Klasy</span></a></li>
+      <li class="current"><a href="files.html"><span>Pliki</span></a></li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>Lista&#160;plików</span></a></li>
+      <li><a href="globals.html"><span>Składowe&#160;plików</span></a></li>
+    </ul>
+  </div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle"><div class="title">wybor_postaci_z_menu.h</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="wybor__postaci__z__menu_8h.html">Idź do dokumentacji tego pliku.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#include &lt;SFML/Graphics.hpp&gt;</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="preprocessor">#include &lt;iostream&gt;</span></div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="comment">//#include &lt;Animation.h&gt;</span></div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="preprocessor">#include &lt;windows.h&gt;</span></div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="preprocessor">#include &lt;math.h&gt;</span></div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="preprocessor">#include &quot;<a class="code" href="is_any_key_pressed_8h.html">isAnyKeyPressed.h</a>&quot;</span></div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span> </div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="keyword">using namespace </span>sf;</div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="keyword">using namespace </span>std;</div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span> </div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span> </div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span><span class="keywordtype">void</span> <a class="code hl_function" href="wybor__postaci__z__menu_8h.html#a1af88d97dd905ce9c422715795e3b18c">wybor_postaci</a>(<span class="keywordtype">int</span> <a class="code hl_variable" href="main_8cpp.html#a49f3e17259835b0bfba5bf73c90e8916">bitmapa</a>, RenderWindow &amp; window, RectangleShape &amp; chooseplayer1,RectangleShape &amp; chooseplayer2, Texture &amp; chooseplayer1_texture, Texture &amp; chooseplayer2_texture, <span class="keywordtype">int</span> &amp;<a class="code hl_variable" href="main_8cpp.html#a06c0dc845bc97c11846126121ef52eae">IdleAnim</a>, <span class="keywordtype">int</span> &amp;<a class="code hl_variable" href="main_8cpp.html#a6f1be1f780ff54ec75b41451cd4d90bd">delay</a>, <span class="keywordtype">int</span> &amp;<a class="code hl_variable" href="main_8cpp.html#a5992b274cfdcacdbc1fa8347fd01ebde">done</a>);</div>
+<div class="ttc" id="ais_any_key_pressed_8h_html"><div class="ttname"><a href="is_any_key_pressed_8h.html">isAnyKeyPressed.h</a></div></div>
+<div class="ttc" id="amain_8cpp_html_a06c0dc845bc97c11846126121ef52eae"><div class="ttname"><a href="main_8cpp.html#a06c0dc845bc97c11846126121ef52eae">IdleAnim</a></div><div class="ttdeci">int IdleAnim</div><div class="ttdoc">Zmienna pozwalajaca na wyswietlenie tekstury w zaleznosci od pozycji gracza.</div><div class="ttdef"><b>Definition:</b> <a href="main_8cpp_source.html#l00034">main.cpp:34</a></div></div>
+<div class="ttc" id="amain_8cpp_html_a49f3e17259835b0bfba5bf73c90e8916"><div class="ttname"><a href="main_8cpp.html#a49f3e17259835b0bfba5bf73c90e8916">bitmapa</a></div><div class="ttdeci">int bitmapa</div><div class="ttdoc">Zmienna przechowuje stan aktualnej bitmapy.</div><div class="ttdef"><b>Definition:</b> <a href="main_8cpp_source.html#l00028">main.cpp:28</a></div></div>
+<div class="ttc" id="amain_8cpp_html_a5992b274cfdcacdbc1fa8347fd01ebde"><div class="ttname"><a href="main_8cpp.html#a5992b274cfdcacdbc1fa8347fd01ebde">done</a></div><div class="ttdeci">int done</div><div class="ttdoc">Zmienna odpowiadajaca za wybor postaci.</div><div class="ttdef"><b>Definition:</b> <a href="main_8cpp_source.html#l00029">main.cpp:29</a></div></div>
+<div class="ttc" id="amain_8cpp_html_a6f1be1f780ff54ec75b41451cd4d90bd"><div class="ttname"><a href="main_8cpp.html#a6f1be1f780ff54ec75b41451cd4d90bd">delay</a></div><div class="ttdeci">int delay</div><div class="ttdoc">Zmienna pozwalajaca na opoznienie aktualnie wykonywanej tekstury.</div><div class="ttdef"><b>Definition:</b> <a href="main_8cpp_source.html#l00033">main.cpp:33</a></div></div>
+<div class="ttc" id="awybor__postaci__z__menu_8h_html_a1af88d97dd905ce9c422715795e3b18c"><div class="ttname"><a href="wybor__postaci__z__menu_8h.html#a1af88d97dd905ce9c422715795e3b18c">wybor_postaci</a></div><div class="ttdeci">void wybor_postaci(int bitmapa, RenderWindow &amp;window, RectangleShape &amp;chooseplayer1, RectangleShape &amp;chooseplayer2, Texture &amp;chooseplayer1_texture, Texture &amp;chooseplayer2_texture, int &amp;IdleAnim, int &amp;delay, int &amp;done)</div><div class="ttdoc">Deklaracja funkcji wybor postaci.</div><div class="ttdef"><b>Definition:</b> <a href="wybor__postaci__z__menu_8cpp_source.html#l00025">wybor_postaci_z_menu.cpp:25</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Wygenerowano przez&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.6
+</small></address>
+</body>
+</html>

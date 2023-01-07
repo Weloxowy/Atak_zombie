@@ -1,0 +1,53 @@
+.TH "pozycja_gracza.cpp" 3 "So, 7 sty 2023" "Atak Zombie" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+pozycja_gracza.cpp
+.SH SYNOPSIS
+.br
+.PP
+\fC#include <SFML/Graphics\&.hpp>\fP
+.br
+\fC#include <iostream>\fP
+.br
+\fC#include <windows\&.h>\fP
+.br
+\fC#include <math\&.h>\fP
+.br
+\fC#include 'pozycja_gracza\&.h'\fP
+.br
+
+.SS "Funkcje"
+
+.in +1c
+.ti -1c
+.RI "void \fBsprawdz_pozycje\fP (RectangleShape &player, int \fBpozycja\fP, int &\fBIdleAnim\fP, int &\fBdelay\fP, float &\fBhp\fP)"
+.br
+.RI "Funkcja sprawdza aktualna pozycje gracza i kierunek w jakim jest on zwrocony aby dopasowac wlasciwa animacje\&. "
+.in -1c
+.SH "Dokumentacja funkcji"
+.PP 
+.SS "void sprawdz_pozycje (RectangleShape & player, int pozycja, int & IdleAnim, int & delay, float & hp)"
+
+.PP
+Funkcja sprawdza aktualna pozycje gracza i kierunek w jakim jest on zwrocony aby dopasowac wlasciwa animacje\&. 
+.PP
+\fBParametry\fP
+.RS 4
+\fIRectangleShape\fP & player - wskaznik na postac 
+.br
+\fIint\fP pozycja - kierunek zwrotu gracza: 1 = lewo, 2 = prawo, 3 = gora , 4 = dol 
+.br
+\fIint\fP &IdleAnim - iterator animacji tekstur 
+.br
+\fIint\fP &delay - opoznienie 
+.br
+\fIfloat\fP &hp - aktualne zdrowie postaci 
+.RE
+.PP
+< Sprawdza czy gracz nie strzela lub nie idzie i zyje
+.PP
+Definicja w linii \fB25\fP pliku \fBpozycja_gracza\&.cpp\fP\&.
+.SH "Autor"
+.PP 
+Wygenerowano automatycznie z kodu źródłowego programem Doxygen dla Atak Zombie\&.

@@ -1,3 +1,6 @@
+/** \file cale_menu_lewy_klik.h
+ * Plik zrodlowy dla pliku naglowkowego caly_menu_lewy_klik.h
+ */
 #include <SFML/Graphics.hpp>
 #include <iostream>
 #include <windows.h>
@@ -8,6 +11,13 @@
 using namespace sf;
 using namespace std;
 
+/**
+ *  @brief Funkcja pozwala na zaladowanie zombie do programu w odpowiednim czasie, jest tu rowniez sprawdzany poziom
+ *  @param czas_respu - ustawia czas pojawiania sie potworow
+ *  @param zombi - wywolanie klasy zombie
+ *  @param zombie_wektor - dodaje zombie do wektora
+ *  @param score - w zaleznosci ile zdobilismy punktow, tyle zombi sie wyswietla
+ */
 
 void laduj_zombie(int &czas_respu, zombie zombi, vector <zombie> &zombie_wektor, int &score)
 {
@@ -73,21 +83,23 @@ void laduj_zombie(int &czas_respu, zombie zombi, vector <zombie> &zombie_wektor,
             break;
         }
         }
-
-
-
-
-
         zombie_wektor.insert(zombie_wektor.begin(),zombi);
         czas_respu=0;
     }
 
 }
 
+/**
+ *  @brief Funckja pobiera aktualne miejsca tekstur (zombie oraz strzaly), gdy napotkaja na siebie to potworowi odejmuja sie punkty zdrowia
+ *  @param zombie_wektor - modyfikuje wektor zombi, gdy strzala napotka na zombiego to zombi traci punkty zdrowia
+ *  @param wektor_strzal - przechowuje strzaly w wektorze
+ *  @param score - gdy zombie ginie, to dodaje nam ilosc punktow
+ */
+
 void przyjmowanie_strzal(vector <zombie> &zombie_wektor,vector <strzal> &wektor_strzal, int &score){
 
-    for(int i=0;i<zombie_wektor.size();i++){
-        for(int j=0; j<wektor_strzal.size();j++){
+    for(unsigned int i=0;i<zombie_wektor.size();i++){
+        for(unsigned int j=0; j<wektor_strzal.size();j++){
             if(zombie_wektor[i].shape.getGlobalBounds().intersects(wektor_strzal[j].shape.getGlobalBounds())){
 
                 zombie_wektor[i].hp_zombie--;
@@ -107,40 +119,31 @@ void przyjmowanie_strzal(vector <zombie> &zombie_wektor,vector <strzal> &wektor_
 }
 
 
+/**
+ *  @brief Funkcja pokazuje cale menu. Sprawdza rowniez czy przyciski zostaly wcisniete.
+ *  @param bitmapa - Sprawdza w ktorym miejscu dokladnie jestesmy. Wywoluje odpowiednie instrukcje.
+ *  @param window - Pozwala na wyswietlenie tekstur.
+ *  @param player - tworzy gracza lucznik
+ *  @param player2 - tworzy gracza berserker
+ *  @param player1Texture - tworzy teksture dla playera
+ *  @param player2Texture - tworzy teksture dla playera
+ */
 
-void cale_menu(int & bitmapa, RenderWindow & window, int &done, RectangleShape & player, RectangleShape & player2, Texture & player1Texture, Texture & player2Texture, int &IdleAnim)
+
+void cale_menu(int & bitmapa, RenderWindow & window, int &done, RectangleShape & player, RectangleShape & player2, Texture & player1Texture, Texture & player2Texture)
 {
-//    zombie zom;
-
 if(Mouse::isButtonPressed(Mouse::Left))
 {
-
-
-    //window potrzebne, od tego zaleza kordy mapki (zaczynaja sie wtedy od 0.0)
- //  cout << Mouse::getPosition(window).x << " " <<Mouse::getPosition(window).y << endl;
- // przycisk start
-
     if(bitmapa == 0 && Mouse::getPosition(window).x > 483 && Mouse::getPosition(window).x < 882 && Mouse::getPosition(window).y >349 && Mouse::getPosition(window).y < 448 )
     {
         bitmapa = 1;
-
-
-
     }
-    // przycisk instrukcji
  if(bitmapa == 0 && Mouse::getPosition(window).x > 483 && Mouse::getPosition(window).x < 882 && Mouse::getPosition(window).y >490 && Mouse::getPosition(window).y < 589 )
     {
         bitmapa = 2;
-
-
-
     }
-
-
-    //przyciski w wyborze postaci - prowadzi do gry docelowej
     if(bitmapa == 1  && Mouse::getPosition(window).x > 220 && Mouse::getPosition(window).x < 521 && Mouse::getPosition(window).y >627 && Mouse::getPosition(window).y < 721 )
             {
-                //ninja
                 done = 1;
                 bitmapa = 3;
 
@@ -151,38 +154,16 @@ if(Mouse::isButtonPressed(Mouse::Left))
                 bitmapa = 3;
 
                 player.setTexture(&player2Texture);
-                //zomb.setTexture(&zombiee);
-                //zom.laduj_zombie(zomb,zombiee);
-               // zom.laduj_teksture_zombie(zomb,IdleAnim);
-                //IdleAnim++;
-
-
-                //tu wybieramy postac lucznika??
             }
-
-    //wyjscie z gry
 
     if(bitmapa == 0 && Mouse::getPosition(window).x > 484 && Mouse::getPosition(window).x < 883 && Mouse::getPosition(window).y >631 && Mouse::getPosition(window).y < 730 )
     {
         window.close();
-      //  return 0;
-      // ZROBIC INNE WYCHODZENIE Z GRY!!!
-
     }
-
-
-    // zerknac na wychodzenie z instrukcji
-
-
-
-
     if(bitmapa == 2 && Mouse::getPosition(window).x > 480 && Mouse::getPosition(window).x < 891 && Mouse::getPosition(window).y >616 && Mouse::getPosition(window).y < 712 )
            {
             Sleep(200);
             bitmapa = 0;
-
             }
-
-
 }
 }

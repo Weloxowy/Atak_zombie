@@ -1,0 +1,71 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="pl">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.6"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Atak Zombie: Plik źródłowy pozycja_gracza.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectlogo"><img alt="Logo" src="logo.png"/></td>
+  <td id="projectalign">
+   <div id="projectname">Atak Zombie
+   </div>
+   <div id="projectbrief">Gra 2D stworzona w SFML, polegająca na zabijaniu nacierających potworów.</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Wygenerowano przez Doxygen 1.9.6 -->
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>Strona&#160;główna</span></a></li>
+      <li><a href="annotated.html"><span>Klasy</span></a></li>
+      <li class="current"><a href="files.html"><span>Pliki</span></a></li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>Lista&#160;plików</span></a></li>
+      <li><a href="globals.html"><span>Składowe&#160;plików</span></a></li>
+    </ul>
+  </div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle"><div class="title">pozycja_gracza.h</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="pozycja__gracza_8h.html">Idź do dokumentacji tego pliku.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#include &lt;SFML/Graphics.hpp&gt;</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="preprocessor">#include &lt;iostream&gt;</span></div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="preprocessor">#include &lt;windows.h&gt;</span></div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="preprocessor">#include &lt;math.h&gt;</span></div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="preprocessor">#include &quot;<a class="code" href="is_any_key_pressed_8h.html">isAnyKeyPressed.h</a>&quot;</span></div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span> </div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="keyword">using namespace </span>sf;</div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="keyword">using namespace </span>std;</div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span> </div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span><span class="keywordtype">void</span> <a class="code hl_function" href="pozycja__gracza_8h.html#abf73cfbf3432b65b01fb3890bef55357">sprawdz_pozycje</a>(RectangleShape &amp; player, <span class="keywordtype">int</span> <a class="code hl_variable" href="main_8cpp.html#a5d7bc75d40aa91845c99e2eae27ce7db">pozycja</a>, <span class="keywordtype">int</span> &amp;<a class="code hl_variable" href="main_8cpp.html#a06c0dc845bc97c11846126121ef52eae">IdleAnim</a>, <span class="keywordtype">int</span> &amp;dealy, <span class="keywordtype">float</span> &amp;<a class="code hl_variable" href="main_8cpp.html#a09fbbe87083078f86ee37d794546dd12">hp</a>);</div>
+<div class="ttc" id="ais_any_key_pressed_8h_html"><div class="ttname"><a href="is_any_key_pressed_8h.html">isAnyKeyPressed.h</a></div></div>
+<div class="ttc" id="amain_8cpp_html_a06c0dc845bc97c11846126121ef52eae"><div class="ttname"><a href="main_8cpp.html#a06c0dc845bc97c11846126121ef52eae">IdleAnim</a></div><div class="ttdeci">int IdleAnim</div><div class="ttdoc">Zmienna pozwalajaca na wyswietlenie tekstury w zaleznosci od pozycji gracza.</div><div class="ttdef"><b>Definition:</b> <a href="main_8cpp_source.html#l00034">main.cpp:34</a></div></div>
+<div class="ttc" id="amain_8cpp_html_a09fbbe87083078f86ee37d794546dd12"><div class="ttname"><a href="main_8cpp.html#a09fbbe87083078f86ee37d794546dd12">hp</a></div><div class="ttdeci">float hp</div><div class="ttdoc">Zmienna przechowujaca poziom zdrowia lucznika.</div><div class="ttdef"><b>Definition:</b> <a href="main_8cpp_source.html#l00038">main.cpp:38</a></div></div>
+<div class="ttc" id="amain_8cpp_html_a5d7bc75d40aa91845c99e2eae27ce7db"><div class="ttname"><a href="main_8cpp.html#a5d7bc75d40aa91845c99e2eae27ce7db">pozycja</a></div><div class="ttdeci">int pozycja</div><div class="ttdoc">Zmienna przechowuje aktualna pozycje gracza.</div><div class="ttdef"><b>Definition:</b> <a href="main_8cpp_source.html#l00032">main.cpp:32</a></div></div>
+<div class="ttc" id="apozycja__gracza_8h_html_abf73cfbf3432b65b01fb3890bef55357"><div class="ttname"><a href="pozycja__gracza_8h.html#abf73cfbf3432b65b01fb3890bef55357">sprawdz_pozycje</a></div><div class="ttdeci">void sprawdz_pozycje(RectangleShape &amp;player, int pozycja, int &amp;IdleAnim, int &amp;dealy, float &amp;hp)</div><div class="ttdoc">Funkcja sprawdza aktualna pozycje gracza i kierunek w jakim jest on zwrocony aby dopasowac wlasciwa a...</div><div class="ttdef"><b>Definition:</b> <a href="pozycja__gracza_8cpp_source.html#l00025">pozycja_gracza.cpp:25</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Wygenerowano przez&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.6
+</small></address>
+</body>
+</html>

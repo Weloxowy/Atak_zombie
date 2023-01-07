@@ -1,0 +1,399 @@
+.TH "gracz" 3 "So, 7 sty 2023" "Atak Zombie" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+gracz \- Klasa gracz\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.SS "Metody publiczne"
+
+.in +1c
+.ti -1c
+.RI "void \fBrender_hp\fP (sf::RenderTarget &target)"
+.br
+.RI "Funkcja wyswietlajaca dwa paski zdrowia gracza\&. "
+.ti -1c
+.RI "void \fBinitHP\fP (RectangleShape &player)"
+.br
+.RI "Funkcja pozwalajaca na ustawienie pozycji oraz kolorow paskow zdrowia\&. "
+.ti -1c
+.RI "void \fBupdate_hp\fP ()"
+.br
+.RI "Funckja sprawdza i modyfikuje aktualny poziom zdrowia\&. "
+.ti -1c
+.RI "void \fBupdate_hp_berserker\fP ()"
+.br
+.RI "Funckja sprawdza i modyfikuje aktualny poziom zdrowia\&. "
+.ti -1c
+.RI "void \fBkolizja_ogolna\fP (RectangleShape &player)"
+.br
+.RI "Funckja sprawdza aktualna pozycje playera, i blokuje mu wyjscie poza mape\&. "
+.ti -1c
+.RI "void \fBporuszanie_lewo\fP (RectangleShape &player)"
+.br
+.RI "Funckja pozwala na poruszanie sie w lewo lucznika (wraz z kolizja), oraz wyswietla tekstury\&. "
+.ti -1c
+.RI "void \fBporuszanie_lewo_berserker\fP (RectangleShape &player)"
+.br
+.RI "Funckja pozwala na poruszanie sie w lewo berserkera (wraz z kolizja), oraz wyswietla tekstury\&. "
+.ti -1c
+.RI "void \fBporuszanie_prawo\fP (RectangleShape &player)"
+.br
+.RI "Funckja pozwala na poruszanie sie w prawo lucznika (wraz z kolizja), oraz wyswietla tekstury\&. "
+.ti -1c
+.RI "void \fBporuszanie_prawo_berserker\fP (RectangleShape &player)"
+.br
+.RI "Funckja pozwala na poruszanie sie w prawo berserkera (wraz z kolizja), oraz wyswietla tekstury\&. "
+.ti -1c
+.RI "void \fBporuszanie_gora\fP (RectangleShape &player)"
+.br
+.RI "Funckja pozwala na poruszanie sie w gore lucznika (wraz z kolizja), oraz wyswietla tekstury\&. "
+.ti -1c
+.RI "void \fBporuszanie_gora_berserker\fP (RectangleShape &player)"
+.br
+.RI "Funckja pozwala na poruszanie sie w gore berserkera (wraz z kolizja), oraz wyswietla tekstury\&. "
+.ti -1c
+.RI "void \fBporuszanie_dol\fP (RectangleShape &player)"
+.br
+.RI "Funckja pozwala na poruszanie sie w dol lucznika (wraz z kolizja), oraz wyswietla tekstury\&. "
+.ti -1c
+.RI "void \fBporuszanie_dol_berserker\fP (RectangleShape &player)"
+.br
+.RI "Funckja pozwala na poruszanie sie w dol berserkera (wraz z kolizja), oraz wyswietla tekstury\&. "
+.ti -1c
+.RI "void \fBporuszanie_ukos_lewo\fP (RectangleShape &player)"
+.br
+.RI "Funckja pozwala na poruszanie sie na ukos lewo gracza (wraz z kolizja), oraz wyswietla tekstury\&. "
+.ti -1c
+.RI "void \fBporuszanie_ukos_prawo\fP (RectangleShape &player)"
+.br
+.RI "Funckja pozwala na poruszanie sie na ukos prawo gracza (wraz z kolizja), oraz wyswietla tekstury\&. "
+.ti -1c
+.RI "void \fBstrzelanie\fP (RectangleShape &player, Texture &strzalka_gora, Texture &strzalka1, Texture &strzalka_lewo, Texture &strzalka_dol, vector< \fBstrzal\fP > &wektor_strzal_1, vector< \fBstrzal\fP > &wektor_strzal, vector< \fBstrzal\fP > &wektor_strzal_dol, vector< \fBstrzal\fP > &wektor_strzal_gora, \fBstrzal\fP &strzalka, \fBstrzal\fP &strzalka_lewoo, \fBstrzal\fP &strzalka_goraa, \fBstrzal\fP &strzalka_doll)"
+.br
+.RI "Funckja pozwalajaca na strzelanie playera, wykonuje rowniez odpowiednie tekstury\&. "
+.ti -1c
+.RI "void \fBusun_strzale_z_pamieci\fP (vector< \fBstrzal\fP > &wektor_strzal)"
+.br
+.RI "Funkcja usuwajaca strzaly z pamieci\&. "
+.in -1c
+.SS "Atrybuty publiczne"
+
+.in +1c
+.ti -1c
+.RI "sf::RectangleShape \fBhpBarBack\fP"
+.br
+.ti -1c
+.RI "sf::RectangleShape \fBhpBarInside\fP"
+.br
+.ti -1c
+.RI "float \fBMAXhp_lucznik\fP = 10"
+.br
+.ti -1c
+.RI "float \fBMAXhp_berserker\fP = 7"
+.br
+.ti -1c
+.RI "float \fBwidth\fP = 50\&.f"
+.br
+.ti -1c
+.RI "float \fBhpBarMaxWidth\fP = \fBwidth\fP"
+.br
+.ti -1c
+.RI "float \fBheight\fP = 10\&.f"
+.br
+.in -1c
+.SH "Opis szczegółowy"
+.PP 
+Klasa gracz\&. 
+
+
+.PP
+\fBParametry\fP
+.RS 4
+\fIhpBarBack\fP - wyswietlanie szarego paska hp 
+.br
+\fIhpBarInside\fP - wyswietlanie czerwonego paska hp 
+.br
+\fIMAXhp_lucznik\fP - maksymalny poziom zdrowia lucznika 
+.br
+\fIMAXhp_berserker\fP - maksymalny poziom zdrowia berserkera 
+.br
+\fIwidth\fP - szerokosc paska zdrowia 
+.br
+\fIheight\fP - wysokosc paska zdrowia 
+.br
+\fIhpBarMaxWidth\fP - maksymalna szerokosc paska zdrowia 
+.RE
+.PP
+
+.PP
+Definicja w linii \fB78\fP pliku \fBmain\&.cpp\fP\&.
+.SH "Dokumentacja funkcji składowych"
+.PP 
+.SS "void gracz::initHP (RectangleShape & player)\fC [inline]\fP"
+
+.PP
+Funkcja pozwalajaca na ustawienie pozycji oraz kolorow paskow zdrowia\&. 
+.PP
+\fBParametry\fP
+.RS 4
+\fIplayer\fP - ustawienie paskow zdrowia nad playerem 
+.RE
+.PP
+
+.PP
+Definicja w linii \fB106\fP pliku \fBmain\&.cpp\fP\&.
+.SS "void gracz::kolizja_ogolna (RectangleShape & player)\fC [inline]\fP"
+
+.PP
+Funckja sprawdza aktualna pozycje playera, i blokuje mu wyjscie poza mape\&. 
+.PP
+\fBParametry\fP
+.RS 4
+\fIplayer\fP - sprawdza pozycje playera 
+.RE
+.PP
+
+.PP
+Definicja w linii \fB140\fP pliku \fBmain\&.cpp\fP\&.
+.SS "void gracz::poruszanie_dol (RectangleShape & player)\fC [inline]\fP"
+
+.PP
+Funckja pozwala na poruszanie sie w dol lucznika (wraz z kolizja), oraz wyswietla tekstury\&. 
+.PP
+\fBParametry\fP
+.RS 4
+\fIplayer\fP - sprawdza pozycje playera 
+.RE
+.PP
+
+.PP
+Definicja w linii \fB395\fP pliku \fBmain\&.cpp\fP\&.
+.SS "void gracz::poruszanie_dol_berserker (RectangleShape & player)\fC [inline]\fP"
+
+.PP
+Funckja pozwala na poruszanie sie w dol berserkera (wraz z kolizja), oraz wyswietla tekstury\&. 
+.PP
+\fBParametry\fP
+.RS 4
+\fIplayer\fP - sprawdza pozycje playera 
+.RE
+.PP
+
+.PP
+Definicja w linii \fB449\fP pliku \fBmain\&.cpp\fP\&.
+.SS "void gracz::poruszanie_gora (RectangleShape & player)\fC [inline]\fP"
+
+.PP
+Funckja pozwala na poruszanie sie w gore lucznika (wraz z kolizja), oraz wyswietla tekstury\&. 
+.PP
+\fBParametry\fP
+.RS 4
+\fIplayer\fP - sprawdza pozycje playera 
+.RE
+.PP
+
+.PP
+Definicja w linii \fB333\fP pliku \fBmain\&.cpp\fP\&.
+.SS "void gracz::poruszanie_gora_berserker (RectangleShape & player)\fC [inline]\fP"
+
+.PP
+Funckja pozwala na poruszanie sie w gore berserkera (wraz z kolizja), oraz wyswietla tekstury\&. 
+.PP
+\fBParametry\fP
+.RS 4
+\fIplayer\fP - sprawdza pozycje playera 
+.RE
+.PP
+
+.PP
+Definicja w linii \fB364\fP pliku \fBmain\&.cpp\fP\&.
+.SS "void gracz::poruszanie_lewo (RectangleShape & player)\fC [inline]\fP"
+
+.PP
+Funckja pozwala na poruszanie sie w lewo lucznika (wraz z kolizja), oraz wyswietla tekstury\&. 
+.PP
+\fBParametry\fP
+.RS 4
+\fIplayer\fP - sprawdza pozycje playera 
+.RE
+.PP
+
+.PP
+Definicja w linii \fB160\fP pliku \fBmain\&.cpp\fP\&.
+.SS "void gracz::poruszanie_lewo_berserker (RectangleShape & player)\fC [inline]\fP"
+
+.PP
+Funckja pozwala na poruszanie sie w lewo berserkera (wraz z kolizja), oraz wyswietla tekstury\&. 
+.PP
+\fBParametry\fP
+.RS 4
+\fIplayer\fP - sprawdza pozycje playera 
+.RE
+.PP
+
+.PP
+Definicja w linii \fB192\fP pliku \fBmain\&.cpp\fP\&.
+.SS "void gracz::poruszanie_prawo (RectangleShape & player)\fC [inline]\fP"
+
+.PP
+Funckja pozwala na poruszanie sie w prawo lucznika (wraz z kolizja), oraz wyswietla tekstury\&. 
+.PP
+\fBParametry\fP
+.RS 4
+\fIplayer\fP - sprawdza pozycje playera 
+.RE
+.PP
+
+.PP
+Definicja w linii \fB224\fP pliku \fBmain\&.cpp\fP\&.
+.SS "void gracz::poruszanie_prawo_berserker (RectangleShape & player)\fC [inline]\fP"
+
+.PP
+Funckja pozwala na poruszanie sie w prawo berserkera (wraz z kolizja), oraz wyswietla tekstury\&. 
+.PP
+\fBParametry\fP
+.RS 4
+\fIplayer\fP - sprawdza pozycje playera 
+.RE
+.PP
+
+.PP
+Definicja w linii \fB278\fP pliku \fBmain\&.cpp\fP\&.
+.SS "void gracz::poruszanie_ukos_lewo (RectangleShape & player)\fC [inline]\fP"
+
+.PP
+Funckja pozwala na poruszanie sie na ukos lewo gracza (wraz z kolizja), oraz wyswietla tekstury\&. 
+.PP
+\fBParametry\fP
+.RS 4
+\fIplayer\fP - sprawdza pozycje playera 
+.RE
+.PP
+
+.PP
+Definicja w linii \fB503\fP pliku \fBmain\&.cpp\fP\&.
+.SS "void gracz::poruszanie_ukos_prawo (RectangleShape & player)\fC [inline]\fP"
+
+.PP
+Funckja pozwala na poruszanie sie na ukos prawo gracza (wraz z kolizja), oraz wyswietla tekstury\&. 
+.PP
+\fBParametry\fP
+.RS 4
+\fIplayer\fP - sprawdza pozycje playera 
+.RE
+.PP
+
+.PP
+Definicja w linii \fB518\fP pliku \fBmain\&.cpp\fP\&.
+.SS "void gracz::render_hp (sf::RenderTarget & target)\fC [inline]\fP"
+
+.PP
+Funkcja wyswietlajaca dwa paski zdrowia gracza\&. 
+.PP
+\fBParametry\fP
+.RS 4
+\fItarget\fP - pozwala na wyswietlenie paskow zdrowia 
+.RE
+.PP
+
+.PP
+Definicja w linii \fB95\fP pliku \fBmain\&.cpp\fP\&.
+.SS "void gracz::strzelanie (RectangleShape & player, Texture & strzalka_gora, Texture & strzalka1, Texture & strzalka_lewo, Texture & strzalka_dol, vector< \fBstrzal\fP > & wektor_strzal_1, vector< \fBstrzal\fP > & wektor_strzal, vector< \fBstrzal\fP > & wektor_strzal_dol, vector< \fBstrzal\fP > & wektor_strzal_gora, \fBstrzal\fP & strzalka, \fBstrzal\fP & strzalka_lewoo, \fBstrzal\fP & strzalka_goraa, \fBstrzal\fP & strzalka_doll)\fC [inline]\fP"
+
+.PP
+Funckja pozwalajaca na strzelanie playera, wykonuje rowniez odpowiednie tekstury\&. 
+.PP
+\fBParametry\fP
+.RS 4
+\fIplayer\fP - nadaje playerowi odpowiednia teksture 
+.br
+\fIstrzalka_gora\fP - tekstura dla strzaly w gore 
+.br
+\fIstrzalka1\fP - tekstura dla strzaly w prawo 
+.br
+\fIstrzalka_lewo\fP - tekstura dla strzaly w lewo 
+.br
+\fIstrzalka_dol\fP - tekstura dla strzaly w dol 
+.br
+\fIwektor_strzal_1\fP - wektor strzal przechowujacy strzaly ktore leca w lewa strone 
+.br
+\fIwektor_strzal\fP - wektor strzal przechowujacy strzaly ktore leca w prawa strone 
+.br
+\fIwektor_strzal_dol\fP - wektor strzal przechowujacy strzaly ktore leca w dol 
+.br
+\fIwektor_strzal_gora\fP - wektor strzal przechowujacy strzaly ktore leca w gore 
+.br
+\fIstrzalka\fP - obiekt klasy strzal, przechowuje strzale ktora leci w prawo 
+.br
+\fIstrzalka_lewoo\fP - obiekt klasy strzal, przechowuje strzale ktora leci w lewo 
+.br
+\fIstrzalka_goraa\fP - obiekt klasy strzal, przechowuje strzale ktora leci w gore 
+.br
+\fIstrzalka_doll\fP - obiekt klasy strzal, przechowuje strzale ktora leci w dol 
+.RE
+.PP
+
+.PP
+Definicja w linii \fB547\fP pliku \fBmain\&.cpp\fP\&.
+.SS "void gracz::update_hp ()\fC [inline]\fP"
+
+.PP
+Funckja sprawdza i modyfikuje aktualny poziom zdrowia\&. 
+.PP
+Definicja w linii \fB122\fP pliku \fBmain\&.cpp\fP\&.
+.SS "void gracz::update_hp_berserker ()\fC [inline]\fP"
+
+.PP
+Funckja sprawdza i modyfikuje aktualny poziom zdrowia\&. 
+.PP
+Definicja w linii \fB130\fP pliku \fBmain\&.cpp\fP\&.
+.SS "void gracz::usun_strzale_z_pamieci (vector< \fBstrzal\fP > & wektor_strzal)\fC [inline]\fP"
+
+.PP
+Funkcja usuwajaca strzaly z pamieci\&. 
+.PP
+\fBParametry\fP
+.RS 4
+\fIwektor_strzal\fP - wektor przechowujacy strzaly 
+.RE
+.PP
+
+.PP
+Definicja w linii \fB641\fP pliku \fBmain\&.cpp\fP\&.
+.SH "Dokumentacja atrybutów składowych"
+.PP 
+.SS "float gracz::height = 10\&.f"
+
+.PP
+Definicja w linii \fB87\fP pliku \fBmain\&.cpp\fP\&.
+.SS "sf::RectangleShape gracz::hpBarBack"
+
+.PP
+Definicja w linii \fB81\fP pliku \fBmain\&.cpp\fP\&.
+.SS "sf::RectangleShape gracz::hpBarInside"
+
+.PP
+Definicja w linii \fB82\fP pliku \fBmain\&.cpp\fP\&.
+.SS "float gracz::hpBarMaxWidth = \fBwidth\fP"
+
+.PP
+Definicja w linii \fB86\fP pliku \fBmain\&.cpp\fP\&.
+.SS "float gracz::MAXhp_berserker = 7"
+
+.PP
+Definicja w linii \fB84\fP pliku \fBmain\&.cpp\fP\&.
+.SS "float gracz::MAXhp_lucznik = 10"
+
+.PP
+Definicja w linii \fB83\fP pliku \fBmain\&.cpp\fP\&.
+.SS "float gracz::width = 50\&.f"
+
+.PP
+Definicja w linii \fB85\fP pliku \fBmain\&.cpp\fP\&.
+
+.SH "Autor"
+.PP 
+Wygenerowano automatycznie z kodu źródłowego programem Doxygen dla Atak Zombie\&.

@@ -1,0 +1,257 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="pl">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.6"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Atak Zombie: Dokumentacja pliku cale_menu_lewy_klik.cpp</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectlogo"><img alt="Logo" src="logo.png"/></td>
+  <td id="projectalign">
+   <div id="projectname">Atak Zombie
+   </div>
+   <div id="projectbrief">Gra 2D stworzona w SFML, polegająca na zabijaniu nacierających potworów.</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Wygenerowano przez Doxygen 1.9.6 -->
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>Strona&#160;główna</span></a></li>
+      <li><a href="annotated.html"><span>Klasy</span></a></li>
+      <li class="current"><a href="files.html"><span>Pliki</span></a></li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>Lista&#160;plików</span></a></li>
+      <li><a href="globals.html"><span>Składowe&#160;plików</span></a></li>
+    </ul>
+  </div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#func-members">Funkcje</a>  </div>
+  <div class="headertitle"><div class="title">Dokumentacja pliku cale_menu_lewy_klik.cpp</div></div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><code>#include &lt;SFML/Graphics.hpp&gt;</code><br />
+<code>#include &lt;iostream&gt;</code><br />
+<code>#include &lt;windows.h&gt;</code><br />
+<code>#include &lt;vector&gt;</code><br />
+<code>#include &quot;<a class="el" href="cale__menu__lewy__klik_8h_source.html">cale_menu_lewy_klik.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="is_any_key_pressed_8h_source.html">isAnyKeyPressed.h</a>&quot;</code><br />
+</div><div class="textblock"><div class="dynheader">
+Wykres zależności załączania dla cale_menu_lewy_klik.cpp:</div>
+<div class="dyncontent">
+<div class="center"><img src="cale__menu__lewy__klik_8cpp__incl.png" border="0" usemap="#acale__menu__lewy__klik_8cpp" alt=""/></div>
+</div>
+</div>
+<p><a href="cale__menu__lewy__klik_8cpp_source.html">Idź do kodu źródłowego tego pliku.</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
+Funkcje</h2></td></tr>
+<tr class="memitem:a09746e35d0a15455e00af95c10c53bc7"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="cale__menu__lewy__klik_8cpp.html#a09746e35d0a15455e00af95c10c53bc7">laduj_zombie</a> (int &amp;czas_respu, <a class="el" href="classzombie.html">zombie</a> zombi, vector&lt; <a class="el" href="classzombie.html">zombie</a> &gt; &amp;zombie_wektor, int &amp;<a class="el" href="main_8cpp.html#aef160b7437d94056f1dc59646cd5b87d">score</a>)</td></tr>
+<tr class="memdesc:a09746e35d0a15455e00af95c10c53bc7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Funkcja pozwala na zaladowanie zombie do programu w odpowiednim czasie, jest tu rowniez sprawdzany poziom.  <br /></td></tr>
+<tr class="separator:a09746e35d0a15455e00af95c10c53bc7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afbb8cd6b13ec1ba2f2bb2c643e9fb308"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="cale__menu__lewy__klik_8cpp.html#afbb8cd6b13ec1ba2f2bb2c643e9fb308">przyjmowanie_strzal</a> (vector&lt; <a class="el" href="classzombie.html">zombie</a> &gt; &amp;zombie_wektor, vector&lt; <a class="el" href="classstrzal.html">strzal</a> &gt; &amp;wektor_strzal, int &amp;<a class="el" href="main_8cpp.html#aef160b7437d94056f1dc59646cd5b87d">score</a>)</td></tr>
+<tr class="memdesc:afbb8cd6b13ec1ba2f2bb2c643e9fb308"><td class="mdescLeft">&#160;</td><td class="mdescRight">Funckja pobiera aktualne miejsca tekstur (zombie oraz strzaly), gdy napotkaja na siebie to potworowi odejmuja sie punkty zdrowia.  <br /></td></tr>
+<tr class="separator:afbb8cd6b13ec1ba2f2bb2c643e9fb308"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a139a9bd377d8c04e6d9899b436f82457"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="cale__menu__lewy__klik_8cpp.html#a139a9bd377d8c04e6d9899b436f82457">cale_menu</a> (int &amp;<a class="el" href="main_8cpp.html#a49f3e17259835b0bfba5bf73c90e8916">bitmapa</a>, RenderWindow &amp;window, int &amp;<a class="el" href="main_8cpp.html#a5992b274cfdcacdbc1fa8347fd01ebde">done</a>, RectangleShape &amp;player, RectangleShape &amp;player2, Texture &amp;player1Texture, Texture &amp;player2Texture)</td></tr>
+<tr class="memdesc:a139a9bd377d8c04e6d9899b436f82457"><td class="mdescLeft">&#160;</td><td class="mdescRight">Funkcja pokazuje cale menu. Sprawdza rowniez czy przyciski zostaly wcisniete.  <br /></td></tr>
+<tr class="separator:a139a9bd377d8c04e6d9899b436f82457"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">Dokumentacja funkcji</h2>
+<a id="a139a9bd377d8c04e6d9899b436f82457" name="a139a9bd377d8c04e6d9899b436f82457"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a139a9bd377d8c04e6d9899b436f82457">&#9670;&#160;</a></span>cale_menu()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void cale_menu </td>
+          <td>(</td>
+          <td class="paramtype">int &amp;&#160;</td>
+          <td class="paramname"><em>bitmapa</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">RenderWindow &amp;&#160;</td>
+          <td class="paramname"><em>window</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int &amp;&#160;</td>
+          <td class="paramname"><em>done</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">RectangleShape &amp;&#160;</td>
+          <td class="paramname"><em>player</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">RectangleShape &amp;&#160;</td>
+          <td class="paramname"><em>player2</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Texture &amp;&#160;</td>
+          <td class="paramname"><em>player1Texture</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Texture &amp;&#160;</td>
+          <td class="paramname"><em>player2Texture</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Funkcja pokazuje cale menu. Sprawdza rowniez czy przyciski zostaly wcisniete. </p>
+<dl class="params"><dt>Parametry</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">bitmapa</td><td>- Sprawdza w ktorym miejscu dokladnie jestesmy. Wywoluje odpowiednie instrukcje. </td></tr>
+    <tr><td class="paramname">window</td><td>- Pozwala na wyswietlenie tekstur. </td></tr>
+    <tr><td class="paramname">player</td><td>- tworzy gracza lucznik </td></tr>
+    <tr><td class="paramname">player2</td><td>- tworzy gracza berserker </td></tr>
+    <tr><td class="paramname">player1Texture</td><td>- tworzy teksture dla playera </td></tr>
+    <tr><td class="paramname">player2Texture</td><td>- tworzy teksture dla playera </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definicja w linii <a class="el" href="cale__menu__lewy__klik_8cpp_source.html#l00133">133</a> pliku <a class="el" href="cale__menu__lewy__klik_8cpp_source.html">cale_menu_lewy_klik.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a09746e35d0a15455e00af95c10c53bc7" name="a09746e35d0a15455e00af95c10c53bc7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a09746e35d0a15455e00af95c10c53bc7">&#9670;&#160;</a></span>laduj_zombie()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void laduj_zombie </td>
+          <td>(</td>
+          <td class="paramtype">int &amp;&#160;</td>
+          <td class="paramname"><em>czas_respu</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classzombie.html">zombie</a>&#160;</td>
+          <td class="paramname"><em>zombi</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">vector&lt; <a class="el" href="classzombie.html">zombie</a> &gt; &amp;&#160;</td>
+          <td class="paramname"><em>zombie_wektor</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int &amp;&#160;</td>
+          <td class="paramname"><em>score</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Funkcja pozwala na zaladowanie zombie do programu w odpowiednim czasie, jest tu rowniez sprawdzany poziom. </p>
+<dl class="params"><dt>Parametry</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">czas_respu</td><td>- ustawia czas pojawiania sie potworow </td></tr>
+    <tr><td class="paramname">zombi</td><td>- wywolanie klasy zombie </td></tr>
+    <tr><td class="paramname">zombie_wektor</td><td>- dodaje zombie do wektora </td></tr>
+    <tr><td class="paramname">score</td><td>- w zaleznosci ile zdobilismy punktow, tyle zombi sie wyswietla </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definicja w linii <a class="el" href="cale__menu__lewy__klik_8cpp_source.html#l00022">22</a> pliku <a class="el" href="cale__menu__lewy__klik_8cpp_source.html">cale_menu_lewy_klik.cpp</a>.</p>
+
+</div>
+</div>
+<a id="afbb8cd6b13ec1ba2f2bb2c643e9fb308" name="afbb8cd6b13ec1ba2f2bb2c643e9fb308"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afbb8cd6b13ec1ba2f2bb2c643e9fb308">&#9670;&#160;</a></span>przyjmowanie_strzal()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void przyjmowanie_strzal </td>
+          <td>(</td>
+          <td class="paramtype">vector&lt; <a class="el" href="classzombie.html">zombie</a> &gt; &amp;&#160;</td>
+          <td class="paramname"><em>zombie_wektor</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">vector&lt; <a class="el" href="classstrzal.html">strzal</a> &gt; &amp;&#160;</td>
+          <td class="paramname"><em>wektor_strzal</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int &amp;&#160;</td>
+          <td class="paramname"><em>score</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Funckja pobiera aktualne miejsca tekstur (zombie oraz strzaly), gdy napotkaja na siebie to potworowi odejmuja sie punkty zdrowia. </p>
+<dl class="params"><dt>Parametry</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">zombie_wektor</td><td>- modyfikuje wektor zombi, gdy strzala napotka na zombiego to zombi traci punkty zdrowia </td></tr>
+    <tr><td class="paramname">wektor_strzal</td><td>- przechowuje strzaly w wektorze </td></tr>
+    <tr><td class="paramname">score</td><td>- gdy zombie ginie, to dodaje nam ilosc punktow </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definicja w linii <a class="el" href="cale__menu__lewy__klik_8cpp_source.html#l00099">99</a> pliku <a class="el" href="cale__menu__lewy__klik_8cpp_source.html">cale_menu_lewy_klik.cpp</a>.</p>
+
+</div>
+</div>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Wygenerowano przez&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.6
+</small></address>
+</body>
+</html>

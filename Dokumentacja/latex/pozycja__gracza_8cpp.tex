@@ -1,0 +1,44 @@
+\hypertarget{pozycja__gracza_8cpp}{}\doxysection{Dokumentacja pliku pozycja\+\_\+gracza.\+cpp}
+\label{pozycja__gracza_8cpp}\index{pozycja\_gracza.cpp@{pozycja\_gracza.cpp}}
+{\ttfamily \#include $<$SFML/\+Graphics.\+hpp$>$}\newline
+{\ttfamily \#include $<$iostream$>$}\newline
+{\ttfamily \#include $<$windows.\+h$>$}\newline
+{\ttfamily \#include $<$math.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}pozycja\+\_\+gracza.\+h\char`\"{}}\newline
+Wykres zależności załączania dla pozycja\+\_\+gracza.\+cpp\+:
+% FIG 0
+\doxysubsection*{Funkcje}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{pozycja__gracza_8cpp_a475b039484d896dc7aa4aba0cb47505e}{sprawdz\+\_\+pozycje}} (Rectangle\+Shape \&player, int \mbox{\hyperlink{main_8cpp_a5d7bc75d40aa91845c99e2eae27ce7db}{pozycja}}, int \&\mbox{\hyperlink{main_8cpp_a06c0dc845bc97c11846126121ef52eae}{Idle\+Anim}}, int \&\mbox{\hyperlink{main_8cpp_a6f1be1f780ff54ec75b41451cd4d90bd}{delay}}, float \&\mbox{\hyperlink{main_8cpp_a09fbbe87083078f86ee37d794546dd12}{hp}})
+\begin{DoxyCompactList}\small\item\em Funkcja sprawdza aktualna pozycje gracza i kierunek w jakim jest on zwrocony aby dopasowac wlasciwa animacje. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Dokumentacja funkcji}
+\mbox{\Hypertarget{pozycja__gracza_8cpp_a475b039484d896dc7aa4aba0cb47505e}\label{pozycja__gracza_8cpp_a475b039484d896dc7aa4aba0cb47505e}} 
+\index{pozycja\_gracza.cpp@{pozycja\_gracza.cpp}!sprawdz\_pozycje@{sprawdz\_pozycje}}
+\index{sprawdz\_pozycje@{sprawdz\_pozycje}!pozycja\_gracza.cpp@{pozycja\_gracza.cpp}}
+\doxysubsubsection{\texorpdfstring{sprawdz\_pozycje()}{sprawdz\_pozycje()}}
+{\footnotesize\ttfamily void sprawdz\+\_\+pozycje (\begin{DoxyParamCaption}\item[{Rectangle\+Shape \&}]{player,  }\item[{int}]{pozycja,  }\item[{int \&}]{Idle\+Anim,  }\item[{int \&}]{delay,  }\item[{float \&}]{hp }\end{DoxyParamCaption})}
+
+
+
+Funkcja sprawdza aktualna pozycje gracza i kierunek w jakim jest on zwrocony aby dopasowac wlasciwa animacje. 
+
+
+\begin{DoxyParams}{Parametry}
+{\em Rectangle\+Shape} & \& player -\/ wskaznik na postac \\
+\hline
+{\em int} & pozycja -\/ kierunek zwrotu gracza\+: 1 = lewo, 2 = prawo, 3 = gora , 4 = dol \\
+\hline
+{\em int} & \&Idle\+Anim -\/ iterator animacji tekstur \\
+\hline
+{\em int} & \&delay -\/ opoznienie \\
+\hline
+{\em float} & \&hp -\/ aktualne zdrowie postaci \\
+\hline
+\end{DoxyParams}
+\texorpdfstring{$<$}{<} Sprawdza czy gracz nie strzela lub nie idzie i zyje
+
+Definicja w linii \mbox{\hyperlink{pozycja__gracza_8cpp_source_l00025}{25}} pliku \mbox{\hyperlink{pozycja__gracza_8cpp_source}{pozycja\+\_\+gracza.\+cpp}}.
+

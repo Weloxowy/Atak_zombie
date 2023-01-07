@@ -1,0 +1,405 @@
+.TH "main.cpp" 3 "So, 7 sty 2023" "Atak Zombie" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+main.cpp
+.SH SYNOPSIS
+.br
+.PP
+\fC#include <SFML/Graphics\&.hpp>\fP
+.br
+\fC#include <SFML/Audio\&.hpp>\fP
+.br
+\fC#include <iostream>\fP
+.br
+\fC#include <windows\&.h>\fP
+.br
+\fC#include <math\&.h>\fP
+.br
+\fC#include <vector>\fP
+.br
+\fC#include <time\&.h>\fP
+.br
+\fC#include <sstream>\fP
+.br
+\fC#include 'pozycja_gracza\&.h'\fP
+.br
+\fC#include 'isAnyKeyPressed\&.h'\fP
+.br
+\fC#include 'wybor_postaci_z_menu\&.h'\fP
+.br
+\fC#include 'cale_menu_lewy_klik\&.h'\fP
+.br
+
+.SS "Komponenty"
+
+.in +1c
+.ti -1c
+.RI "class \fBgracz\fP"
+.br
+.RI "Klasa gracz\&. "
+.in -1c
+.SS "Funkcje"
+
+.in +1c
+.ti -1c
+.RI "bool \fBkolizja_strzaly\fP (\fBstrzal\fP strzalka)"
+.br
+.RI "Funkcja sprawdzajaca kolizje strzaly\&. "
+.ti -1c
+.RI "void \fBzombie_pozycja\fP ()"
+.br
+.RI "Funckja sprawdzajaca pozycje zombie, oraz ustawiajaca ich kolizje\&. "
+.ti -1c
+.RI "void \fBconvert_score\fP (int &\fBscore\fP, Text &tekscior, stringstream &score_to_string, Text &poziomek, int &\fBpoziom\fP, stringstream &poziom_to_string)"
+.br
+.RI "Funckaja pozwalajaca na wyswietlanie punktow w grze\&. "
+.ti -1c
+.RI "void \fBostateczne_punkty\fP (int &\fBscore\fP, Text &end_score, stringstream &endzik_score)"
+.br
+.RI "Funckja wyswietlajaca wszystkie punkty ktore zdobyl gracz\&. "
+.ti -1c
+.RI "void \fBhp_rowne_zero\fP (RectangleShape &player, sf::RenderWindow &window)"
+.br
+.RI "Funkcja sprawdza czy poziom zdrowia gracza jest rowne zero, jesli tak to wyswietla okno przegrania gry\&. "
+.ti -1c
+.RI "int \fBmain\fP ()"
+.br
+.in -1c
+.SS "Zmienne"
+
+.in +1c
+.ti -1c
+.RI "int \fBbitmapa\fP = 0"
+.br
+.RI "Zmienna przechowuje stan aktualnej bitmapy\&. "
+.ti -1c
+.RI "int \fBdone\fP = 0"
+.br
+.RI "Zmienna odpowiadajaca za wybor postaci\&. "
+.ti -1c
+.RI "const unsigned \fBWINDOW_WIDTH\fP = 1366"
+.br
+.RI "Zmienna przechowuje dlugosc mapy\&. "
+.ti -1c
+.RI "const unsigned \fBWINDOW_HEIGHT\fP = 768"
+.br
+.RI "Zmienna przechowuje szerokosc mapy\&. "
+.ti -1c
+.RI "int \fBpozycja\fP = 0"
+.br
+.RI "Zmienna przechowuje aktualna pozycje gracza\&. "
+.ti -1c
+.RI "int \fBdelay\fP = 0"
+.br
+.RI "Zmienna pozwalajaca na opoznienie aktualnie wykonywanej tekstury\&. "
+.ti -1c
+.RI "int \fBIdleAnim\fP = 0"
+.br
+.RI "Zmienna pozwalajaca na wyswietlenie tekstury w zaleznosci od pozycji gracza\&. "
+.ti -1c
+.RI "bool \fBczy_strzela\fP = false"
+.br
+.RI "Zmienna okreslajaca czy gracz wykonuje strzal\&. "
+.ti -1c
+.RI "float \fBziara\fP = 0"
+.br
+.RI "Zmienna pozwalajaca na wykonanie tekstury strzalu\&. "
+.ti -1c
+.RI "int \fBczas_respu_zombie\fP =10000"
+.br
+.RI "Zmienna przechowujaca opoznienie dla pojawienia sie zombie\&. "
+.ti -1c
+.RI "float \fBhp\fP =10"
+.br
+.RI "Zmienna przechowujaca poziom zdrowia lucznika\&. "
+.ti -1c
+.RI "float \fBhp_berserker\fP =7"
+.br
+.RI "Zmienna przechowujaca poziom zdrowia berserkera\&. "
+.ti -1c
+.RI "int \fBscore\fP = 0"
+.br
+.RI "Zmienna przechowujaca zdobyte punkty przez gracza\&. "
+.ti -1c
+.RI "int \fBpoziom\fP = 1"
+.br
+.RI "Zmienna przechowujaca aktualny poziom gry\&. "
+.ti -1c
+.RI "bool \fBwykonaj\fP = false"
+.br
+.RI "Zmienna pozwalajaca na wyswietlenie tekstury umierania playera\&. "
+.ti -1c
+.RI "int \fBziara4\fP = 0"
+.br
+.RI "Zmienna pozwalajaca na wykonanie tekstury umierania\&. "
+.ti -1c
+.RI "int \fBdelay2\fP = 0"
+.br
+.RI "Zmienna pozwalajaca na opoznienie aktualnie wykonywanej tekstury\&. "
+.ti -1c
+.RI "int \fBkontroluj_strzal\fP = 0"
+.br
+.RI "Zmienna pozwalajaca na zablokowaniu dublowania sie strzal w tym samym wektorze, sprawdzanie pozycji gracza, sprawdzanie ktorej metody ma uzyc z klasy\&. "
+.ti -1c
+.RI "vector< \fBzombie\fP > \fBwektor_zombie\fP"
+.br
+.RI "Wektor przechowujacy zombie\&. "
+.in -1c
+.SH "Dokumentacja funkcji"
+.PP 
+.SS "void convert_score (int & score, Text & tekscior, stringstream & score_to_string, Text & poziomek, int & poziom, stringstream & poziom_to_string)"
+
+.PP
+Funckaja pozwalajaca na wyswietlanie punktow w grze\&. 
+.PP
+\fBParametry\fP
+.RS 4
+\fIscore\fP - przechowuje ilosc zdobytych punktow 
+.br
+\fItekscior\fP - przechowuje czcionke do wyswietlania 
+.br
+\fIscore_to_string\fP - wyswietla zdobyte przez gracza punkty 
+.br
+\fIpoziomek\fP - przechowuje czcionke do wyswietlenia 
+.br
+\fIpoziom\fP - przechowuje aktualny poziom gry 
+.br
+\fIpoziom_to_string\fP - wyswietla aktualny poziom gry 
+.RE
+.PP
+
+.PP
+Definicja w linii \fB684\fP pliku \fBmain\&.cpp\fP\&.
+.SS "void hp_rowne_zero (RectangleShape & player, sf::RenderWindow & window)"
+
+.PP
+Funkcja sprawdza czy poziom zdrowia gracza jest rowne zero, jesli tak to wyswietla okno przegrania gry\&. 
+.PP
+\fBParametry\fP
+.RS 4
+\fIplayer\fP - pozwala wyswietlic tekstura gracza 
+.br
+\fIwindow\fP - wyswietla na ekranie odpowiednie tekstury 
+.RE
+.PP
+
+.PP
+Definicja w linii \fB730\fP pliku \fBmain\&.cpp\fP\&.
+.SS "bool kolizja_strzaly (\fBstrzal\fP strzalka)"
+
+.PP
+Funkcja sprawdzajaca kolizje strzaly\&. 
+.PP
+\fBParametry\fP
+.RS 4
+\fIstrzalka\fP - obiekt klasy strzal, tworzy strzale 
+.RE
+.PP
+
+.PP
+Definicja w linii \fB53\fP pliku \fBmain\&.cpp\fP\&.
+.SS "int main ()"
+< Stworzenie okna gry
+.PP
+< Ustawienie ilosci FPS w grze
+.PP
+< Tworzenie wektora strzaly, ktora leci w prawa strone\&. £adowanie tekstury dla strzaly\&.
+.PP
+< Tworzenie wektora strzaly, ktora leci w lewa strone\&. £adowanie tekstury dla strzaly\&.
+.PP
+< Tworzenie wektora strzaly, ktora leci w dol\&. £adowanie tekstury dla strzaly\&.
+.PP
+< Tworzenie wektora strzaly, ktora leci w gore\&. £adowanie tekstury dla strzaly\&.
+.PP
+< Stworzenie szurikena ktorym posluguje sie berserker\&. Szuriken porusza sie w prawo\&. Zaladowanie tekstury dla szurikena\&.
+.PP
+< Stworzenie szurikena ktorym posluguje sie berserker\&. Szuriken porusza sie w lewo\&. Zaladowanie tekstury dla szurikena\&.
+.PP
+< Stworzenie szurikena ktorym posluguje sie berserker\&. Szuriken porusza sie w dol\&. Zaladowanie tekstury dla szurikena\&.
+.PP
+< Stworzenie szurikena ktorym posluguje sie berserker\&. Szuriken porusza sie w gore\&. Zaladowanie tekstury dla szurikena\&.
+.PP
+< Stworzenie tekstur animacji dla wyboru postaci
+.PP
+< Stworzenie i ustawienie tekstury dla gracza berserker
+.PP
+< Stworzenie i ustawienie tekstury dla gracza lucznik
+.PP
+< Stworzenie tekstury dla zombie, oraz wywolanie metody zombie
+.PP
+< Stworzenie czcionki do wyswietlania punktow w grze
+.PP
+< Stworzenie czcionki do wyswietlania poziomu w grze
+.PP
+< Stworzenie tekstury menu
+.PP
+< Stworzenie tekstury wyboru postaci
+.PP
+< Stworzenie tesktury dla instruckji
+.PP
+< Stworzenie tekstury mapy docelowej
+.PP
+< Wyswietlenie postaci w wyborze postaci
+.PP
+< Stworzenie muzyki w grze
+.PP
+< Wywolanie funkcji menu
+.PP
+< Stworzenie obiektu klasy lucznik, wywolanie metod klasy
+.PP
+< Usuwanie strzal z pamieci
+.PP
+< Stworzenie obiektu klasy berserk, wywolanie metod klasy
+.PP
+< Usuwanie szurikenow z pamieci
+.PP
+< Ten if pozwala nam na zablokowaniu dublowania sie strzal, hp gracza, oraz na wyswietlaniu tesktury umierania gracza
+.PP
+< W zaleznosci od zdobytych punktow, poziom gry sie zwieksza i tworzy sie wiecej potworow
+.PP
+< W tych if'ach sprawdzamy w ktorym miejscu dokladnie jestesmy\&.
+.PP
+Definicja w linii \fB784\fP pliku \fBmain\&.cpp\fP\&.
+.SS "void ostateczne_punkty (int & score, Text & end_score, stringstream & endzik_score)"
+
+.PP
+Funckja wyswietlajaca wszystkie punkty ktore zdobyl gracz\&. 
+.PP
+\fBParametry\fP
+.RS 4
+\fIscore\fP - przechwytuje wszystkie zdobyte punkty przez gracza 
+.br
+\fIend_score\fP - tekst do wyswietlenia 
+.br
+\fIendzik_score\fP - wyswietla na ostatnim ekranie ostateczna ilosc zdobytych punktow 
+.RE
+.PP
+
+.PP
+Definicja w linii \fB713\fP pliku \fBmain\&.cpp\fP\&.
+.SS "void zombie_pozycja ()"
+
+.PP
+Funckja sprawdzajaca pozycje zombie, oraz ustawiajaca ich kolizje\&. 
+.PP
+Definicja w linii \fB657\fP pliku \fBmain\&.cpp\fP\&.
+.SH "Dokumentacja zmiennych"
+.PP 
+.SS "int bitmapa = 0"
+
+.PP
+Zmienna przechowuje stan aktualnej bitmapy\&. 
+.PP
+Definicja w linii \fB28\fP pliku \fBmain\&.cpp\fP\&.
+.SS "int czas_respu_zombie =10000"
+
+.PP
+Zmienna przechowujaca opoznienie dla pojawienia sie zombie\&. 
+.PP
+Definicja w linii \fB37\fP pliku \fBmain\&.cpp\fP\&.
+.SS "bool czy_strzela = false"
+
+.PP
+Zmienna okreslajaca czy gracz wykonuje strzal\&. 
+.PP
+Definicja w linii \fB35\fP pliku \fBmain\&.cpp\fP\&.
+.SS "int delay = 0"
+
+.PP
+Zmienna pozwalajaca na opoznienie aktualnie wykonywanej tekstury\&. 
+.PP
+Definicja w linii \fB33\fP pliku \fBmain\&.cpp\fP\&.
+.SS "int delay2 = 0"
+
+.PP
+Zmienna pozwalajaca na opoznienie aktualnie wykonywanej tekstury\&. 
+.PP
+Definicja w linii \fB44\fP pliku \fBmain\&.cpp\fP\&.
+.SS "int done = 0"
+
+.PP
+Zmienna odpowiadajaca za wybor postaci\&. 
+.PP
+Definicja w linii \fB29\fP pliku \fBmain\&.cpp\fP\&.
+.SS "float hp =10"
+
+.PP
+Zmienna przechowujaca poziom zdrowia lucznika\&. 
+.PP
+Definicja w linii \fB38\fP pliku \fBmain\&.cpp\fP\&.
+.SS "float hp_berserker =7"
+
+.PP
+Zmienna przechowujaca poziom zdrowia berserkera\&. 
+.PP
+Definicja w linii \fB39\fP pliku \fBmain\&.cpp\fP\&.
+.SS "int IdleAnim = 0"
+
+.PP
+Zmienna pozwalajaca na wyswietlenie tekstury w zaleznosci od pozycji gracza\&. 
+.PP
+Definicja w linii \fB34\fP pliku \fBmain\&.cpp\fP\&.
+.SS "int kontroluj_strzal = 0"
+
+.PP
+Zmienna pozwalajaca na zablokowaniu dublowania sie strzal w tym samym wektorze, sprawdzanie pozycji gracza, sprawdzanie ktorej metody ma uzyc z klasy\&. 
+.PP
+Definicja w linii \fB45\fP pliku \fBmain\&.cpp\fP\&.
+.SS "int poziom = 1"
+
+.PP
+Zmienna przechowujaca aktualny poziom gry\&. 
+.PP
+Definicja w linii \fB41\fP pliku \fBmain\&.cpp\fP\&.
+.SS "int pozycja = 0"
+
+.PP
+Zmienna przechowuje aktualna pozycje gracza\&. 
+.PP
+Definicja w linii \fB32\fP pliku \fBmain\&.cpp\fP\&.
+.SS "int score = 0"
+
+.PP
+Zmienna przechowujaca zdobyte punkty przez gracza\&. 
+.PP
+Definicja w linii \fB40\fP pliku \fBmain\&.cpp\fP\&.
+.SS "vector<\fBzombie\fP> wektor_zombie"
+
+.PP
+Wektor przechowujacy zombie\&. 
+.PP
+Definicja w linii \fB46\fP pliku \fBmain\&.cpp\fP\&.
+.SS "const unsigned WINDOW_HEIGHT = 768"
+
+.PP
+Zmienna przechowuje szerokosc mapy\&. 
+.PP
+Definicja w linii \fB31\fP pliku \fBmain\&.cpp\fP\&.
+.SS "const unsigned WINDOW_WIDTH = 1366"
+
+.PP
+Zmienna przechowuje dlugosc mapy\&. 
+.PP
+Definicja w linii \fB30\fP pliku \fBmain\&.cpp\fP\&.
+.SS "bool wykonaj = false"
+
+.PP
+Zmienna pozwalajaca na wyswietlenie tekstury umierania playera\&. 
+.PP
+Definicja w linii \fB42\fP pliku \fBmain\&.cpp\fP\&.
+.SS "float ziara = 0"
+
+.PP
+Zmienna pozwalajaca na wykonanie tekstury strzalu\&. 
+.PP
+Definicja w linii \fB36\fP pliku \fBmain\&.cpp\fP\&.
+.SS "int ziara4 = 0"
+
+.PP
+Zmienna pozwalajaca na wykonanie tekstury umierania\&. 
+.PP
+Definicja w linii \fB43\fP pliku \fBmain\&.cpp\fP\&.
+.SH "Autor"
+.PP 
+Wygenerowano automatycznie z kodu ÅºrÃ³dÅ‚owego programem Doxygen dla Atak Zombie\&.

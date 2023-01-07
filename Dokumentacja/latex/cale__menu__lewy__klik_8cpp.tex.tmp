@@ -1,0 +1,99 @@
+\hypertarget{cale__menu__lewy__klik_8cpp}{}\doxysection{Dokumentacja pliku cale\+\_\+menu\+\_\+lewy\+\_\+klik.\+cpp}
+\label{cale__menu__lewy__klik_8cpp}\index{cale\_menu\_lewy\_klik.cpp@{cale\_menu\_lewy\_klik.cpp}}
+{\ttfamily \#include $<$SFML/\+Graphics.\+hpp$>$}\newline
+{\ttfamily \#include $<$iostream$>$}\newline
+{\ttfamily \#include $<$windows.\+h$>$}\newline
+{\ttfamily \#include $<$vector$>$}\newline
+{\ttfamily \#include \char`\"{}cale\+\_\+menu\+\_\+lewy\+\_\+klik.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}is\+Any\+Key\+Pressed.\+h\char`\"{}}\newline
+Wykres zależności załączania dla cale\+\_\+menu\+\_\+lewy\+\_\+klik.\+cpp\+:
+% FIG 0
+\doxysubsection*{Funkcje}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{cale__menu__lewy__klik_8cpp_a09746e35d0a15455e00af95c10c53bc7}{laduj\+\_\+zombie}} (int \&czas\+\_\+respu, \mbox{\hyperlink{classzombie}{zombie}} zombi, vector$<$ \mbox{\hyperlink{classzombie}{zombie}} $>$ \&zombie\+\_\+wektor, int \&\mbox{\hyperlink{main_8cpp_aef160b7437d94056f1dc59646cd5b87d}{score}})
+\begin{DoxyCompactList}\small\item\em Funkcja pozwala na zaladowanie zombie do programu w odpowiednim czasie, jest tu rowniez sprawdzany poziom. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{cale__menu__lewy__klik_8cpp_afbb8cd6b13ec1ba2f2bb2c643e9fb308}{przyjmowanie\+\_\+strzal}} (vector$<$ \mbox{\hyperlink{classzombie}{zombie}} $>$ \&zombie\+\_\+wektor, vector$<$ \mbox{\hyperlink{classstrzal}{strzal}} $>$ \&wektor\+\_\+strzal, int \&\mbox{\hyperlink{main_8cpp_aef160b7437d94056f1dc59646cd5b87d}{score}})
+\begin{DoxyCompactList}\small\item\em Funckja pobiera aktualne miejsca tekstur (zombie oraz strzaly), gdy napotkaja na siebie to potworowi odejmuja sie punkty zdrowia. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{cale__menu__lewy__klik_8cpp_a139a9bd377d8c04e6d9899b436f82457}{cale\+\_\+menu}} (int \&\mbox{\hyperlink{main_8cpp_a49f3e17259835b0bfba5bf73c90e8916}{bitmapa}}, Render\+Window \&window, int \&\mbox{\hyperlink{main_8cpp_a5992b274cfdcacdbc1fa8347fd01ebde}{done}}, Rectangle\+Shape \&player, Rectangle\+Shape \&player2, Texture \&player1\+Texture, Texture \&player2\+Texture)
+\begin{DoxyCompactList}\small\item\em Funkcja pokazuje cale menu. Sprawdza rowniez czy przyciski zostaly wcisniete. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Dokumentacja funkcji}
+\mbox{\Hypertarget{cale__menu__lewy__klik_8cpp_a139a9bd377d8c04e6d9899b436f82457}\label{cale__menu__lewy__klik_8cpp_a139a9bd377d8c04e6d9899b436f82457}} 
+\index{cale\_menu\_lewy\_klik.cpp@{cale\_menu\_lewy\_klik.cpp}!cale\_menu@{cale\_menu}}
+\index{cale\_menu@{cale\_menu}!cale\_menu\_lewy\_klik.cpp@{cale\_menu\_lewy\_klik.cpp}}
+\doxysubsubsection{\texorpdfstring{cale\_menu()}{cale\_menu()}}
+{\footnotesize\ttfamily void cale\+\_\+menu (\begin{DoxyParamCaption}\item[{int \&}]{bitmapa,  }\item[{Render\+Window \&}]{window,  }\item[{int \&}]{done,  }\item[{Rectangle\+Shape \&}]{player,  }\item[{Rectangle\+Shape \&}]{player2,  }\item[{Texture \&}]{player1\+Texture,  }\item[{Texture \&}]{player2\+Texture }\end{DoxyParamCaption})}
+
+
+
+Funkcja pokazuje cale menu. Sprawdza rowniez czy przyciski zostaly wcisniete. 
+
+
+\begin{DoxyParams}{Parametry}
+{\em bitmapa} & -\/ Sprawdza w ktorym miejscu dokladnie jestesmy. Wywoluje odpowiednie instrukcje. \\
+\hline
+{\em window} & -\/ Pozwala na wyswietlenie tekstur. \\
+\hline
+{\em player} & -\/ tworzy gracza lucznik \\
+\hline
+{\em player2} & -\/ tworzy gracza berserker \\
+\hline
+{\em player1\+Texture} & -\/ tworzy teksture dla playera \\
+\hline
+{\em player2\+Texture} & -\/ tworzy teksture dla playera \\
+\hline
+\end{DoxyParams}
+
+
+Definicja w linii \mbox{\hyperlink{cale__menu__lewy__klik_8cpp_source_l00133}{133}} pliku \mbox{\hyperlink{cale__menu__lewy__klik_8cpp_source}{cale\+\_\+menu\+\_\+lewy\+\_\+klik.\+cpp}}.
+
+\mbox{\Hypertarget{cale__menu__lewy__klik_8cpp_a09746e35d0a15455e00af95c10c53bc7}\label{cale__menu__lewy__klik_8cpp_a09746e35d0a15455e00af95c10c53bc7}} 
+\index{cale\_menu\_lewy\_klik.cpp@{cale\_menu\_lewy\_klik.cpp}!laduj\_zombie@{laduj\_zombie}}
+\index{laduj\_zombie@{laduj\_zombie}!cale\_menu\_lewy\_klik.cpp@{cale\_menu\_lewy\_klik.cpp}}
+\doxysubsubsection{\texorpdfstring{laduj\_zombie()}{laduj\_zombie()}}
+{\footnotesize\ttfamily void laduj\+\_\+zombie (\begin{DoxyParamCaption}\item[{int \&}]{czas\+\_\+respu,  }\item[{\mbox{\hyperlink{classzombie}{zombie}}}]{zombi,  }\item[{vector$<$ \mbox{\hyperlink{classzombie}{zombie}} $>$ \&}]{zombie\+\_\+wektor,  }\item[{int \&}]{score }\end{DoxyParamCaption})}
+
+
+
+Funkcja pozwala na zaladowanie zombie do programu w odpowiednim czasie, jest tu rowniez sprawdzany poziom. 
+
+
+\begin{DoxyParams}{Parametry}
+{\em czas\+\_\+respu} & -\/ ustawia czas pojawiania sie potworow \\
+\hline
+{\em zombi} & -\/ wywolanie klasy zombie \\
+\hline
+{\em zombie\+\_\+wektor} & -\/ dodaje zombie do wektora \\
+\hline
+{\em score} & -\/ w zaleznosci ile zdobilismy punktow, tyle zombi sie wyswietla \\
+\hline
+\end{DoxyParams}
+
+
+Definicja w linii \mbox{\hyperlink{cale__menu__lewy__klik_8cpp_source_l00022}{22}} pliku \mbox{\hyperlink{cale__menu__lewy__klik_8cpp_source}{cale\+\_\+menu\+\_\+lewy\+\_\+klik.\+cpp}}.
+
+\mbox{\Hypertarget{cale__menu__lewy__klik_8cpp_afbb8cd6b13ec1ba2f2bb2c643e9fb308}\label{cale__menu__lewy__klik_8cpp_afbb8cd6b13ec1ba2f2bb2c643e9fb308}} 
+\index{cale\_menu\_lewy\_klik.cpp@{cale\_menu\_lewy\_klik.cpp}!przyjmowanie\_strzal@{przyjmowanie\_strzal}}
+\index{przyjmowanie\_strzal@{przyjmowanie\_strzal}!cale\_menu\_lewy\_klik.cpp@{cale\_menu\_lewy\_klik.cpp}}
+\doxysubsubsection{\texorpdfstring{przyjmowanie\_strzal()}{przyjmowanie\_strzal()}}
+{\footnotesize\ttfamily void przyjmowanie\+\_\+strzal (\begin{DoxyParamCaption}\item[{vector$<$ \mbox{\hyperlink{classzombie}{zombie}} $>$ \&}]{zombie\+\_\+wektor,  }\item[{vector$<$ \mbox{\hyperlink{classstrzal}{strzal}} $>$ \&}]{wektor\+\_\+strzal,  }\item[{int \&}]{score }\end{DoxyParamCaption})}
+
+
+
+Funckja pobiera aktualne miejsca tekstur (zombie oraz strzaly), gdy napotkaja na siebie to potworowi odejmuja sie punkty zdrowia. 
+
+
+\begin{DoxyParams}{Parametry}
+{\em zombie\+\_\+wektor} & -\/ modyfikuje wektor zombi, gdy strzala napotka na zombiego to zombi traci punkty zdrowia \\
+\hline
+{\em wektor\+\_\+strzal} & -\/ przechowuje strzaly w wektorze \\
+\hline
+{\em score} & -\/ gdy zombie ginie, to dodaje nam ilosc punktow \\
+\hline
+\end{DoxyParams}
+
+
+Definicja w linii \mbox{\hyperlink{cale__menu__lewy__klik_8cpp_source_l00099}{99}} pliku \mbox{\hyperlink{cale__menu__lewy__klik_8cpp_source}{cale\+\_\+menu\+\_\+lewy\+\_\+klik.\+cpp}}.
+

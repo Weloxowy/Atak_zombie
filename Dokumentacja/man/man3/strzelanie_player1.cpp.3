@@ -1,0 +1,198 @@
+.TH "strzelanie_player1.cpp" 3 "So, 7 sty 2023" "Atak Zombie" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+strzelanie_player1.cpp
+.SH SYNOPSIS
+.br
+.PP
+\fC#include <SFML/Graphics\&.hpp>\fP
+.br
+\fC#include <iostream>\fP
+.br
+\fC#include <windows\&.h>\fP
+.br
+\fC#include 'strzelanie_player1\&.h'\fP
+.br
+\fC#include <vector>\fP
+.br
+\fC#include <math\&.h>\fP
+.br
+
+.SS "Funkcje"
+
+.in +1c
+.ti -1c
+.RI "void \fBdodaj_strzale\fP (\fBstrzal\fP strzalka, vector< \fBstrzal\fP > &wektor_strzal, RectangleShape &player)"
+.br
+.RI "Tworzy strzale lecaca w prawo\&. "
+.ti -1c
+.RI "void \fBdodaj_strzale_lewo\fP (\fBstrzal\fP strzalka, vector< \fBstrzal\fP > &wektor_strzal_1, RectangleShape &player)"
+.br
+.RI "Tworzy strzale lecaca w lewo\&. "
+.ti -1c
+.RI "void \fBdodaj_strzale_dol\fP (\fBstrzal\fP strzalka, vector< \fBstrzal\fP > &wektor_strzal_dol, RectangleShape &player)"
+.br
+.RI "Tworzy strzale lecaca w dol\&. "
+.ti -1c
+.RI "void \fBdodaj_strzale_gora\fP (\fBstrzal\fP strzalka, vector< \fBstrzal\fP > &wektor_strzal_gora, RectangleShape &player)"
+.br
+.RI "Tworzy strzale lecaca w gora\&. "
+.ti -1c
+.RI "void \fBnarysuj_strzale\fP (vector< \fBstrzal\fP > &wektor_strzal, RenderWindow &window)"
+.br
+.RI "Naklada teksture na strzale lecaca w prawo\&. "
+.ti -1c
+.RI "void \fBnarysuj_strzale_lewo\fP (vector< \fBstrzal\fP > &wektor_strzal_1, RenderWindow &window)"
+.br
+.RI "Naklada teksture na strzale lecaca w lewo\&. "
+.ti -1c
+.RI "void \fBnarysuj_strzale_dol\fP (vector< \fBstrzal\fP > &wektor_strzal_dol, RenderWindow &window)"
+.br
+.RI "Naklada teksture na strzale lecaca w dol\&. "
+.ti -1c
+.RI "void \fBnarysuj_strzale_gora\fP (vector< \fBstrzal\fP > &wektor_strzal_gora, RenderWindow &window)"
+.br
+.RI "Naklada teksture na strzale lecaca w gore\&. "
+.in -1c
+.SH "Dokumentacja funkcji"
+.PP 
+.SS "void dodaj_strzale (\fBstrzal\fP strzalka, vector< \fBstrzal\fP > & wektor_strzal, RectangleShape & player)"
+
+.PP
+Tworzy strzale lecaca w prawo\&. 
+.PP
+\fBParametry\fP
+.RS 4
+\fIstrzal\fP strzalka - wywolanie klasy strzal 
+.br
+\fIvector\fP <strzal> &wektor_strzal - wywolanie wektora przechowujacego strzaly 
+.br
+\fIRectangleShape\fP & player - wskaznik na postac 
+.RE
+.PP
+
+.PP
+Definicja w linii \fB26\fP pliku \fBstrzelanie_player1\&.cpp\fP\&.
+.SS "void dodaj_strzale_dol (\fBstrzal\fP strzalka, vector< \fBstrzal\fP > & wektor_strzal_dol, RectangleShape & player)"
+
+.PP
+Tworzy strzale lecaca w dol\&. 
+.PP
+\fBParametry\fP
+.RS 4
+\fIstrzal\fP strzalka - wywolanie klasy strzal 
+.br
+\fIvector\fP <strzal> &wektor_strzal - wywolanie wektora przechowujacego strzaly 
+.br
+\fIRectangleShape\fP & player - wskaznik na postac 
+.RE
+.PP
+
+.PP
+Definicja w linii \fB56\fP pliku \fBstrzelanie_player1\&.cpp\fP\&.
+.SS "void dodaj_strzale_gora (\fBstrzal\fP strzalka, vector< \fBstrzal\fP > & wektor_strzal_gora, RectangleShape & player)"
+
+.PP
+Tworzy strzale lecaca w gora\&. 
+.PP
+\fBParametry\fP
+.RS 4
+\fIstrzal\fP strzalka - wywolanie klasy strzal 
+.br
+\fIvector\fP <strzal> &wektor_strzal - wywolanie wektora przechowujacego strzaly 
+.br
+\fIRectangleShape\fP & player - wskaznik na postac 
+.RE
+.PP
+
+.PP
+Definicja w linii \fB70\fP pliku \fBstrzelanie_player1\&.cpp\fP\&.
+.SS "void dodaj_strzale_lewo (\fBstrzal\fP strzalka, vector< \fBstrzal\fP > & wektor_strzal_1, RectangleShape & player)"
+
+.PP
+Tworzy strzale lecaca w lewo\&. 
+.PP
+\fBParametry\fP
+.RS 4
+\fIstrzal\fP strzalka - wywolanie klasy strzal 
+.br
+\fIvector\fP <strzal> &wektor_strzal - wywolanie wektora przechowujacego strzaly 
+.br
+\fIRectangleShape\fP & player - wskaznik na postac 
+.RE
+.PP
+
+.PP
+Definicja w linii \fB42\fP pliku \fBstrzelanie_player1\&.cpp\fP\&.
+.SS "void narysuj_strzale (vector< \fBstrzal\fP > & wektor_strzal, RenderWindow & window)"
+
+.PP
+Naklada teksture na strzale lecaca w prawo\&. 
+.PP
+\fBParametry\fP
+.RS 4
+\fIstrzal\fP strzalka - wywolanie klasy strzal 
+.br
+\fIvector\fP <strzal> &wektor_strzal - wywolanie wektora przechowujacego strzaly 
+.br
+\fIRectangleShape\fP & player - wskaznik na postac 
+.RE
+.PP
+
+.PP
+Definicja w linii \fB84\fP pliku \fBstrzelanie_player1\&.cpp\fP\&.
+.SS "void narysuj_strzale_dol (vector< \fBstrzal\fP > & wektor_strzal_dol, RenderWindow & window)"
+
+.PP
+Naklada teksture na strzale lecaca w dol\&. 
+.PP
+\fBParametry\fP
+.RS 4
+\fIstrzal\fP strzalka - wywolanie klasy strzal 
+.br
+\fIvector\fP <strzal> &wektor_strzal - wywolanie wektora przechowujacego strzaly 
+.br
+\fIRectangleShape\fP & player - wskaznik na postac 
+.RE
+.PP
+
+.PP
+Definicja w linii \fB116\fP pliku \fBstrzelanie_player1\&.cpp\fP\&.
+.SS "void narysuj_strzale_gora (vector< \fBstrzal\fP > & wektor_strzal_gora, RenderWindow & window)"
+
+.PP
+Naklada teksture na strzale lecaca w gore\&. 
+.PP
+\fBParametry\fP
+.RS 4
+\fIstrzal\fP strzalka - wywolanie klasy strzal 
+.br
+\fIvector\fP <strzal> &wektor_strzal - wywolanie wektora przechowujacego strzaly 
+.br
+\fIRectangleShape\fP & player - wskaznik na postac 
+.RE
+.PP
+
+.PP
+Definicja w linii \fB132\fP pliku \fBstrzelanie_player1\&.cpp\fP\&.
+.SS "void narysuj_strzale_lewo (vector< \fBstrzal\fP > & wektor_strzal_1, RenderWindow & window)"
+
+.PP
+Naklada teksture na strzale lecaca w lewo\&. 
+.PP
+\fBParametry\fP
+.RS 4
+\fIstrzal\fP strzalka - wywolanie klasy strzal 
+.br
+\fIvector\fP <strzal> &wektor_strzal - wywolanie wektora przechowujacego strzaly 
+.br
+\fIRectangleShape\fP & player - wskaznik na postac 
+.RE
+.PP
+
+.PP
+Definicja w linii \fB100\fP pliku \fBstrzelanie_player1\&.cpp\fP\&.
+.SH "Autor"
+.PP 
+Wygenerowano automatycznie z kodu źródłowego programem Doxygen dla Atak Zombie\&.

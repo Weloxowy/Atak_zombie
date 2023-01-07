@@ -1,0 +1,27 @@
+var classgracz =
+[
+    [ "initHP", "classgracz.html#aa1588fb740ca7da675cf36db12e73352", null ],
+    [ "kolizja_ogolna", "classgracz.html#a7e9797a9a1572d0be7c24b104ddfdbab", null ],
+    [ "poruszanie_dol", "classgracz.html#a17f7ec264952c5f97c1529d496496ece", null ],
+    [ "poruszanie_dol_berserker", "classgracz.html#ab71a4fd49df034310a4254ff1dc8e528", null ],
+    [ "poruszanie_gora", "classgracz.html#a3c7eb928efe47084d27e537652824d76", null ],
+    [ "poruszanie_gora_berserker", "classgracz.html#ab2824ecb9a3d4527df47882bcf1de42a", null ],
+    [ "poruszanie_lewo", "classgracz.html#ab667b4b02d75f77fe5ab5a0c02bf606b", null ],
+    [ "poruszanie_lewo_berserker", "classgracz.html#a61321cb2a2a1e4c6c6b51c558a81cc79", null ],
+    [ "poruszanie_prawo", "classgracz.html#a60e2f4af74c39478cec367b02f7baca8", null ],
+    [ "poruszanie_prawo_berserker", "classgracz.html#a175c552f98a8b6e81e6b08de750cd369", null ],
+    [ "poruszanie_ukos_lewo", "classgracz.html#ad7b950c0b961bdfe4043cc2d505e33d9", null ],
+    [ "poruszanie_ukos_prawo", "classgracz.html#a391cfdb68554e351e54953b20bccea63", null ],
+    [ "render_hp", "classgracz.html#a9dcba2fd5edd0553e8a48adc1d2297d2", null ],
+    [ "strzelanie", "classgracz.html#a8871a02731c63081cd307448995e468e", null ],
+    [ "update_hp", "classgracz.html#a567a955019653cc42aa8af10939f70d6", null ],
+    [ "update_hp_berserker", "classgracz.html#a1189d390559e5030bbb8c9d3630d27a2", null ],
+    [ "usun_strzale_z_pamieci", "classgracz.html#a0f485d51f887a6d29986d447af54cda5", null ],
+    [ "height", "classgracz.html#ad0cff7b5d76a778f9e26208f1abb61cc", null ],
+    [ "hpBarBack", "classgracz.html#ae43aa08a575696a2838458acd9823568", null ],
+    [ "hpBarInside", "classgracz.html#a787dd274560bfa06d509b3527e9f5b57", null ],
+    [ "hpBarMaxWidth", "classgracz.html#a4a423b5124b72c55fe7bccd7cbb8abc4", null ],
+    [ "MAXhp_berserker", "classgracz.html#a0ad6d11046243f487eb119f81c09c7b4", null ],
+    [ "MAXhp_lucznik", "classgracz.html#a843345d7cec6459c3aa80d167990b11a", null ],
+    [ "width", "classgracz.html#aeb733087f23a5165d1ab6dc801430227", null ]
+];

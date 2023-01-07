@@ -1,0 +1,171 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="pl">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.6"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Atak Zombie: Dokumentacja pliku wybor_postaci_z_menu.cpp</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectlogo"><img alt="Logo" src="logo.png"/></td>
+  <td id="projectalign">
+   <div id="projectname">Atak Zombie
+   </div>
+   <div id="projectbrief">Gra 2D stworzona w SFML, polegająca na zabijaniu nacierających potworów.</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Wygenerowano przez Doxygen 1.9.6 -->
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>Strona&#160;główna</span></a></li>
+      <li><a href="annotated.html"><span>Klasy</span></a></li>
+      <li class="current"><a href="files.html"><span>Pliki</span></a></li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>Lista&#160;plików</span></a></li>
+      <li><a href="globals.html"><span>Składowe&#160;plików</span></a></li>
+    </ul>
+  </div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#func-members">Funkcje</a>  </div>
+  <div class="headertitle"><div class="title">Dokumentacja pliku wybor_postaci_z_menu.cpp</div></div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><code>#include &lt;SFML/Graphics.hpp&gt;</code><br />
+<code>#include &lt;iostream&gt;</code><br />
+<code>#include &lt;windows.h&gt;</code><br />
+<code>#include &lt;math.h&gt;</code><br />
+<code>#include &quot;<a class="el" href="wybor__postaci__z__menu_8h_source.html">wybor_postaci_z_menu.h</a>&quot;</code><br />
+</div><div class="textblock"><div class="dynheader">
+Wykres zależności załączania dla wybor_postaci_z_menu.cpp:</div>
+<div class="dyncontent">
+<div class="center"><img src="wybor__postaci__z__menu_8cpp__incl.png" border="0" usemap="#awybor__postaci__z__menu_8cpp" alt=""/></div>
+</div>
+</div>
+<p><a href="wybor__postaci__z__menu_8cpp_source.html">Idź do kodu źródłowego tego pliku.</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
+Funkcje</h2></td></tr>
+<tr class="memitem:a1af88d97dd905ce9c422715795e3b18c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="wybor__postaci__z__menu_8cpp.html#a1af88d97dd905ce9c422715795e3b18c">wybor_postaci</a> (int <a class="el" href="main_8cpp.html#a49f3e17259835b0bfba5bf73c90e8916">bitmapa</a>, RenderWindow &amp;window, RectangleShape &amp;chooseplayer1, RectangleShape &amp;chooseplayer2, Texture &amp;chooseplayer1_texture, Texture &amp;chooseplayer2_texture, int &amp;<a class="el" href="main_8cpp.html#a06c0dc845bc97c11846126121ef52eae">IdleAnim</a>, int &amp;<a class="el" href="main_8cpp.html#a6f1be1f780ff54ec75b41451cd4d90bd">delay</a>, int &amp;<a class="el" href="main_8cpp.html#a5992b274cfdcacdbc1fa8347fd01ebde">done</a>)</td></tr>
+<tr class="memdesc:a1af88d97dd905ce9c422715795e3b18c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Deklaracja funkcji wybor postaci.  <br /></td></tr>
+<tr class="separator:a1af88d97dd905ce9c422715795e3b18c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">Dokumentacja funkcji</h2>
+<a id="a1af88d97dd905ce9c422715795e3b18c" name="a1af88d97dd905ce9c422715795e3b18c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1af88d97dd905ce9c422715795e3b18c">&#9670;&#160;</a></span>wybor_postaci()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void wybor_postaci </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>bitmapa</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">RenderWindow &amp;&#160;</td>
+          <td class="paramname"><em>window</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">RectangleShape &amp;&#160;</td>
+          <td class="paramname"><em>chooseplayer1</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">RectangleShape &amp;&#160;</td>
+          <td class="paramname"><em>chooseplayer2</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Texture &amp;&#160;</td>
+          <td class="paramname"><em>chooseplayer1_texture</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Texture &amp;&#160;</td>
+          <td class="paramname"><em>chooseplayer2_texture</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int &amp;&#160;</td>
+          <td class="paramname"><em>IdleAnim</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int &amp;&#160;</td>
+          <td class="paramname"><em>delay</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int &amp;&#160;</td>
+          <td class="paramname"><em>done</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Deklaracja funkcji wybor postaci. </p>
+<dl class="params"><dt>Parametry</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">int</td><td>bitmapa - zawiera id uzywanej bitmapy </td></tr>
+    <tr><td class="paramname">RenderWindow</td><td>&amp;window - wska�nik na okno </td></tr>
+    <tr><td class="paramname">RectangleShape</td><td>&amp; chooseplayer1 - wskaznik na 1 postac </td></tr>
+    <tr><td class="paramname">RectangleShape</td><td>&amp; chooseplayer2 - wskaznik na 2 postac </td></tr>
+    <tr><td class="paramname">Texture</td><td>&amp; chooseplayer1_texture - wskaznik na tekstury 1 postaci </td></tr>
+    <tr><td class="paramname">Texture</td><td>&amp; chooseplayer2_texture - wskaznik na tekstury 1 postaci </td></tr>
+    <tr><td class="paramname">int</td><td>&amp;IdleAnim - iterator animacji tekstur </td></tr>
+    <tr><td class="paramname">int</td><td>&amp;done - zmienna przechowuje numer wybranej postaci </td></tr>
+    <tr><td class="paramname">int</td><td>&amp;delay - opoznienie </td></tr>
+  </table>
+  </dd>
+</dl>
+<p>&lt; Wybor pierwszej postaci z menu</p>
+<p>&lt; Zmienna do wyswietlenia danej postaci w main</p>
+<p>&lt; Animacja mrugania w menu</p>
+<p>&lt; Zmienna do wyswietlenia danej postaci w main</p>
+<p>&lt; Animacja mrugania w menu</p>
+
+<p class="definition">Definicja w linii <a class="el" href="wybor__postaci__z__menu_8cpp_source.html#l00025">25</a> pliku <a class="el" href="wybor__postaci__z__menu_8cpp_source.html">wybor_postaci_z_menu.cpp</a>.</p>
+
+</div>
+</div>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Wygenerowano przez&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.6
+</small></address>
+</body>
+</html>

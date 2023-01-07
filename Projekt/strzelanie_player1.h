@@ -1,19 +1,25 @@
 #include <SFML/Graphics.hpp>
 #include <iostream>
-//#include <Animation.h>
 #include <windows.h>
 #include <math.h>
 
 using namespace sf;
 using namespace std;
+/** @class strzal
+ * @brief klasa sluzaca tworzeniu strzal/sztyletow
+ */
 
 class strzal
 {
     public:
-    Texture *strzala;
-    Sprite shape;
-    float szybkosc_lotu_strzaly;
-    int dmg;
+    Texture *strzala; /**< zawiera wskaznik na uzywana teksture */
+    Sprite shape; /**<pozwala na wyswietlenie tekstury */
+    float szybkosc_lotu_strzaly;/**< predkosc broni */
+    int dmg;/**< zadawane pojedyncze obrazenia z broni */
+
+    /** @struct strzal
+     * @brief konstruktor
+     */
 
     strzal(Texture *strzala, float szybkosc_lotu_strzaly, int dmg)
     {

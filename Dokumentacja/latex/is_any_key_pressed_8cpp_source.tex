@@ -1,0 +1,25 @@
+\hypertarget{is_any_key_pressed_8cpp_source}{}\doxysection{is\+Any\+Key\+Pressed.\+cpp}
+\mbox{\hyperlink{is_any_key_pressed_8cpp}{Idź do dokumentacji tego pliku.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{is_any_key_pressed_8cpp_source_l00001}00001\ \textcolor{preprocessor}{\#include\ <SFML/Graphics.hpp>}}
+\DoxyCodeLine{\Hypertarget{is_any_key_pressed_8cpp_source_l00002}00002\ \textcolor{preprocessor}{\#include\ <iostream>}}
+\DoxyCodeLine{\Hypertarget{is_any_key_pressed_8cpp_source_l00003}00003\ \textcolor{preprocessor}{\#include\ <windows.h>}}
+\DoxyCodeLine{\Hypertarget{is_any_key_pressed_8cpp_source_l00004}00004\ \textcolor{preprocessor}{\#include\ <math.h>}}
+\DoxyCodeLine{\Hypertarget{is_any_key_pressed_8cpp_source_l00005}00005\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{is_any_key_pressed_8h}{isAnyKeyPressed.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{is_any_key_pressed_8cpp_source_l00006}00006\ }
+\DoxyCodeLine{\Hypertarget{is_any_key_pressed_8cpp_source_l00007}00007\ \textcolor{keyword}{using\ namespace\ }sf;}
+\DoxyCodeLine{\Hypertarget{is_any_key_pressed_8cpp_source_l00008}00008\ \textcolor{keyword}{using\ namespace\ }std;}
+\DoxyCodeLine{\Hypertarget{is_any_key_pressed_8cpp_source_l00009}00009\ }
+\DoxyCodeLine{\Hypertarget{is_any_key_pressed_8cpp_source_l00013}\mbox{\hyperlink{is_any_key_pressed_8cpp_a923658f32cdd59f0fd78c87245556898}{00013}}\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{is_any_key_pressed_8cpp_a923658f32cdd59f0fd78c87245556898}{isAnyKeyPressed}}()}
+\DoxyCodeLine{\Hypertarget{is_any_key_pressed_8cpp_source_l00014}00014\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{is_any_key_pressed_8cpp_source_l00015}00015\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ k\ =\ -\/1;\ k\ <\ sf::Keyboard::KeyCount;\ ++k)}
+\DoxyCodeLine{\Hypertarget{is_any_key_pressed_8cpp_source_l00016}00016\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{is_any_key_pressed_8cpp_source_l00017}00017\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (sf::Keyboard::isKeyPressed(\textcolor{keyword}{static\_cast<}sf::Keyboard::Key\textcolor{keyword}{>}(k)))}
+\DoxyCodeLine{\Hypertarget{is_any_key_pressed_8cpp_source_l00018}00018\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{true};}
+\DoxyCodeLine{\Hypertarget{is_any_key_pressed_8cpp_source_l00019}00019\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{is_any_key_pressed_8cpp_source_l00020}00020\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{false};}
+\DoxyCodeLine{\Hypertarget{is_any_key_pressed_8cpp_source_l00021}00021\ }
+\DoxyCodeLine{\Hypertarget{is_any_key_pressed_8cpp_source_l00022}00022\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{is_any_key_pressed_8cpp_source_l00023}00023\ }
+
+\end{DoxyCode}

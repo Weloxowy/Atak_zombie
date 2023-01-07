@@ -1,0 +1,107 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="pl">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.6"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Atak Zombie: Plik źródłowy pozycja_gracza.cpp</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectlogo"><img alt="Logo" src="logo.png"/></td>
+  <td id="projectalign">
+   <div id="projectname">Atak Zombie
+   </div>
+   <div id="projectbrief">Gra 2D stworzona w SFML, polegająca na zabijaniu nacierających potworów.</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Wygenerowano przez Doxygen 1.9.6 -->
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>Strona&#160;główna</span></a></li>
+      <li><a href="annotated.html"><span>Klasy</span></a></li>
+      <li class="current"><a href="files.html"><span>Pliki</span></a></li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>Lista&#160;plików</span></a></li>
+      <li><a href="globals.html"><span>Składowe&#160;plików</span></a></li>
+    </ul>
+  </div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle"><div class="title">pozycja_gracza.cpp</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="pozycja__gracza_8cpp.html">Idź do dokumentacji tego pliku.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span> </div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="preprocessor">#include &lt;SFML/Graphics.hpp&gt;</span></div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="preprocessor">#include &lt;iostream&gt;</span></div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="preprocessor">#include &lt;windows.h&gt;</span></div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="preprocessor">#include &lt;math.h&gt;</span></div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="preprocessor">#include &quot;<a class="code" href="pozycja__gracza_8h.html">pozycja_gracza.h</a>&quot;</span></div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span> </div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span> </div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="keyword">using namespace </span>sf;</div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="keyword">using namespace </span>std;</div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span> </div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span> </div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno"><a class="line" href="pozycja__gracza_8cpp.html#a475b039484d896dc7aa4aba0cb47505e">   25</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="pozycja__gracza_8cpp.html#a475b039484d896dc7aa4aba0cb47505e">sprawdz_pozycje</a>(RectangleShape &amp; player, <span class="keywordtype">int</span> <a class="code hl_variable" href="main_8cpp.html#a5d7bc75d40aa91845c99e2eae27ce7db">pozycja</a>, <span class="keywordtype">int</span> &amp;<a class="code hl_variable" href="main_8cpp.html#a06c0dc845bc97c11846126121ef52eae">IdleAnim</a>, <span class="keywordtype">int</span> &amp;<a class="code hl_variable" href="main_8cpp.html#a6f1be1f780ff54ec75b41451cd4d90bd">delay</a>, <span class="keywordtype">float</span> &amp;<a class="code hl_variable" href="main_8cpp.html#a09fbbe87083078f86ee37d794546dd12">hp</a>)</div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>{</div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span><span class="keywordflow">if</span>(<a class="code hl_variable" href="main_8cpp.html#a09fbbe87083078f86ee37d794546dd12">hp</a> &gt; 0)</div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>{</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>    <span class="keywordflow">if</span>(!<a class="code hl_function" href="is_any_key_pressed_8cpp.html#a923658f32cdd59f0fd78c87245556898">isAnyKeyPressed</a>() &amp;&amp; <a class="code hl_variable" href="main_8cpp.html#a6f1be1f780ff54ec75b41451cd4d90bd">delay</a> &gt;= 15) </div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>        {</div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>            <span class="keywordflow">if</span>(<a class="code hl_variable" href="main_8cpp.html#a5d7bc75d40aa91845c99e2eae27ce7db">pozycja</a> == 1)</div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>            {</div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>                player.setTextureRect(IntRect(<a class="code hl_variable" href="main_8cpp.html#a06c0dc845bc97c11846126121ef52eae">IdleAnim</a>*69,960,69,96));</div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>            }</div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>            <span class="keywordflow">if</span>(<a class="code hl_variable" href="main_8cpp.html#a5d7bc75d40aa91845c99e2eae27ce7db">pozycja</a> == 2)</div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>            {</div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>                player.setTextureRect(IntRect(<a class="code hl_variable" href="main_8cpp.html#a06c0dc845bc97c11846126121ef52eae">IdleAnim</a>*69,0,69,96));</div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>            }</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>            <span class="keywordflow">if</span>(<a class="code hl_variable" href="main_8cpp.html#a5d7bc75d40aa91845c99e2eae27ce7db">pozycja</a> == 3)</div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>            {</div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>                player.setTextureRect(IntRect(<a class="code hl_variable" href="main_8cpp.html#a06c0dc845bc97c11846126121ef52eae">IdleAnim</a>*69,480,69,96));</div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>            }</div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>            <span class="keywordflow">if</span>(<a class="code hl_variable" href="main_8cpp.html#a5d7bc75d40aa91845c99e2eae27ce7db">pozycja</a> == 4)</div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>            {</div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>                player.setTextureRect(IntRect(<a class="code hl_variable" href="main_8cpp.html#a06c0dc845bc97c11846126121ef52eae">IdleAnim</a>*69,96,69,96));</div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>            }</div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span> </div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>++<a class="code hl_variable" href="main_8cpp.html#a06c0dc845bc97c11846126121ef52eae">IdleAnim</a>;</div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span><span class="keywordflow">if</span>(<a class="code hl_variable" href="main_8cpp.html#a06c0dc845bc97c11846126121ef52eae">IdleAnim</a> == 9)</div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>{</div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>    <a class="code hl_variable" href="main_8cpp.html#a06c0dc845bc97c11846126121ef52eae">IdleAnim</a> = 0;</div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>}</div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span><a class="code hl_variable" href="main_8cpp.html#a6f1be1f780ff54ec75b41451cd4d90bd">delay</a> = 1;</div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>}</div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>}</div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>}</div>
+<div class="ttc" id="ais_any_key_pressed_8cpp_html_a923658f32cdd59f0fd78c87245556898"><div class="ttname"><a href="is_any_key_pressed_8cpp.html#a923658f32cdd59f0fd78c87245556898">isAnyKeyPressed</a></div><div class="ttdeci">bool isAnyKeyPressed()</div><div class="ttdoc">Funckja sprawdza czy jakikolwiek przycisk jest wcisniety.</div><div class="ttdef"><b>Definition:</b> <a href="is_any_key_pressed_8cpp_source.html#l00013">isAnyKeyPressed.cpp:13</a></div></div>
+<div class="ttc" id="amain_8cpp_html_a06c0dc845bc97c11846126121ef52eae"><div class="ttname"><a href="main_8cpp.html#a06c0dc845bc97c11846126121ef52eae">IdleAnim</a></div><div class="ttdeci">int IdleAnim</div><div class="ttdoc">Zmienna pozwalajaca na wyswietlenie tekstury w zaleznosci od pozycji gracza.</div><div class="ttdef"><b>Definition:</b> <a href="main_8cpp_source.html#l00034">main.cpp:34</a></div></div>
+<div class="ttc" id="amain_8cpp_html_a09fbbe87083078f86ee37d794546dd12"><div class="ttname"><a href="main_8cpp.html#a09fbbe87083078f86ee37d794546dd12">hp</a></div><div class="ttdeci">float hp</div><div class="ttdoc">Zmienna przechowujaca poziom zdrowia lucznika.</div><div class="ttdef"><b>Definition:</b> <a href="main_8cpp_source.html#l00038">main.cpp:38</a></div></div>
+<div class="ttc" id="amain_8cpp_html_a5d7bc75d40aa91845c99e2eae27ce7db"><div class="ttname"><a href="main_8cpp.html#a5d7bc75d40aa91845c99e2eae27ce7db">pozycja</a></div><div class="ttdeci">int pozycja</div><div class="ttdoc">Zmienna przechowuje aktualna pozycje gracza.</div><div class="ttdef"><b>Definition:</b> <a href="main_8cpp_source.html#l00032">main.cpp:32</a></div></div>
+<div class="ttc" id="amain_8cpp_html_a6f1be1f780ff54ec75b41451cd4d90bd"><div class="ttname"><a href="main_8cpp.html#a6f1be1f780ff54ec75b41451cd4d90bd">delay</a></div><div class="ttdeci">int delay</div><div class="ttdoc">Zmienna pozwalajaca na opoznienie aktualnie wykonywanej tekstury.</div><div class="ttdef"><b>Definition:</b> <a href="main_8cpp_source.html#l00033">main.cpp:33</a></div></div>
+<div class="ttc" id="apozycja__gracza_8cpp_html_a475b039484d896dc7aa4aba0cb47505e"><div class="ttname"><a href="pozycja__gracza_8cpp.html#a475b039484d896dc7aa4aba0cb47505e">sprawdz_pozycje</a></div><div class="ttdeci">void sprawdz_pozycje(RectangleShape &amp;player, int pozycja, int &amp;IdleAnim, int &amp;delay, float &amp;hp)</div><div class="ttdoc">Funkcja sprawdza aktualna pozycje gracza i kierunek w jakim jest on zwrocony aby dopasowac wlasciwa a...</div><div class="ttdef"><b>Definition:</b> <a href="pozycja__gracza_8cpp_source.html#l00025">pozycja_gracza.cpp:25</a></div></div>
+<div class="ttc" id="apozycja__gracza_8h_html"><div class="ttname"><a href="pozycja__gracza_8h.html">pozycja_gracza.h</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Wygenerowano przez&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.6
+</small></address>
+</body>
+</html>
