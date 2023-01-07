@@ -9,8 +9,6 @@ using namespace sf;
 using namespace std;
 
 
-
-
 void laduj_zombie(int &czas_respu, zombie zombi, vector <zombie> &zombie_wektor, int &score)
 {
     czas_respu++;
@@ -142,17 +140,11 @@ if(Mouse::isButtonPressed(Mouse::Left))
     //przyciski w wyborze postaci - prowadzi do gry docelowej
     if(bitmapa == 1  && Mouse::getPosition(window).x > 220 && Mouse::getPosition(window).x < 521 && Mouse::getPosition(window).y >627 && Mouse::getPosition(window).y < 721 )
             {
+                //ninja
                 done = 1;
                 bitmapa = 3;
 
                 player2.setTexture(&player1Texture);
-              //  zom.laduj_zombie(zomb, zombiee);
-                //tu wybieramy postac wojownika???
-                // zadeklarowac zmiennna postac, cos typu postac=0 - to wojownik, postac = 1 - to lucznik
-                // nastepnie zrobic funkcje z parametrem aby sprawdzalo ktora postac wybralismy
-                //cos typu tak jak w allegro
-
-
     } else if(bitmapa == 1  && Mouse::getPosition(window).x > 888 && Mouse::getPosition(window).x < 1161 && Mouse::getPosition(window).y >648 && Mouse::getPosition(window).y < 716 )
             {
                 done = 2;
@@ -184,9 +176,9 @@ if(Mouse::isButtonPressed(Mouse::Left))
 
 
 
-    if(bitmapa == 2 && Mouse::getPosition(window).x > 523 && Mouse::getPosition(window).x < 848 && Mouse::getPosition(window).y >646 && Mouse::getPosition(window).y < 722 )
+    if(bitmapa == 2 && Mouse::getPosition(window).x > 480 && Mouse::getPosition(window).x < 891 && Mouse::getPosition(window).y >616 && Mouse::getPosition(window).y < 712 )
            {
-
+            Sleep(200);
             bitmapa = 0;
 
             }

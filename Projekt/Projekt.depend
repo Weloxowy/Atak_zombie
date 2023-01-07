@@ -1837,7 +1837,7 @@
 	"cale_menu_lewy_klik.h"
 	"klasa_postac.h"
 
-1672588053 source:d:\code blocks\projekt sfml\projektnajnowszy\cale_menu_lewy_klik.cpp
+1673053329 source:d:\code blocks\projekt sfml\projektnajnowszy\cale_menu_lewy_klik.cpp
 	<SFML/Graphics.hpp>
 	<iostream>
 	<windows.h>
@@ -1845,7 +1845,7 @@
 	"cale_menu_lewy_klik.h"
 	"isAnyKeyPressed.h"
 
-1672588801 d:\code blocks\projekt sfml\projektnajnowszy\cale_menu_lewy_klik.h
+1672957866 d:\code blocks\projekt sfml\projektnajnowszy\cale_menu_lewy_klik.h
 	<SFML/Graphics.hpp>
 	<iostream>
 	<windows.h>
@@ -1885,8 +1885,9 @@
 	<windows.h>
 	<math.h>
 
-1672588053 source:d:\code blocks\projekt sfml\projektnajnowszy\main.cpp
+1672966565 source:d:\code blocks\projekt sfml\projektnajnowszy\main.cpp
 	<SFML/Graphics.hpp>
+	<SFML/Audio.hpp>
 	<iostream>
 	<windows.h>
 	<math.h>
@@ -1899,7 +1900,7 @@
 	"cale_menu_lewy_klik.h"
 	"klasa_postac.h"
 
-1670957797 d:\code blocks\projekt sfml\projektnajnowszy\pozycja_gracza.h
+1672960567 d:\code blocks\projekt sfml\projektnajnowszy\pozycja_gracza.h
 	<SFML/Graphics.hpp>
 	<iostream>
 	<windows.h>
@@ -1913,7 +1914,7 @@
 	<math.h>
 	"isAnyKeyPressed.h"
 
-1672236651 source:d:\code blocks\projekt sfml\projektnajnowszy\pozycja_gracza.cpp
+1672960567 source:d:\code blocks\projekt sfml\projektnajnowszy\pozycja_gracza.cpp
 	<SFML/Graphics.hpp>
 	<iostream>
 	<windows.h>
@@ -1937,4 +1938,122 @@
 	<windows.h>
 	<math.h>
 	"wybor_postaci_z_menu.h"
+
+1525808418 d:\code blocks\sfml\include\sfml\audio.hpp
+	<SFML/System.hpp>
+	<SFML/Audio/InputSoundFile.hpp>
+	<SFML/Audio/Listener.hpp>
+	<SFML/Audio/Music.hpp>
+	<SFML/Audio/OutputSoundFile.hpp>
+	<SFML/Audio/Sound.hpp>
+	<SFML/Audio/SoundBuffer.hpp>
+	<SFML/Audio/SoundBufferRecorder.hpp>
+	<SFML/Audio/SoundFileFactory.hpp>
+	<SFML/Audio/SoundFileReader.hpp>
+	<SFML/Audio/SoundFileWriter.hpp>
+	<SFML/Audio/SoundRecorder.hpp>
+	<SFML/Audio/SoundSource.hpp>
+	<SFML/Audio/SoundStream.hpp>
+
+1525808418 d:\code blocks\sfml\include\sfml\audio\inputsoundfile.hpp
+	<SFML/Audio/Export.hpp>
+	<SFML/System/NonCopyable.hpp>
+	<SFML/System/Time.hpp>
+	<string>
+	<algorithm>
+
+1525808418 d:\code blocks\sfml\include\sfml\audio\export.hpp
+	<SFML/Config.hpp>
+
+1525808418 d:\code blocks\sfml\include\sfml\audio\listener.hpp
+	<SFML/Audio/Export.hpp>
+	<SFML/System/Vector3.hpp>
+
+1525808418 d:\code blocks\sfml\include\sfml\audio\music.hpp
+	<SFML/Audio/Export.hpp>
+	<SFML/Audio/SoundStream.hpp>
+	<SFML/Audio/InputSoundFile.hpp>
+	<SFML/System/Mutex.hpp>
+	<SFML/System/Time.hpp>
+	<string>
+	<vector>
+
+1525808418 d:\code blocks\sfml\include\sfml\audio\soundstream.hpp
+	<SFML/Audio/Export.hpp>
+	<SFML/Audio/SoundSource.hpp>
+	<SFML/System/Thread.hpp>
+	<SFML/System/Time.hpp>
+	<SFML/System/Mutex.hpp>
+	<cstdlib>
+
+1525808418 d:\code blocks\sfml\include\sfml\audio\soundsource.hpp
+	<SFML/Audio/Export.hpp>
+	<SFML/Audio/AlResource.hpp>
+	<SFML/System/Vector3.hpp>
+
+1525808418 d:\code blocks\sfml\include\sfml\audio\alresource.hpp
+	<SFML/Audio/Export.hpp>
+
+1525808418 d:\code blocks\sfml\include\sfml\audio\outputsoundfile.hpp
+	<SFML/Audio/Export.hpp>
+	<SFML/System/NonCopyable.hpp>
+	<string>
+
+1525808418 d:\code blocks\sfml\include\sfml\audio\sound.hpp
+	<SFML/Audio/Export.hpp>
+	<SFML/Audio/SoundSource.hpp>
+	<SFML/System/Time.hpp>
+	<cstdlib>
+
+1525808418 d:\code blocks\sfml\include\sfml\audio\soundbuffer.hpp
+	<SFML/Audio/Export.hpp>
+	<SFML/Audio/AlResource.hpp>
+	<SFML/System/Time.hpp>
+	<string>
+	<vector>
+	<set>
+
+1525808418 d:\code blocks\sfml\include\sfml\audio\soundbufferrecorder.hpp
+	<SFML/Audio/Export.hpp>
+	<SFML/Audio/SoundBuffer.hpp>
+	<SFML/Audio/SoundRecorder.hpp>
+	<vector>
+
+1525808418 d:\code blocks\sfml\include\sfml\audio\soundrecorder.hpp
+	<SFML/Audio/Export.hpp>
+	<SFML/Audio/AlResource.hpp>
+	<SFML/System/Thread.hpp>
+	<SFML/System/Time.hpp>
+	<vector>
+	<string>
+
+1525808418 d:\code blocks\sfml\include\sfml\audio\soundfilefactory.hpp
+	<SFML/Audio/Export.hpp>
+	<string>
+	<vector>
+	<SFML/Audio/SoundFileFactory.inl>
+
+1525808418 d:\code blocks\sfml\include\sfml\audio\soundfilefactory.inl
+
+1525808418 d:\code blocks\sfml\include\sfml\audio\soundfilereader.hpp
+	<SFML/Audio/Export.hpp>
+	<string>
+
+1525808418 d:\code blocks\sfml\include\sfml\audio\soundfilewriter.hpp
+	<SFML/Audio/Export.hpp>
+	<string>
+
+1672961419 source:d:\code blocks\projekt sfml\projektnajnowszy\spr_poz_ninja.cpp
+	<SFML/Graphics.hpp>
+	<iostream>
+	<windows.h>
+	<math.h>
+	"spr_poz_ninja.h"
+
+1672961419 d:\code blocks\projekt sfml\projektnajnowszy\spr_poz_ninja.h
+	<SFML/Graphics.hpp>
+	<iostream>
+	<windows.h>
+	<math.h>
+	"isAnyKeyPressed.h"
 

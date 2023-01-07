@@ -327,64 +327,6 @@ public:
                         if(ziara3 == 8 && hp>0)
                         {
                             hp-=1;
-                                while(hp <= 0)
-                                {
-                                    Texture gleba;
-                                    gleba.loadFromFile("ded.png");
-                                    Sprite dedzik;
-                                    dedzik.setTexture(gleba);
-                                    delay2++;
-                                    window.clear(Color::Black);
-                                    window.draw(dedzik);
-                                    window.draw(player);
-                                    sf::Vector2u windowSize = window.getSize();
-                                    float x = (windowSize.x - player.getSize().x) / 2;
-                                    float y = (windowSize.y - player.getSize().y) / 2;
-                                    player.setPosition(x, y);
-                                    player.setScale(2.0,2.0);
-
-                                    // dolaczyc wyniki
-                                    // dwa guziki (wyjscie i powrot do menu)
-                                    if(wykonaj == false)
-                                    {
-                                        if(ziara4 < 10)
-                                            {
-
-                                            if(delay2 >= 5)
-                                                {
-
-
-                                                    player.setTextureRect(IntRect(ziara4*69,384,69,96));
-                                                    ziara4++;
-                                                    delay2=0;
-                                                }
-
-                                            }
-                                            else
-                                            {
-                                               wykonaj = true;
-                                            }
-                                    }
-
-                                    window.display();
-
-                                        if(Mouse::isButtonPressed(Mouse::Left) && Mouse::getPosition(window).x > 480 && Mouse::getPosition(window).x < 615 && Mouse::getPosition(window).y >615 && Mouse::getPosition(window).y <712)
-                                        {
-
-                                            //exit(0);
-                                            break;
-                                        }
-
-
-                                        //dokonczyc wychodzenie
-
-                                            /*
-
-                                                */
-
-
-                                }
-
                         }
 
 
@@ -418,4 +360,5 @@ public:
 void cale_menu(int & bitmapa, RenderWindow & window, int &done, RectangleShape & player, RectangleShape & player2, Texture & player1Texture, Texture & player2Texture,int &IdleAnim);
 void laduj_zombie(int &czas_respu, zombie zombi, vector <zombie> &zombie_wektor, int &score);
 void przyjmowanie_strzal(vector <zombie> &zombie_wektor,vector <strzal> &wektor_strzal,int &score);
+
 
